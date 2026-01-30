@@ -1,0 +1,323 @@
+{
+  "main": {
+    "id": "b0f5ec3b6deb830f",
+    "type": "split",
+    "children": [
+      {
+        "id": "de7482024b88832b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fdacac7cb7e0021",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MAIN.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MAIN"
+            }
+          },
+          {
+            "id": "f98c877ed1129c1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CDW/CDW.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CDW"
+            }
+          },
+          {
+            "id": "63f1834f2cfb81c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVMe Key Value (NVMe-KV) Command Set.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NVMe Key Value (NVMe-KV) Command Set"
+            }
+          },
+          {
+            "id": "2dc3c80998ccab4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IO Queue.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "IO Queue"
+            }
+          },
+          {
+            "id": "fa28ad1790f9bc30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Completion Queue.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Completion Queue"
+            }
+          },
+          {
+            "id": "2dda62825ca0a000",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CDW/CDW.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CDW"
+            }
+          },
+          {
+            "id": "c4c7a8451aefcf8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Controller Capabilities (CAP).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Controller Capabilities (CAP)"
+            }
+          },
+          {
+            "id": "216a3ad01972e808",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Namespace Management & Commands.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Namespace Management & Commands"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9407dbf852569175",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab9951fe6e2e39b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86c20603f7eaf545",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "da845b0c4d9375a2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "01ff354371374db5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "6be60a8df6e1af19",
+    "type": "split",
+    "children": [
+      {
+        "id": "c52da95cb9dd6077",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04f3560c2253719a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Completion Queue.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Completion Queue"
+            }
+          },
+          {
+            "id": "34f1e5b5ae44ad97",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Completion Queue.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Completion Queue"
+            }
+          },
+          {
+            "id": "b6984e4d7ff2559a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d60ef9e5e57a94c4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "894c6a5e9b1531c6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Completion Queue.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Completion Queue"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "fa28ad1790f9bc30",
+  "lastOpenFiles": [
+    "NVMe Key Value (NVMe-KV) Command Set.md",
+    "pictures/Pasted image 20260129210326.png",
+    "CDW/CDW.md",
+    "CDW/CDW14.md",
+    "CDW/CDW0.md",
+    "CDW/CDW6.md",
+    "CDW/CDW5.md",
+    "CDW/CDW8.md",
+    "CDW/CDW7.md",
+    "CDW/CDW10.md",
+    "CDW/CDW9.md",
+    "CDW/CDW12.md",
+    "CDW/CDW11.md",
+    "CDW/CDW15.md",
+    "CDW/CDW13.md",
+    "CDW/CDW1.md",
+    "CDW/CDW2.md",
+    "CDW/CDW3.md",
+    "CDW/CDW4.md",
+    "Namespace Management & Commands.md",
+    "Controller Capabilities (CAP).md",
+    "NVMe Controller.md",
+    "CDW",
+    "pictures/Pasted image 20260129210623.png",
+    "Completion Queue.md",
+    "IO Queue.md",
+    "NVMe Commands.md",
+    "pictures/Pasted image 20260129210408.png",
+    "pictures/Pasted image 20260129210349.png",
+    "pictures/Pasted image 20260129210339.png",
+    "pictures",
+    "pictures/Pasted image 20260129210256.png",
+    "pictures/Pasted image 20260129210247.png",
+    "pictures/Pasted image 20260129210234.png",
+    "MAIN.md"
+  ]
+}

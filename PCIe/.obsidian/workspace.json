@@ -1,0 +1,447 @@
+{
+  "main": {
+    "id": "68511ff70859ae5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "0533661fcc7d4418",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86c415e458234caa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Overview"
+            }
+          },
+          {
+            "id": "930dfaa631f8bd8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Serial Encoding.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Serial Encoding"
+            }
+          },
+          {
+            "id": "8c77bc288d6cbd57",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PERST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PERST"
+            }
+          },
+          {
+            "id": "29c157a79fdc574f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DMA Controller.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DMA Controller"
+            }
+          },
+          {
+            "id": "c26f7be617d29f97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe Bridge.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PCIe Bridge"
+            }
+          },
+          {
+            "id": "52eed29c58c414b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Repeater.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Repeater"
+            }
+          },
+          {
+            "id": "b979ff6be970b37f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Functional Level Reset (FLR).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Functional Level Reset (FLR)"
+            }
+          },
+          {
+            "id": "9d671a5350ba02de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SPDM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SPDM"
+            }
+          },
+          {
+            "id": "6ed9a30de551b3fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Root Complex.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Root Complex"
+            }
+          },
+          {
+            "id": "ba26ebe7017e60d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe Addressing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PCIe Addressing"
+            }
+          },
+          {
+            "id": "67d00ed0d72e5e2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dual Port(ing).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dual Port(ing)"
+            }
+          },
+          {
+            "id": "510d34be2ad55cb5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Overview"
+            }
+          },
+          {
+            "id": "9cfb621a275143ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Link Initialization and Training.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Link Initialization and Training"
+            }
+          },
+          {
+            "id": "8b976b83c8c97869",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ordered Sets.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ordered Sets"
+            }
+          },
+          {
+            "id": "90b52e95b27e1868",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Link Initialization and Training.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Link Initialization and Training"
+            }
+          },
+          {
+            "id": "a4d97338f6c4427c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Compliance Pattern.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Compliance Pattern"
+            }
+          },
+          {
+            "id": "f918af1a01fa82b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Overview"
+            }
+          },
+          {
+            "id": "e9ae8b7a8118bdda",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "pictures/Pasted image 20260127211314.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260127211314"
+            }
+          }
+        ],
+        "currentTab": 12
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f47a8ab3d3d3027a",
+    "type": "split",
+    "children": [
+      {
+        "id": "52552a0cbb3c420a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2a02e79beb3cde0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "53a46aec8c599922",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "09d1a907d1fbf7b5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3e0cfd7ca30da03d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a63fa8bfeef53860",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5975a05297f560ca",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Link Initialization and Training.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Link Initialization and Training"
+            }
+          },
+          {
+            "id": "c550cd27f086a213",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Link Initialization and Training.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Link Initialization and Training"
+            }
+          },
+          {
+            "id": "b4e6b26ae341d0bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d3485b3778ec134a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Link Initialization and Training.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Link Initialization and Training"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9cfb621a275143ca",
+  "lastOpenFiles": [
+    "Lanes.md",
+    "Overview.md",
+    "MIPO.md",
+    "Dual Port(ing).md",
+    "PCIe Addressing.md",
+    "Root Complex.md",
+    "Pasted image 20260129203956.png",
+    "SPDM.md",
+    "Functional Level Reset (FLR).md",
+    "Repeater.md",
+    "PCIe Bridge.md",
+    "DMA Controller.md",
+    "pictures/Pasted image 20260129203631.png",
+    "PERST.md",
+    "Serial Encoding.md",
+    "Scrambling.md",
+    "pictures/Pasted image 20260127211314.png",
+    "pictures/Pasted image 20260127211333.png",
+    "Untitled.base",
+    "Untitled.canvas",
+    "2026-01-27.md",
+    "Link Initialization and Training.md",
+    "pictures/Pasted image 20260127205846.png",
+    "SERDES Interface and PIPE.md",
+    "pictures",
+    "pictures/Pasted image 20260127211256.png",
+    "Compliance Pattern.md",
+    "pictures/Pasted image 20260127211200.png",
+    "pictures/Pasted image 20260127211142.png",
+    "pictures/Pasted image 20260127211046.png",
+    "pictures/Pasted image 20260127211028.png",
+    "Ordered Sets.md",
+    "Physical Layer.md",
+    "PHY (Physical Layer).md",
+    "Welcome.md"
+  ]
+}

@@ -1,0 +1,3 @@
+The is an additional Polling state, _Polling.Compliance_, that is entered if, at Detect, if at least a single lane never exited Electrical Idle during _Polling.Active_. This implies that some passive test equipment is attached to measure transmitter electrical compliance. The transmitter must then output the compliance pattern, which is, for 8b/10b K28.5, D21.5, K28.5 and D10.2, repeated. For multiple lane devices, a two-symbol delay is introduced on every eighth lane, and then scrolled around in one lane steps at the end of the sequence.
+
+Since this is a test mode, we will not detail this any further here, but it must be available in an implementation.
