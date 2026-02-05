@@ -1,3 +1,37 @@
+In PCIe, an Ordered Set (OS) is a special, short control packet used for link management, like synchronization, training, and flow control, rather than sending user data; they ensure the physical link stays aligned, manage speed changes (like entering/exiting low power states), and signal link status, with common types including TS1/TS2 (Training Sequences), EIEOS (Electrical Idle Exit), and SKP (Skip) Ordered Sets, acting as the "punctuation" of the physical layer. 
+
+Purpose of Ordered Sets
+
+Link Training & Initialization: They help devices discover each other, establish a connection, and calibrate link parameters (deskewing, timing).
+
+Flow Control & Synchronization: SKP Ordered Sets, for instance, are used to adjust for clock frequency differences and maintain data alignment (elastic buffering).
+
+Power Management: They signal transitions into and out of low-power states, like L0s (Electrical Idle).
+
+Control Signals: They carry essential physical layer (PHY) control information, helping manage the link's state machine. 
+
+Key Types of Ordered Sets
+
+TS1/TS2 (Training Sequence 1/2): Used extensively during link training for alignment and initial communication.
+
+EIEOS (Electrical Idle Exit Ordered Set): Signals the end of an electrical idle state, allowing the link to wake up.
+
+EIOS (Electrical Idle Ordered Set): Used to indicate entry into electrical idle.
+
+SKP (Skip): Inserted periodically to compensate for clock drift, allowing receivers to adjust their elastic buffers.
+
+Control Skip: A special type for finer control, especially in newer PCIe versions like PCIe 6.0. 
+
+How They Work
+
+Framing: A special control bit (e.g., 10b in some encodings) marks a block of symbols as an Ordered Set versus regular data.
+
+Symbol Structure: Each OS has a specific structure (e.g., 16 symbols for TS1/TS2) where the first symbol identifies the type (e.g., TS1, TS2).
+
+Periodic Insertion: SKP OSes are scheduled at set intervals (e.g., every 1538 symbol times) if no other packet is ready to send, ensuring continuous link maintenance. 
+
+In essence, while data packets (TLPs) carry the actual information, Ordered Sets are the crucial background communication that keeps the PCIe link healthy and functioning at high speeds.
+
 So now we know how to send bytes out over the lanes, some of which are scrambled, all of which are encoded, and some of the encoded symbols are control symbols. Using these encodings, the protocol can encode blocks of data either within a lane, or frame packets across the available lanes. Within the lanes are ‘ordered sets’ which are used during initialisation and link training. (We will deal with the link training in a separate section as it is a large subject.) The diagram below shows the ordered sets for PCIe versions up to 2.1:
 
 ![[Pasted image 20260127210925.png]]

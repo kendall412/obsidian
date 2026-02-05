@@ -3,7 +3,7 @@ Unlike its predecessor, PCI, PCIe is not a bus. It is a point-to-point protocol,
 
 ![[Pasted image 20260127205846.png]]
 
-Unlike some other point-to-point architectures, there is a definite directional hierarchy with PCIe. The main CPU (or processor sub-system) sits at the top and is connected to a ‘root complex’ (RC) using whatever appropriate user interface. This root complex is the top level PCIe interconnect component and would typically be connected to main memory through which the CPU system would access it. The root complex will have a number of PCIe interfaces included, but to a limited degree. To expand the number of supported peripherals ‘switches’ may be attached to a root complex PCIe interface to expand the number of connections. Indeed, a switch may have one or more of its interfaces connected to other switches to allow even more expansion. Eventually an ‘endpoint’ (EP) is connected to an interface, which would be on a peripheral device, such as a graphics card or ethernet network card etc.
+Unlike some other point-to-point architectures, there is a definite directional hierarchy with PCIe. The main CPU (or processor sub-system) sits at the top and is connected to a [[root complex]] using whatever appropriate user interface. This root complex is the top level PCIe interconnect component and would typically be connected to main memory through which the CPU system would access it. The root complex will have a number of PCIe interfaces included, but to a limited degree. To expand the number of supported peripherals ‘switches’ may be attached to a root complex PCIe interface to expand the number of connections. Indeed, a switch may have one or more of its interfaces connected to other switches to allow even more expansion. Eventually an ‘endpoint’ (EP) is connected to an interface, which would be on a peripheral device, such as a graphics card or ethernet network card etc.
 
 At each link, then, there is a definite ‘downstream’ link (from an upstream component e.g., RC to a switch or EP) and an ‘upstream’ link (from a downstream component e.g., EP to switch/RC). For each link the specification defines three layers built on top of each other
 
@@ -17,7 +17,7 @@ The physical layer is concerned with the electrical connections, the serializati
 [[Scrambling]]
 [[Serial Encoding]]
 [[Ordered Sets]]
-[[Link Initialization and Training]]
+[[Link Training and Status State Machine (LTSSM)]]
 [[Compliance Pattern]]
 [[SERDES Interface and PIPE]]
 
