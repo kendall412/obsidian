@@ -1,4 +1,4 @@
-In PCIe, TS1 (Training Sequence 1) and TS2 (Training Sequence 2) are special 16-symbol Ordered Sets used during link training to establish communication, detect physical link characteristics, and configure electrical equalization for high-speed data transfer. TS1 is for initial discovery, sending capabilities like link/lane numbers and data rates, while TS2 confirms those settings and finalizes the link's electrical parameters (like pre-shoot/de-emphasis) for optimal performance. 
+In PCIe, TS1 (Training Sequence 1) and TS2 (Training Sequence 2) are special 16-symbol [[Ordered Sets]] used during link training to establish communication, detect physical link characteristics, and configure electrical equalization for high-speed data transfer. TS1 is for initial discovery, sending capabilities like link/lane numbers and data rates, while TS2 confirms those settings and finalizes the link's electrical parameters (like pre-shoot/de-emphasis) for optimal performance. 
 
 ![[TS_during_LTSSM.png]]
 

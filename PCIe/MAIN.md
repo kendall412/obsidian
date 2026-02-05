@@ -13,17 +13,17 @@ At each link, then, there is a definite ‘downstream’ link (from an upstream 
 
 The physical layer is concerned with the electrical connections, the serialization, encoding of bytes, the link initialization and training and moving between power states. The data link layer sits on top of the physical layer and is involved in data flow control, ACK and NAK replies for transactions and power management. The transaction layer sits on top of the data link layer and is involved with sending data packet reads and writes for memory or I/O and returning read completions. The transaction layer also has a configuration space—a set of control and status registers separate to the main address map—and the transaction layer protocol has read and write packets to access this space.
 
-[[Physical Layer]]
-[[Scrambling]]
-[[Serial Encoding]]
-[[Ordered Sets]]
-[[Link Training and Status State Machine (LTSSM)]]
-[[Compliance]]
-[[SERDES Interface and PIPE]]
+- [[Physical Layer]]
+- [[Scrambling]]
+- [[Serial Encoding]]
+- [[Ordered Sets]]
+- [[Link Training and Status State Machine (LTSSM)]]
+- [[Compliance]]
+- [[SERDES Interface and PIPE]]
 
 CONCLUSION
-In this article we have looked at how PCIe is organized, with Root Complex, Switches and Endpoints, in a definite flow from upstream to downstream. We have seen that a PCIe link can be from 1 to 32 differential serial ‘lanes’. Bytes are scrambled (if data) and then encoded into DC free symbols (8b/10b or 128b/130b). Ordered Sets are defined for waking up a link from idle, link bit and symbol lock and lane-to-lane deskew. Training sequence Ordered sets are used to bring up a link from electrically idle to configured and initialized, configuring parameters as it does so or, optionally, forcing to non-standard states. Additional states are used for powered down modes of varying degrees, and a recovery state to update to higher link speed if supported. We also looked at the complementary PIPE specification for virtualizing away SERDES and PHY details to a standard interface.
+In this article we have looked at how PCIe is organized, with Root Complex, Switches and Endpoints, in a definite flow from upstream to downstream. We have seen that a PCIe link can be from 1 to 32 differential serial ‘lanes’. Bytes are scrambled (if data) and then encoded into DC free symbols ([[8b-10b encoding]] or 128b/130b). Ordered Sets are defined for waking up a link from idle, link bit and symbol lock and lane-to-lane [[Deskew]]. Training sequence Ordered sets are used to bring up a link from electrically idle to configured and initialized, configuring parameters as it does so or, optionally, forcing to non-standard states. Additional states are used for powered down modes of varying degrees, and a recovery state to update to higher link speed if supported. We also looked at the complementary PIPE specification for virtualizing away SERDES and PHY details to a standard interface.
 
-We dwelt on the LTSSM at some length as this is the more complex aspect of the physical layer protocol, and the only remaining aspects of this layer are how the physical layer carries the higher data link layer and transaction layer packets.
+We dwelt on the [[Link Training and Status State Machine (LTSSM)]] at some length as this is the more complex aspect of the physical layer protocol, and the only remaining aspects of this layer are how the physical layer carries the higher data link layer and transaction layer packets.
 
 **[https://www.linkedin.com/pulse/pci-express-primer-1-overview-physical-layer-simon-southwell/](https://www.linkedin.com/pulse/pci-express-primer-1-overview-physical-layer-simon-southwell/)**

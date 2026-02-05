@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lane reversal.md",
+                "file": "PCIe/Link Training and Status State Machine (LTSSM).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lane reversal"
+              "title": "Link Training and Status State Machine (LTSSM)"
             }
           }
         ]
@@ -185,8 +185,17 @@
   },
   "active": "fddd59cbc4cb4f9a",
   "lastOpenFiles": [
+    "PCIe/Training Sequences (TS).md",
+    "PCIe/Ordered Sets.md",
     "PCIe/Link Training and Status State Machine (LTSSM).md",
-    "lane reversal.md",
+    "PCIe/MAIN.md",
+    "PCIe/Compliance.md",
+    "PCIe/Root Complex.md",
+    "PCIe/Deskew.md",
+    "8b-10b encoding.md",
+    "8b/10b.md",
+    "8b",
+    "PCIe/lane reversal.md",
     "PCIe/Disable.md",
     "PCIe/Link Training.md",
     "PCIe/Symbol Lock.md",
@@ -195,8 +204,6 @@
     "PCIe/Recovery.md",
     "PCIe/L1.md",
     "PCIe/L2.md",
-    "PCIe/MAIN.md",
-    "PCIe/Training Sequences (TS).md",
     "PCIe/pictures/Pasted image 20260204180311.png",
     "PCIe/pictures/pcie_architecture.png",
     "PCIe/pictures/pcie_architecture_2.png",
@@ -207,12 +214,8 @@
     "PCIe/pictures/Pasted image 20260127211200.png",
     "PCIe/pictures/TS_during_LTSSM.png",
     "PCIe/pictures/Pasted image 20260127210602.png",
-    "PCIe/Compliance.md",
-    "PCIe/Root Complex.md",
     "PCIe/Symbols.md",
     "PCIe/Bit Lock.md",
-    "PCIe/Deskew.md",
-    "PCIe/Ordered Sets.md",
     "PCIe/Hot Reset.md",
     "PCIe/Loopback.md",
     "MD_Tutorial/general.md",
