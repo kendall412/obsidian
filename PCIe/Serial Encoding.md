@@ -9,7 +9,7 @@ Having encoded the bytes for each lane, the SERDES (serializer-deserializer) wil
 
 Within the 8b/10b encoding are control symbols, as mentioned before, called K symbols, and for PCIe these are encoded to have the following meanings.
 
-![[Pasted image 20260127210857.png]]
+![[8b_10b_k_symbols.png]]
 
 For 128b/130b encoding of the two control bits determine whether the following 16 bytes are an ordered set (10b) or data (01b), rather than a K symbol. When an ordered set, the first symbol determines the type of ordered set. Thus, the 10b control bits act like a COM symbol, and the next symbol gives the value, whereas 01b control bits have symbol 0 encode the various other token types. More details are given in the next section.
 

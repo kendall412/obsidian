@@ -1,10 +1,10 @@
-The state of the link is defined by a Link Training and Status State Machine (LTSSM). From an initial state, the state machine goes through various major states (Detect, Polling, Configuration) to train and configure the link before being fully in a link-up state (L0). The initialization states also have sub-state which we will discuss shortly.
+The state of the link is defined by a [[Link Training]] and Status State Machine (LTSSM). From an initial state, the state machine goes through various major states (Detect, Polling, Configuration) to train and configure the link before being fully in a link-up state (L0). The initialization states also have sub-state which we will discuss shortly.
 
-In addition, there are various powered-down states of varying degrees from L0s to L1 and L2, with L2 being all but powered off. The link can also be put into a loopback mode for test and debug, or a ‘hot reset’ state to send the link back to its initial state. The disabled state is for configured links where communications are suspended. Many of these ancillary states can be entered from the recovery state, but the main purpose of this state is to allow a configured link to change data rates, establishing lock and deskew for the new rate. Note that many of these states can be entered if directed from a higher layer, or if the link receives a particular TS ordered set where the control symbol has a particular bit set. For example, if a receiver receives two consecutive TS1 ordered sets with the Disable Link Bit asserted in the control symbol (see diagram above), the state will be forced to the Disabled state.
+In addition, there are various powered-down states of varying degrees from L0s to L1 and L2, with L2 being all but powered off. The link can also be put into a loopback mode for test and debug, or a ‘hot reset’ state to send the link back to its initial state. The disabled state is for configured links where communications are suspended. Many of these ancillary states can be entered from the recovery state, but the main purpose of this state is to allow a configured link to change data rates, establishing lock and deskew for the new rate. Note that many of these states can be entered if directed from a higher layer, or if the link receives a particular [[Training Sequences (TS)]] ordered set where the control symbol has a particular bit set. For example, if a receiver receives two consecutive TS1 ordered sets with the Disable Link Bit asserted in the control symbol (see diagram above), the state will be forced to the Disabled state.
 
 The diagram below shows these main states and the paths between them:
 
-![[Pasted image 20260127211028.png]]
+![[ltssm.png]]
 
 From power-up, then, the main flow is from the _Detect_ state which checks what’s connected electrically and that it’s electrically idle. After this it enters the polling state where both ends start transmitting TS ordered sets and waits to receive a certain number of ordered sets from the other link. Polarity inversion is done in this state. After this, the _Configuration_ state does a multitude of things with both ends sending ordered sets moving through assigning a link number (or numbers if splitting) and the lane numbers, with lane reversal if supported. In the configuration state the received TS ordered sets may direct the next state to be _Disabled_ or _Loopback_ and, in addition, scrambling may be disabled. Deskewing will be completed by the end of this state and the link will now be ’up’ and the state enters _L_0, the normal link-up state (assuming not directed to Loopback or Disabled).
 
@@ -12,14 +12,14 @@ LTSSM consists of 11 top-level states:
 1. Detect
 2. Polling
 3. Configuration
-4. L0
-5. Recovery
+4. [[L0]]
+5. [[Recovery]]
 6. L0s
-7. L1
-8. L2
+7. [[L1]]
+8. [[L2]]
 9. [[Hot Reset]]
 10. [[Loopback]]
-11. Disable
+11. [[Disable]]
 
 The 11 top-level states can be categorized into 5 categories:
 1. Link Training states (PERST => Detect => Polling => Configuration => L0)
@@ -30,7 +30,7 @@ The 11 top-level states can be categorized into 5 categories:
 
 As mentioned before, the initialization states have sub-states, and the diagram below lists these states, what’s transmitted on those states and the condition to move to the next state.
 
-![[Pasted image 20260127211046.png]]
+![[link_training_steps.png]]
 
 # PRE-DETECT
 Control signals:
@@ -44,7 +44,7 @@ REFCLK (100MHz) is a prerequisite.
 the initial state after reset (PERST). In this state, after all the devices are powered and REFCLK is provided a Receiver circuit in each lane will determine if there is a link partner to pair with. Each lane will begin transmitting serial data at 2.5 Gb/s (Gen 1 speed). Detect may also be entered from a number of other LTSSM states. 
 
 Detect Receiver Present
-1. After reset or power-up (PERST), Transmitters drive a stable voltage on the D+ and D- terminal
+1. After reset or power-up ([[PERST]]), Transmitters drive a stable voltage on the D+ and D- terminal
 2. Transmitters then change the common mode voltage in a positive direction by no more than the V<sub>TX-RCV-DETECT</sub> amount of 600mV specified for all three data rates.
 3. Detect logic measures the charge time:
 	- Receiver is absent if the charge time is short
@@ -55,21 +55,30 @@ In the _Detect.Quiet_ state the link waits for Electrical Idle to be broken. Ele
 # POLLING
 Polling - Then the Root Complex, Repeater, and the Endpoint will begin transmitting Ordered Sets of data called Training Sequences (TS) at PCIe Gen 1 speed in order to establish:
 - Achieve [[Bit Lock]] - BIt Lock refers to the crucial process during link training where the receiver synchronizes its internal clock with the transmitter's clock and locks onto the incoming data stream's timing to correctly sample and interpret individual bits, ensuring reliable high-speed data transfer between devices
-- Acquire Symbol Lock or Block Lock - Symbol Lock is a crucial step during link training where the receiver successfully aligns its clock and data grouping ([[Symbols]]) with the transmitter, understanding the specific patterns (like TS1/TS2 Ordered Sets) to correctly decode data, following Bit Lock (clock frequency sync), and allowing the link to move to configuration and normal operation (L0 state).
+- Acquire [[Symbol Lock]] or Block Lock - Symbol Lock is a crucial step during link training where the receiver successfully aligns its clock and data grouping ([[Symbols]]) with the transmitter, understanding the specific patterns (like TS1/TS2 Ordered Sets) to correctly decode data, following Bit Lock (clock frequency sync), and allowing the link to move to configuration and normal operation (L0 state).
 - Correct lane polarity inversion, if needed
 - Learn available lane date rates
 
 
-If directed, Initiate the Compliance test sequence: the way this works is that if a receiver was detected in the Detect state but no incoming signal is seen, it’s understood to mean that the device has been connected to a test load. In that case, it should send the specified Compliance test pattern to facilitate testing. This allows test equipment to quickly verify that voltage, BER, timing, and other parameters are within tolerance.
+If directed, Initiate the [[Compliance]] test sequence: the way this works is that if a receiver was detected in the Detect state but no incoming signal is seen, it’s understood to mean that the device has been connected to a test load. In that case, it should send the specified Compliance test pattern to facilitate testing. This allows test equipment to quickly verify that voltage, BER, timing, and other parameters are within tolerance.
 
 Moving into _Polling.Active_ both ends start transmitting TS1 [[Ordered Sets]] with the lane and link numbers set to the PAD symbol. The wait to have sent at least 1024 TSs and received 8 (or their inverse), before moving to _Polling.Config_. Here they start transmitting TS2 ordered sets with link and lane set to PAD, having inverted the RX lanes as necessary. The state then waits for transmitting at least 16 TS2s (after receiving one) and receives at least 8.
 
 # CONFIGURE
+Configuration - Upstream and Downstream components now play specific roles as they continue to exchange TS1s and TS2s at 2.5 GT/s to accomplish the following:
+Determine link width
+Assign lane numbers
+Optionally check for [[lane reversal]] correct it
+[[Deskew]] lane to lane timing differences
+
+From this state, scrambling can be disabled, the Disable and Loopback states can be entered, and the number of FTS Ordered sets required to transition from the L0s state to the L0 state is recorded from the TS1s and TS2s.
+
+
 Now we move to _Config.LinkWidth.Start_. It is this, and the next state, that the viable link width or split is configured using different link numbers for each viable group of lanes. Here the upstream link (e.g., the endpoint) starts transmitting TS1s again with link and lane set to PAD. The downstream link (e.g., from root complex) start transmitting TS1s with a chosen link number and the lane number set to PAD. The upstream link responds to the receiving a minimum of two TS1s with a link number by sending back the TS1 with that link value and moves to _Config.LinkWidth.Accept_. The downstream will move to the same state when it has received to TS1s with a non-PAD link number. At this point the downstream link will transmit TS1s with assigned lane numbers whilst the upstream will initially continue to transmit TS1s with the lanes at PAD but will respond by matching the lane numbers on its TS1 transmissions (or possibly lane reversed) and then move to _Config.Lanenum.Wait_. The downstream link will move to this state on receiving TS1s with non-PAD lanes. This state is to allow for up to 1ms of time to settle errors or [[Deskew]] that could give false link width configuration. The downstream will start transmitting TS2s when it has seen two consecutive TS1s, and the upstream lanes will respond when it has received two consecutive TS2s. At this point the state is _Config.Complete_ and will move to _Config.Idle_ after receiving eight consecutive TS2s whilst sending them. The lanes start sending IDL symbols and will move to state _L_0 (LinkUp=1) after receiving eight IDL symbols and have sent at least sixteen after seeing the first IDL.
 
 The diagram below summarizes these described steps for a normal non-split link initialization.
 
-![[Pasted image 20260127211142.png]]
+![[TS_during_LTSSM.png]]
 
 o summarise these steps each link sends training sequences of a certain type and with certain values for link and lane values. When a certain number of TSs are seen, and on which lanes, the state is advanced, and configurations are set. There is a slight asymmetry in that a downstream link will switch type first to lead the upstream link into the next state. By the end of the process the link is configured for width, link number and lane assignment, with link reversal, lane inversion, and disabled scrambling where indicated. There are many variations of possible flow, such as being directed to Disabled or Loopback, or timeouts forcing the link back to Detect from Configuration states etc., which we want to describe in detail here.
 

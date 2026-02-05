@@ -1,4 +1,4 @@
-![[Pasted image 20260129203956.png]]
+![[pcie_architecture_2.png]]
 
 The root complex in PCI Express (PCIe) is the intermediary between the system’s central processing unit (CPU), memory, and the PCIe switch fabric that includes one or more PCIe or PCI devices. It uses the link training and status state machine (LTSSM) to manage connected PCIe devices. The LTSSM detects, polls, configures, recovers, resets, and disables the devices as required during operation.
 
