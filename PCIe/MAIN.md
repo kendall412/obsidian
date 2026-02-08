@@ -26,4 +26,5 @@ In this article we have looked at how PCIe is organized, with Root Complex, Swit
 
 We dwelt on the [[Link Training and Status State Machine (LTSSM)]] at some length as this is the more complex aspect of the physical layer protocol, and the only remaining aspects of this layer are how the physical layer carries the higher data link layer and transaction layer packets.
 
-**[https://www.linkedin.com/pulse/pci-express-primer-1-overview-physical-layer-simon-southwell/](https://www.linkedin.com/pulse/pci-express-primer-1-overview-physical-layer-simon-southwell/)**
+[pcie primer part 1](https://www.linkedin.com/pulse/pci-express-primer-1-overview-physical-layer-simon-southwell/)
+
