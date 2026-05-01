@@ -4,23 +4,41 @@
 
 NVMe commands are structured within a 64-byte Submission Queue Entry (SQE), which is composed of 16 Double Words (DWORDs). Each DWORD is 4 bytes in size. The structure is generally consistent across different command types (Admin commands and I/O commands), with some fields having common definitions and others being command-specific.
 
-  
-
 Here's a general overview of the DWORD structure in an NVMe command:
-
-  
-
 Command DWORD 0 (CDW0): This DWORD is crucial as it contains the Opcode, which identifies the type of command being issued (e.g., Identify, Read, Write), and the Command Identifier (CID), used to uniquely identify the command.
 
-  
+
+```bash
+DWORD  0 : OPC | FUSE | CID
+DWORD  1 : NSID
+
+DWORD  2 : Reserved
+DWORD  3 : Reserved
+
+DWORD  4 : MPTR (Metadata Pointer) - lower 32 bits
+DWORD  5 : MPTR (Metadata Pointer) - upper 32 bits
+
+DWORD  6 : PRP1 (Data Pointer) - lower 32 bits
+DWORD  7 : PRP1 (Data Pointer) - upper 32 bits
+
+DWORD  8 : PRP2 (Data Pointer) - lower 32 bits
+DWORD  9 : PRP2 (Data Pointer) - upper 32 bits
+
+DWORD 10 : CDW10 (Command-specific)
+DWORD 11 : CDW11 (Command-specific)
+DWORD 12 : CDW12 (Command-specific)
+DWORD 13 : CDW13 (Command-specific)
+DWORD 14 : CDW14 (Command-specific)
+DWORD 15 : CDW15 (Command-specific)
+```
+
+
 
 Namespace Identifier (NSID): This 4-byte field specifies the namespace to which the command applies. If not applicable, it should be set to 0. A value of 0xFFFFFFFF can indicate that the command applies to all namespaces if supported by the controller.
 
-  
 
 Metadata Pointer (CDW4 and CDW5): These DWORDs, if used, point to the location of any associated metadata for the command.
 
-  
 
 Physical Region Pointers (PRPs) or Scatter-Gather List (SGL) Entry:
 
@@ -32,27 +50,15 @@ SGL Entry 1: If the command uses SGLs for data transfer, this field is used inst
 
 Command-Specific DWORDs (CDW2, CDW3, CDW10-15): These DWORDs are reserved for command-specific parameters and vary depending on the particular NVMe command being executed. For example, a Store command in the Key Value Command Set might use CDW2, CDW3, CDW14, and CDW15 to specify parts of the KV key. 
 
-  
-
 Or, in the context of the NVMe Format NVM command (opcode 80h), Command DWORD 10 (CDW10) is used to specify formatting options. This DWORD might contain fields like the Protection Information (PI) settings, the size of metadata, or whether the command applies to a single namespace or all namespaces.
-
-  
 
 Another example is the Create I/O Submission Queue command, where Command DWORD 10 contains the queue identifier in the low word and the queue size in the high word. Command DWORD 11 holds flags in the low word and the interrupt vector in the high word. 
 
-  
-
 The NVMe Identify command uses specific CNS (Controller or Namespace Structure) codes within Command DWORD 10 to indicate the type of information requested, such as controller capabilities, namespace identification, or active namespace list.
-
-  
 
 In general, when constructing an NVMe command, the NVMe specification for that particular command details the purpose and bit-level layout of the relevant Command DWORDs (CDW0 to CDW15) within the Submission Queue Entry. These DWORDs are crucial for providing the necessary parameters and options for the controller to execute the command correctly.
 
-  
-
 Reserved Fields: Several DWORDs within the 16-DWORD SQE are reserved and should be initialized to 0 unless explicitly used by a specific command.
-
-  
 
 Completion Queue Entry (CQE): After a command is executed, a Completion Queue Entry is posted to the appropriate Completion Queue, providing status information about the command's execution. The CQE also contains DWORDs, including status values and command-specific information.
 
@@ -62,15 +68,9 @@ Key Aspects of Command Dwords
 
 Structure: Each command submitted to the NVMe controller is a 64-byte structure in the Submission Queue. This structure is divided into various fields, many of which are designated as Dwords (4-byte chunks).
 
-  
-
 Common Fields: Several Dwords have common definitions across all commands, as defined in the NVM Express Base Specification:
 
-  
-
 Command Dword 0 (CDW0): This is a critical field that contains the Opcode (specifies the command, e.g., Read, Write, Identify, Abort) and the Command Identifier.
-
-  
 
 Namespace Identifier (NSID): Dword 1 typically holds the Namespace ID.
 
@@ -88,12 +88,8 @@ For a Read or Write command, Dwords 10 through 14 are used for specifying the St
 
 For an Identify command, the low byte of Dword 10 indicates the type of information to be returned (e.g., namespace, controller, etc.). 
 
-  
-
 In essence, Command Dwords are the instruction set parameters that allow the host software to tell the NVMe controller exactly what operation to perform, where the data is located, and where to put the results.
 
-  
-  
 
 CDW 1:
 

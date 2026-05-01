@@ -1,3 +1,12 @@
+### 🎛️ Controller (the interface)
+
+- What the **host talks to**
+- Handles commands, queues, registers
+- Multiple controllers = multiple “entry points” to same device
+
+👉 Think: _“network ports into the same server”_
+
+
 Controller Registers
 
 ![[Pasted image 20260129210623.png]]
