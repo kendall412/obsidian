@@ -1,7 +1,7 @@
 SSD performance is defined by <span style="color: yellow">speed (throughput/IOPS), latency, and consistency (QoS)</span>, measured through sequential/random read/write speeds (MB/s, IOPS) and low latency, with factors like controller, NAND type, cache, capacity, and workload (burst vs. sustained) heavily influencing these metrics for real-world application responsiveness, boot times, and multitasking. 
 
 
-**SSD performance testing** is the process of **measuring how an SSD behaves under controlled I/O workloads** to quantify metrics like throughput, latency, and scalability. In NVMe environments, this typically involves driving the device with synthetic or trace-based workloads and analyzing results at different queue depths, block sizes, and access patterns.
+**SSD performance testing** is the process of **measuring how an SSD behaves under controlled I/O workloads** to quantify metrics like throughput, [[latency]], and scalability. In NVMe environments, this typically involves driving the device with synthetic or trace-based workloads and analyzing results at different queue depths, block sizes, and access patterns.
 
 ### 1) Throughput (Bandwidth)
 

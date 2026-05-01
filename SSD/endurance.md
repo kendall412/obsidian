@@ -12,8 +12,8 @@ It’s governed by NAND physics (program/erase cycle limits) and managed by the 
 
 ## 📏 How endurance is specified
 
-- **TBW (Terabytes Written)** — total bytes that can be written
-- **DWPD (Drive Writes Per Day)** — writes per day over warranty
+- **Terabytes Written (TBW)** — total bytes that can be written
+- **[[Drive Writes Per Day (DWPD)]]** — writes per day over warranty
 - **JEDEC client/enterprise workloads** (e.g., JESD218/219) — standardized profiles
 
 Example:

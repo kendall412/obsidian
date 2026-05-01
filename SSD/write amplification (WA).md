@@ -1,20 +1,19 @@
 
-<p>write amplification=<sup>nand write</sup>&frasl;<sub>host write</sub></p>
+<p>write amplification factor=<sup>nand write</sup>&frasl;<sub>host write</sub></p>
+
+- **Host writes** → what the OS/application sends
+- **NAND writes** → what the SSD actually programs internally
 
 **Write Amplification (WA)** in an SSD/NVMe device is:
 
 > **The ratio of total data written to NAND flash versus the data written by the host.**
 
----
-
-## 📐 Definition
-
-<p>write amplification=<sup>nand write</sup>&frasl;<sub>host write</sub></p>
-
-- **Host writes** → what the OS/application sends
-- **NAND writes** → what the SSD actually programs internally
-
-
+|Aspect|Write Amplification|Write Amplification Factor (WAF)|
+|---|---|---|
+|Type|Concept / phenomenon|Numerical metric|
+|Purpose|Explain behavior|Measure severity|
+|Units|None|Ratio (≥1)|
+|Usage|Design discussion|Performance/endurance analysis|
 ## 🧠 Why Write Amplification Happens
 
 It’s a direct consequence of NAND constraints:
@@ -43,7 +42,9 @@ Host writes = 4 KB
 Internally SSD may:
 
 ```
-Read old blockCopy valid pages (e.g., 28 KB)Write new + copied data (32 KB)
+Read old block
+Copy valid pages (e.g., 28 KB)
+Write new + copied data (32 KB)
 ```
 
 So:
