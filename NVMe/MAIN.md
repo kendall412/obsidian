@@ -1,19 +1,18 @@
 > The NVMe Base Protocol (Non-Volatile Memory Express) is a high-performance storage protocol designed specifically for SSDs connected over PCIe. Here’s a clear, structured summary:
 
 ### What is NVMe ?
-> NVMe is a host controller interface + storage protocol optimized for non-volatile memory (like NAND flash).
-It replaces older protocols like AHCI, which were designed for slower HDDs.
+> NVMe is a host controller interface + storage protocol optimized for non-volatile memory (like NAND flash). It replaces older protocols like AHCI, which were designed for slower HDDs.
 
 ### Key Design Goals
-Low latency (minimal overhead)
-High parallelism
-Scalability across many CPU cores
-Efficient use of modern hardware (PCIe, SSDs)
+- Low latency (minimal overhead)
+- High parallelism
+- Scalability across many CPU cores
+- Efficient use of modern hardware (PCIe, SSDs)
 
 ### Core Concepts
 
 1. **Queue-Based Architecture**
-	Uses <span style="color:yellow">submission queues (SQs)</span> and <span style="color:yellow">completion queues (CQs)</span>.
+Uses [[Submission Queue]]s (SQs) and <span style="color:yellow">completion queues (CQs)</span>.
 	Each queue can hold thousands of commands.
 	64K queues
 	64K commands per queue
