@@ -17,13 +17,13 @@ Uses [[Submission Queue]]s (SQs) and <span style="color:yellow">completion queue
 	64K queues
 	64K commands per queue
 	
-	This allows massive parallel I/O compared to AHCI (which has only 1 queue with 32 commands).
+This allows massive parallel I/O compared to AHCI (which has only 1 queue with 32 commands).
 
 2. **Command Set** - In NVMe, a command set defines the operations a host can send to a storage device—basically, what you can ask the device to do and how those requests are structured. <span style="color:yellow">A command set is a collection of commands tailored for a specific type of storage or use case</span>. NVMe uses a streamlined command set (fewer, faster commands). Think of it as a language: The host (CPU/OS) speaks commands, and The NVMe controller executes them
 	
 	Two main categories of Command Set:
 	
-	- [[Admin Command Set]] - Mandatory (see als0 [[Admin Command Set OPCODE (OPC)]])
+	- [[Admin Command Set]] - Mandatory (see also [[Admin Command Set OPCODE (OPC)]])
 	- [[IO Command Set]] - Mandatory
 	- [[NVMe/Zoned Namespaces (ZNS)]]
 	- [[Key-Value (KV) Command Set]]
@@ -34,7 +34,7 @@ Uses [[Submission Queue]]s (SQs) and <span style="color:yellow">completion queue
 	Host and controller communicate via:
 	- Memory-mapped registers
 	- Data structures in system memory
-	- Uses DMA (Direct Memory Access) to reduce CPU overhead.
+	- Uses [[Direct Memory Access (DMA)]] to reduce CPU overhead.
 
 4. Parallelism
 	Designed to align with:

@@ -1,5 +1,5 @@
 
-A **scatter–gather list (SGL)** in NVMe is a **data buffer description mechanism** that allows a command to reference **multiple, potentially non-contiguous memory regions** using a list of descriptors instead of a single contiguous buffer. In NVMe, an SGL descriptor is **embedded directly into the SQE at DW6–DW9**, with PSDT selecting SGL mode, allowing the controller to interpret those DWORDs as a **16-byte descriptor instead of PRP pointers**.
+> A **scatter–gather list (SGL)** in NVMe is a **[[data buffer]] description mechanism** that allows a command to reference **multiple, potentially non-contiguous memory regions** using a list of descriptors instead of a single contiguous buffer. In NVMe, an SGL descriptor is **embedded directly into the SQE at DW6–DW9**, with PSDT selecting SGL mode, allowing the controller to interpret those DWORDs as a **16-byte descriptor instead of PRP pointers**.
 
 ### Why SGL exists (context)
 
@@ -347,8 +347,6 @@ Flow:
 - Not all commands support SGL (depends on spec revision and controller)
 
 
-
-
 ---
 # Mental model
 
@@ -360,15 +358,148 @@ Each SGL entry says:
 
 # Key takeaway
 
-> An NVMe SGL descriptor is a **16-byte structure (DW0–DW3)** consisting of a **64-bit address, 32-bit length, and a 32-bit control field encoding descriptor type and subtype**, enabling flexible, chained descriptions of host memory for DMA.
-
-
-
-
-
+> An NVMe SGL descriptor is a **16-byte structure (DW0–DW3)** consisting of a **64-bit address, 32-bit length, and a 32-bit control field encoding descriptor type and subtype**, enabling flexible, chained descriptions of host memory for DMA
 
 If you want, I can go deeper into:
 
 - Exact **SGL descriptor bit layout (DW0–DW3)**
 - How SGL is encoded in **NVMe submission queue entries**
 - Or compare **PRP list vs SGL chain traversal at the controller level**
+
+---
+# Submission Queue EXAMPLE of using SGL descriptor
+
+# 🔹 Scenario
+
+- Command: **NVM Write**
+- Data buffer is **non-contiguous**, so SGL is used
+- Two segments:
+    - Segment A → 4 KB @ `0x00000010_00000000`
+    - Segment B → 8 KB @ `0x00000020_00000000`
+
+We’ll use:
+
+- **Data Block descriptor** for simple case
+- Single descriptor inline (pointing to a segment list)
+
+# 🔹 SQE Layout (Relevant Part)
+
+```
+DW6–DW9 → SGL Descriptor (16 bytes)
+```
+
+# 🔹 Example SQE (DWORD Dump)
+
+```
+DW0  : 0x00010001   (OPC=0x01 Write, CID=1)
+DW1  : 0x00000001   (NSID = 1)
+
+DW2–DW5 : 0x00000000
+
+DW6  : 0x00000000   (SGL Address low)
+DW7  : 0x00000030   (SGL Address high → 0x00000030_00000000)
+
+DW8  : 0x00000020   (Length = 32 bytes → size of SGL list)
+
+DW9  : 0x00000002   (Type = Segment Descriptor)
+
+DW10–DW15 : command-specific (LBA, length, etc.)
+```
+
+# 🔹 Decode of SGL Descriptor (DW6–DW9)
+
+## ✔ Address (DW6–DW7)
+
+```
+0x00000030_00000000
+```
+
+👉 Points to **SGL segment list in memory**
+
+## ✔ Length (DW8)
+
+```
+0x20 (32 bytes)
+```
+
+👉 Size of SGL list (2 descriptors × 16 bytes each)
+
+## ✔ Type (DW9)
+
+```
+0x02 → Segment Descriptor
+```
+
+👉 Means:
+
+- “Go to this address and read a list of descriptors”
+
+# 🔹 SGL Segment List in Host Memory
+
+At address `0x00000030_00000000`:
+
+## Descriptor 1 (16 bytes)
+
+```
+Address : 0x00000010_00000000
+Length  : 0x00001000 (4 KB)
+Type    : Data Block
+```
+
+## Descriptor 2 (16 bytes)
+
+```
+Address : 0x00000020_00000000
+Length  : 0x00002000 (8 KB)
+Type    : Data Block
+```
+
+# 🔹 Visual Flow
+
+```
+SQE
+ ↓
+DW6–9 → SGL Segment Descriptor
+ ↓
+Points to SGL List
+ ↓
+[Data Block A] → 4 KB
+[Data Block B] → 8 KB
+```
+
+# 🔹 Key Variants
+
+## ✔ Inline Data Block Descriptor (no segment list)
+
+If only one segment:
+
+```
+DW6–7 → data address
+DW8   → length
+DW9   → Data Block Descriptor type
+```
+
+👉 No extra memory indirection
+
+## ✔ Last Segment Descriptor
+
+- Marks final segment list
+- Prevents further chaining
+
+# 🔹 Important Notes
+
+- SGL descriptor = **always 16 bytes**
+- DW9 encodes:
+    - Descriptor Type
+    - Subtype
+- Address alignment rules depend on type
+
+# 🔹 Key Insight
+
+> The SQE doesn’t hold all buffer addresses—it holds a **pointer to a structured description of memory segments**.
+
+---
+
+# 🔹 One-Line Summary
+
+**In an NVMe SQE, an SGL descriptor (DW6–DW9) either directly describes a data buffer or points to a list of descriptors in memory that collectively define a scattered I/O buffer.**

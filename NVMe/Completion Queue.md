@@ -31,7 +31,7 @@ Key fields:
 
 - **CID**: matches the original command
 - **SQHD**: tells host how far the SQ has been consumed
-- **Status**: success/error + **Phase Tag (P)**
+- **Status**: success/error + **[[Phase Tag (P)]]**
 ---
 ### How CQ works (step-by-step)
 

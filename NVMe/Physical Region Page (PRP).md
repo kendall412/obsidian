@@ -1,8 +1,7 @@
 
-A **Physical Region Page (PRP)** in NVMe is the **primary mechanism used by the host to tell the controller where data buffers reside in system memory for DMA transfers**.
+> A **Physical Region Page (PRP)** in NVMe is the **primary mechanism used by the host to tell the controller where data buffers reside in system memory for DMA transfers**.
 
 ---
-
 ### Core idea
 
 NVMe commands (read/write) need to move data between:
@@ -19,8 +18,8 @@ PRPs provide the **physical memory addresses** that the controller should read f
 
 PRPs are embedded in the **[[Submission Queue]] Entry (SQE)** of an NVMe command:
 
-- **PRP1** → first data buffer (always present)
-- **PRP2** → either:
+- **[[PRP1]]** → first data buffer (always present)
+- **[[PRP2]]** → either:
     - second buffer, OR
     - pointer to a **PRP List**
 
