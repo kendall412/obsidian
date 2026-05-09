@@ -1,6 +1,6 @@
 ### What is a **doorbell** in NVMe?
 
-A **doorbell** is a **memory-mapped I/O (MMIO) register** that the host writes to in order to **notify the NVMe controller that a queue pointer has been updated**.
+> A **doorbell** is a **memory-mapped I/O (MMIO) register** that the host writes to in order to **notify the NVMe controller that a queue pointer has been updated**.
 
 Think of it as a lightweight hardware signal:
 - **Submission Queue Tail Doorbell (SQT)**  

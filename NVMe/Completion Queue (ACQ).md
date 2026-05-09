@@ -1,5 +1,5 @@
 
-Here is the **bit-accurate layout of an NVMe Completion Queue Entry (CQE)**—this applies to the **Admin Completion Queue (ACQ)** as well (the structure is identical for Admin and I/O CQs; only the _meaning_ of DW0 varies by command).
+> Here is the **bit-accurate layout of an NVMe Completion Queue Entry (CQE)**—this applies to the **Admin Completion Queue (ACQ)** as well (the structure is identical for Admin and I/O CQs; only the _meaning_ of DW0 varies by command).
 
 # NVMe CQE (16 bytes = 4 DWORDs)
 ```
@@ -33,7 +33,7 @@ Bits 31:16 → SQID (Submission Queue Identifier)
 
 ### Meaning
 
-- **SQHD**:
+- **[[Submission Queue Head Pointer (SQHD)]]**:
     - Indicates how far the controller has consumed the SQ
     - Helps host reclaim SQ entries
 - **SQID**:

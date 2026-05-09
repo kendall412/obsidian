@@ -1,5 +1,5 @@
 
-In NVMe, the **Error Information Log Page (LID = 0x01)** is the primary mechanism to retrieve **records of failed or problematic commands**.
+> In NVMe, the **Error Information Log Page (LID = 0x01)** is the primary mechanism to retrieve **records of failed or problematic commands**.
 
 ---
 

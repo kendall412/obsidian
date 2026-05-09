@@ -1,10 +1,9 @@
 
-An SSD's block size refers to its smallest physical erase unit, often 128-256 pages (4KB-16KB each), forming a larger "erase block" (e.g., 512KB), while reporting a smaller logical sector size (typically 512 bytes or 4KB) to the operating system, leading to potential performance issues if the filesystem block size isn't aligned with the physical block size, with 4KB alignment often recommended for modern drives. 
+> An SSD's block size refers to its **smallest physical erase unit**, often 128-256 pages (4KB-16KB each), forming a larger "erase block" (e.g., 512KB), while reporting a smaller logical sector size (typically 512 bytes or 4KB) to the operating system, leading to potential performance issues if the filesystem block size isn't aligned with the physical block size, with 4KB alignment often recommended for modern drives. 
 
 blocksize (bs) = (page size)(pages per block)
 
 > **Block size** in an SSD/NVMe context refers to the **granularity of data addressed or transferred at different layers**. The key point is that _“block size” is not a single fixed value_—it depends on which layer you’re talking about.
-
 
 ## 🧠 Three meanings of “block size”
 

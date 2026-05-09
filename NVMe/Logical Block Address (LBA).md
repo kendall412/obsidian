@@ -1,9 +1,5 @@
 
-**LBA** in SSD/NVMe stands for:
-
-> **Logical Block Addressing**
-
-It’s the scheme the host uses to **address storage as a linear array of fixed-size blocks**, instead of dealing with the physical layout of NAND.
+> **LBA** in SSD/NVMe stands for **Logical Block Address**. It’s the scheme the host uses to **address storage as a linear array of fixed-size blocks**, instead of dealing with the physical layout of NAND.
 
 ## 🧠 Core idea
 
@@ -27,7 +23,7 @@ Each LBA maps to a fixed-size chunk of data (e.g., 512B or 4KB).
 
 ### Logical block = data unit
 
-- Size defined by **LBA Format (LBAF)** in the Identify Namespace structure
+- Size defined by **[[Logical Block Address Format (LBAF)]]** in the Identify Namespace structure
 - Common sizes:
     - **512 bytes**
     - **4096 bytes (4K)**
@@ -46,13 +42,12 @@ So:
 
 ![https://images.openai.com/static-rsc-4/7QOelkH8o9JM2WzLYmmYb-xEajfZnaVVmKYeSweNoc_mU1aIWE5P4NAjRP2tN9TF_jUSqj7jvETrIjEFTP8JT0d2w7VngFLRoJofg15G-yyVOU1EpQtT4zeN68vBeR4iONtsQeZW6OXgDRfQUvekoC2Msw6GRAGyj4GdGAorFKOfTJiZWa79bQ264EtNfFc7?purpose=fullsize](https://images.openai.com/static-rsc-4/8uy67GTNfkMjGTNxU7cm_9R3IhVEravhkX4w3G5BGODzKDPjjCv1gYKIad1gg15EGpZdzWLL5AO4u449T9VI6WuZNcAHy70fubD_a78URlAaO8J4ll-Ku2V8pyh3Ph3nVnVyPYT9loALDtGYoDiwXsQSNDiBDmZYzdeo15dkFLw?purpose=inline)
 
-
 ### Important:
 
 > **LBA is NOT physical location**
 
-
-Inside the SSD:
+---
+#### Inside the SSD:
 
 ```
 Host writes LBA 100
@@ -128,12 +123,10 @@ NLB  = 7  → writes 8 blocks (0-based)
     - Blocks
     - Wear
 
-
 ### 2) Enables wear leveling
 
 - Same LBA can move physically
 - Prevents uneven wear
-
 
 ### 3) Supports advanced features
 
@@ -147,7 +140,6 @@ NLB  = 7  → writes 8 blocks (0-based)
 
 - Misaligned I/O → performance loss
 - Always align to **4K boundaries**
-
 
 ### 🔹 LBA ≠ sector (historically)
 
@@ -163,7 +155,7 @@ NLB  = 7  → writes 8 blocks (0-based)
 ```
 
 - Helps reduce write amplification
-
+---
 ## 🧩 Key Insight
 
 > **LBA is the logical addressing interface between host and SSD—while the controller dynamically maps those addresses to physical NAND locations.**

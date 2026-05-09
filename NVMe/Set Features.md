@@ -1,6 +1,5 @@
 
-
-> The **NVMe Set Features command** is an **Admin command** used by the host to **configure controller or namespace behavior** at runtime.
+> The **NVMe Set Features command** is an **[[Admin Command Set]]** used by the host to **configure controller or namespace behavior** at runtime.
 
 ---
 # 🔹 1) Purpose

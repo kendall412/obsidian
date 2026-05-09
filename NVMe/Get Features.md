@@ -1,8 +1,7 @@
 
-The **NVMe Get Features command** is the counterpart to _[[Set Features]]_: it lets the host **query the current value and capabilities of a specific feature** from the controller or a namespace.
+> The **NVMe Get Features command** is the counterpart to _[[Set Features]]_: it lets the host **query the current value and capabilities of a specific feature** from the controller or a namespace.
 
 ---
-
 # 🔹 1) Purpose
 
 - Read configuration/state of NVMe features (power, queues, cache, APST, etc.)
