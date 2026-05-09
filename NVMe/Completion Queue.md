@@ -94,7 +94,7 @@ Each CQE includes a **Phase Tag**:
 ---
 ### Types of Completion Queues
 
-#### 1. [[Completion Queue (ACQ)]]
+#### 1. [[Completion Queue (CQ)]]
 
 - Queue ID = 0
 - Used for admin commands

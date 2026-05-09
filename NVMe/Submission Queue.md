@@ -1,10 +1,5 @@
 
-A **Submission Queue (SQ)** in NVMe is a **host-resident circular queue used to submit commands to the NVMe controller**.
-
----
-### Core definition
-
-> A **Submission Queue** is a **ring buffer in system memory** where the host places NVMe commands (SQEs), which the controller fetches and executes.
+> A **Submission Queue (SQ)** in NVMe is a **host-resident circular queue used to submit commands to the NVMe controller**.  It is a **ring buffer in system memory** where the host places NVMe commands (SQEs), which the controller fetches and executes.
 
 ### Architectural context
 
@@ -110,7 +105,6 @@ This enables:
 
 ---
 ### [[Submission Queue Entry (SQE)]] overview
----
 
 ### Why SQ design matters
 

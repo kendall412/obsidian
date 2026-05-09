@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Submission Queue Head Pointer (SQHD).md",
+                "file": "NVMe/Submission Queue.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Submission Queue Head Pointer (SQHD)"
+              "title": "Submission Queue"
             }
           },
           {
@@ -382,9 +382,10 @@
   },
   "active": "c516fed653773b3c",
   "lastOpenFiles": [
-    "NVMe/doorbell.md",
+    "NVMe/MAIN.md",
+    "NVMe/Completion Queue (CQ).md",
     "Submission Queue Head Pointer (SQHD).md",
-    "NVMe/Completion Queue (ACQ).md",
+    "NVMe/doorbell.md",
     "NVMe/Key-Value (KV) Command Set.md",
     "NVMe/Logical Block Address (LBA).md",
     "NVMe/LID = 0x01.md",
@@ -395,7 +396,6 @@
     "NVMe/Get Features.md",
     "NVMe/TRIM.md",
     "NVMe/Admin Command Set.md",
-    "NVMe/MAIN.md",
     "Direct Memory Access (DMA).md",
     "Input–Output Memory Management Unit (IOMMU).md",
     "NVMe/payload data.md",

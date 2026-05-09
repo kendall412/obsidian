@@ -12,7 +12,7 @@
 ### Core Concepts
 
 1. **Queue-Based Architecture**
-Uses [[Submission Queue]]s (SQs) and <span style="color:yellow">completion queues (CQs)</span>.
+Uses [[Submission Queue]]s (SQs) and [[Completion Queue (CQ)]]
 	Each queue can hold thousands of commands.
 	64K queues
 	64K commands per queue
