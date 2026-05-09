@@ -8,6 +8,6 @@ High-performance, parallel execution
 Common I/O Commands:
 Read → Fetch data from SSD
 Write → Store data
-Flush → Ensure data is persisted
+[[Flush]] → Ensure data is persisted
 Write Zeroes → Efficiently zero blocks
 Dataset Management (Trim/Deallocate) → Inform SSD of unused blocks
