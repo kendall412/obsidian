@@ -307,12 +307,52 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/process of host submitting a request to read to nvme drive.md",
+                "file": "NVMe/Phase Tag (P).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "process of host submitting a request to read to nvme drive"
+              "title": "Phase Tag (P)"
+            }
+          },
+          {
+            "id": "cfc04c56cc53c48c",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "NVMe/pictures/host to nvme.png"
+              },
+              "icon": "lucide-image",
+              "title": "host to nvme"
+            }
+          },
+          {
+            "id": "84a72b1d22d0842b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVMe/power/Sudden Power-Off Reset (SPOR).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sudden Power-Off Reset (SPOR)"
+            }
+          },
+          {
+            "id": "4567069ea304c0a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVMe/power/Normal Power-Off Reset (NPOR).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Normal Power-Off Reset (NPOR)"
             }
           },
           {
@@ -372,7 +412,7 @@
             }
           }
         ],
-        "currentTab": 21
+        "currentTab": 24
       }
     ],
     "direction": "vertical"
@@ -429,7 +469,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 279.5
   },
   "right": {
     "id": "3ff4f1a9ed564f50",
@@ -534,11 +574,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "ac389a692824da69",
+  "active": "4567069ea304c0a7",
   "lastOpenFiles": [
-    "host to nvme.png",
+    "NVMe/power/Sudden Power-Off Reset (SPOR).md",
+    "NVMe/power/Normal Power-Off Reset (NPOR).md",
+    "NVMe/power",
+    "Pasted image 20260519205618.png",
+    "NVMe/pictures/host to nvme.png",
+    "NVMe/doorbell.md",
+    "NVMe/interrupt.md",
+    "NVMe/Phase Tag (P).md",
+    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
+    "Register Transfer Level (RTL).md",
     "NVMe/LOGS/LID = 0x02 S.M.A.R.T Log.md",
-    "NVMe/scenarios/process of host submitting a request to read to nvme drive.md",
     "NVMe/Critical Warning.md",
     "SSD/Flush.md",
     "NVMe/LOGS/LID = 0x04.md",
@@ -560,19 +608,13 @@
     "NVMe/status code-type",
     "NVMe/status code-type/status codes (sc).md",
     "NVMe/Set Features.md",
-    "NVMe/atomicity.md",
     "NVMe/scenarios",
-    "NVMe/Submission Queue Head Pointer (SQHD).md",
-    "registers.md",
-    "flip-flop.md",
-    "Register Transfer Level (RTL).md",
     "Untitled.canvas",
     "Untitled.base",
     "NVMe/Commands",
     "Communication Protocols/pix",
     "Communication Protocols",
     "SSD",
-    "8b",
     "PCIe/pictures/Pasted image 20260204180311.png",
     "PCIe/pictures/pcie_architecture.png",
     "PCIe/pictures/pcie_architecture_2.png",
@@ -580,8 +622,6 @@
     "PCIe/pictures/Pasted image 20260127211333.png",
     "PCIe/pictures/Pasted image 20260127211314.png",
     "PCIe/pictures/Pasted image 20260127211256.png",
-    "PCIe/pictures/Pasted image 20260127211200.png",
-    "PCIe/pictures/TS_during_LTSSM.png",
-    "PCIe/pictures/Pasted image 20260127210602.png"
+    "PCIe/pictures/Pasted image 20260127211200.png"
   ]
 }
