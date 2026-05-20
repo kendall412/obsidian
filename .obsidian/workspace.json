@@ -153,7 +153,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Flush.md",
+                "file": "SSD/Flush.md",
                 "mode": "source",
                 "source": false
               },
@@ -265,12 +265,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Critical Warning.md",
+                "file": "NVMe/LOGS/logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Critical Warning"
+              "title": "logs"
+            }
+          },
+          {
+            "id": "ed5da23aac0b72c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVMe/LOGS/logs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "logs"
+            }
+          },
+          {
+            "id": "415b53e77b3207f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVMe/LOGS/LID = 0x02 S.M.A.R.T Log.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LID = 0x02 S.M.A.R.T Log"
+            }
+          },
+          {
+            "id": "d7ac7a35a4ce745c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "process of host submitting a request to read to nvme drive.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "process of host submitting a request to read to nvme drive"
             }
           },
           {
@@ -330,7 +372,7 @@
             }
           }
         ],
-        "currentTab": 18
+        "currentTab": 21
       }
     ],
     "direction": "vertical"
@@ -492,12 +534,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "38671468f08df55a",
+  "active": "d7ac7a35a4ce745c",
   "lastOpenFiles": [
-    "S.M.A.R.T Log.md",
-    "Critical Warning.md",
+    "host to nvme.png",
+    "NVMe/LOGS/LID = 0x02 S.M.A.R.T Log.md",
+    "process of host submitting a request to read to nvme drive.md",
+    "NVMe/Critical Warning.md",
+    "SSD/Flush.md",
+    "NVMe/LOGS/LID = 0x04.md",
+    "NVMe/LOGS/logs.md",
+    "NVMe/LOGS/LID = 0x01.md",
+    "NVMe/LOGS/LID = 0x03.md",
+    "NVMe/LOGS",
     "NVMe/scenarios/Causes for write fails in nvme drives.md",
-    "NVMe/logs.md",
     "NVMe/status code-type/status code type (sct).md",
     "NVMe/status code-type/SCT = 0x3 — Path Related Status.md",
     "register.md",
@@ -517,12 +566,6 @@
     "registers.md",
     "flip-flop.md",
     "Register Transfer Level (RTL).md",
-    "Flush.md",
-    "NVMe/IO Command Set.md",
-    "NVMe/Submission Queue.md",
-    "NVMe/MAIN.md",
-    "NVMe/Completion Queue (CQ).md",
-    "NVMe/doorbell.md",
     "Untitled.canvas",
     "Untitled.base",
     "NVMe/Commands",
@@ -539,7 +582,6 @@
     "PCIe/pictures/Pasted image 20260127211256.png",
     "PCIe/pictures/Pasted image 20260127211200.png",
     "PCIe/pictures/TS_during_LTSSM.png",
-    "PCIe/pictures/Pasted image 20260127210602.png",
-    "MD_Tutorial"
+    "PCIe/pictures/Pasted image 20260127210602.png"
   ]
 }
