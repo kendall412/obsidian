@@ -375,12 +375,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
+                "file": "PCIe/Disable.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Message Signaled Interrupts eXtended (MSI-X)"
+              "title": "Disable"
+            }
+          },
+          {
+            "id": "25f8e577f1890ca5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/Ordered Sets.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ordered Sets"
             }
           },
           {
@@ -440,7 +454,7 @@
             }
           }
         ],
-        "currentTab": 26
+        "currentTab": 27
       }
     ],
     "direction": "vertical"
@@ -497,7 +511,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 319.5
   },
   "right": {
     "id": "3ff4f1a9ed564f50",
@@ -602,11 +616,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "4dae5b3820754f1a",
+  "active": "25f8e577f1890ca5",
   "lastOpenFiles": [
+    "Training Sequence 2 (TS2).md",
+    "PCIe/Ordered Sets.md",
+    "Training Sequence 1 (TS1).md",
+    "PCIe/scenario/PCIe link training process.md",
+    "PCIe/Disable.md",
+    "PCIe/Deskew.md",
+    "PCIe/Compliance.md",
+    "NVMe/Phase Tag (P).md",
+    "PCIe/scenario",
+    "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
+    "Memory-Mapped IO (MMIO).md",
     "run_git.sh",
     "NVMe/interrupt.md",
-    "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
     "PCIe/Base Address Register (BAR).md",
     "NVMe/doorbell.md",
     "Bible/Main Outline.md",
@@ -618,7 +642,6 @@
     "NVMe/power",
     "Pasted image 20260519205618.png",
     "NVMe/pictures/host to nvme.png",
-    "NVMe/Phase Tag (P).md",
     "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "HW/Register Transfer Level (RTL).md",
     "NVMe/LOGS/LID = 0x02 S.M.A.R.T Log.md",
@@ -629,20 +652,11 @@
     "NVMe/LOGS/LID = 0x01.md",
     "NVMe/LOGS/LID = 0x03.md",
     "NVMe/LOGS",
-    "NVMe/scenarios/Causes for write fails in nvme drives.md",
-    "NVMe/status code-type/status code type (sct).md",
-    "NVMe/status code-type/SCT = 0x3 — Path Related Status.md",
-    "HW/register.md",
-    "NVMe/status code-type/SCT = 0x7 — Vendor Specific.md",
-    "NVMe/status code-type/SCT = 0x0 — Generic Command Status.md",
-    "NVMe/status code-type/SCT = 0x2 — Media and Data Integrity Errors.md",
     "NVMe/namespace",
     "NVMe/status code-type",
     "NVMe/scenarios",
     "Untitled.canvas",
     "Untitled.base",
-    "NVMe/Commands",
-    "Communication Protocols/pix",
     "PCIe/pictures/Pasted image 20260204180311.png",
     "PCIe/pictures/pcie_architecture.png",
     "PCIe/pictures/pcie_architecture_2.png",

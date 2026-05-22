@@ -1,7 +1,5 @@
 
-In NVMe, the **Phase Tag (P bit)** is a **1-bit field in each Completion Queue Entry (CQE)** used by the host to determine whether an entry is **new (just written by the controller)** or **old/stale (already processed or not yet updated)**.
-
----
+> In NVMe, the **Phase Tag (P bit)** is a **1-bit field in each Completion Queue Entry (CQE)** used by the host to determine whether an entry is **new (just written by the controller)** or **old/stale (already processed or not yet updated)**.
 
 # 🔹 Where the Phase Tag Is
 
@@ -19,7 +17,6 @@ DW3:
 
 - **P = bit 0 of DW3**
 - 1 bit only
-
 
 # 🔹 Why Phase Tag Exists
 
