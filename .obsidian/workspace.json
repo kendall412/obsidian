@@ -370,6 +370,20 @@
             }
           },
           {
+            "id": "4dae5b3820754f1a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Message Signaled Interrupts eXtended (MSI-X)"
+            }
+          },
+          {
             "id": "b4c67033e150ea68",
             "type": "leaf",
             "state": {
@@ -426,7 +440,7 @@
             }
           }
         ],
-        "currentTab": 25
+        "currentTab": 26
       }
     ],
     "direction": "vertical"
@@ -483,7 +497,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5
+    "width": 236.5
   },
   "right": {
     "id": "3ff4f1a9ed564f50",
@@ -588,10 +602,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "ac389a692824da69",
+  "active": "4dae5b3820754f1a",
   "lastOpenFiles": [
-    "HW/Cyclic Redundancy Check (CRC).md",
+    "run_git.sh",
+    "NVMe/interrupt.md",
+    "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
+    "PCIe/Base Address Register (BAR).md",
+    "NVMe/doorbell.md",
     "Bible/Main Outline.md",
+    "HW/Cyclic Redundancy Check (CRC).md",
     "Bible",
     "NVMe/power/Normal Power-Off Reset (NPOR).md",
     "HW",
@@ -599,8 +618,6 @@
     "NVMe/power",
     "Pasted image 20260519205618.png",
     "NVMe/pictures/host to nvme.png",
-    "NVMe/doorbell.md",
-    "NVMe/interrupt.md",
     "NVMe/Phase Tag (P).md",
     "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "HW/Register Transfer Level (RTL).md",
@@ -619,9 +636,6 @@
     "NVMe/status code-type/SCT = 0x7 — Vendor Specific.md",
     "NVMe/status code-type/SCT = 0x0 — Generic Command Status.md",
     "NVMe/status code-type/SCT = 0x2 — Media and Data Integrity Errors.md",
-    "NVMe/status code-type/SCT = 0x1 — Command Specific Status.md",
-    "NVMe/namespace/Namespace.md",
-    "NVMe/namespace/Namespace Globally Unique Identifier (NGUID).md",
     "NVMe/namespace",
     "NVMe/status code-type",
     "NVMe/scenarios",

@@ -1,4 +1,4 @@
-> In NVMe, an interrupt is a signal sent from the drive's controller to the CPU, indicating that a task is complete and a response is ready in a completion queue. This allows the CPU to efficiently handle I/O operations by pausing its current task, processing the completed request, and then resuming its work instead of constantly checking for updates. NVMe drives extensively use MSI-X interrupts for better performance and scalability, allowing them to direct specific interrupts to particular CPU cores. 
+> In NVMe, an interrupt is a signal sent from the drive's controller to the CPU, indicating that a task is complete and a response is ready in a completion queue. This allows the CPU to efficiently handle I/O operations by pausing its current task, processing the completed request, and then resuming its work instead of constantly checking for updates. NVMe drives extensively use [[Message Signaled Interrupts eXtended (MSI-X)]] for better performance and scalability, allowing them to direct specific interrupts to particular CPU cores. 
 
 
 - The CPU sends an I/O command to the NVMe drive through a "submission queue".
@@ -8,10 +8,7 @@
 The CPU's interrupt handler receives the signal, stops what it's doing, and reads the completion entry from the queue to see which request is finished.
 
 The driver then processes the completion and the CPU can return to its previous task, or the driver can immediately prepare a new command for the CPU. 
-
-
-
-Key concepts
+# Key concepts
 
 MSI-X (Message Signaled Interrupts eXtended): This is the preferred method for modern storage. Unlike older, shared interrupts, MSI-X assigns a dedicated interrupt vector to each interrupt source (like a specific completion queue). This allows the system to send the interrupt directly to the CPU core that is handling the I/O, significantly reducing overhead and improving performance in multi-core systems.
 

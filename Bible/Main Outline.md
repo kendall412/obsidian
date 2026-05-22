@@ -24,7 +24,6 @@ Divided Kingdom
 - Israel
 - Judah
 Exile
-
 - Daniel
 - Nehemiah
 Return
