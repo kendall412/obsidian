@@ -1,481 +1,41 @@
 {
   "main": {
-    "id": "30b73ab0b7f0a3f1",
+    "id": "51c4547914ab8f68",
     "type": "split",
     "children": [
       {
-        "id": "98d9942bdf40c706",
+        "id": "ad75682fa54ac7b4",
         "type": "tabs",
         "children": [
           {
-            "id": "69c8799d29ac6661",
+            "id": "ec3895f88ebb3e50",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/Link Training and Status State Machine (LTSSM).md",
+                "file": "8bit-10bit encoding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "Link Training and Status State Machine (LTSSM)"
+              "title": "8bit-10bit encoding"
             }
           }
         ]
-=======
-              "title": "Admin Command Set"
-            }
-          },
-          {
-            "id": "7d84febd0a1568bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD/IOPS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "IOPS"
-            }
-          },
-          {
-            "id": "45e8bc0f2978d6b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/MAIN.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MAIN"
-            }
-          },
-          {
-            "id": "6c18dc18b9282995",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Completion Queue.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Completion Queue"
-            }
-          },
-          {
-            "id": "36a48fbf6b40f9b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Logical Block Address (LBA).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Logical Block Address (LBA)"
-            }
-          },
-          {
-            "id": "0d699449dc38a93e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD/throughput vs bandwidth.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "throughput vs bandwidth"
-            }
-          },
-          {
-            "id": "dd87df7e784bfb3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Autonomous Power State Transitions (APST).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Autonomous Power State Transitions (APST)"
-            }
-          },
-          {
-            "id": "2b8511283432fa10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Set Features.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Set Features"
-            }
-          },
-          {
-            "id": "568486a9dee5d4bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Set Features.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Set Features"
-            }
-          },
-          {
-            "id": "c91fea9ee8e0860c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Logical Block Address (LBA).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Logical Block Address (LBA)"
-            }
-          },
-          {
-            "id": "c516fed653773b3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD/Flush.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Flush"
-            }
-          },
-          {
-            "id": "374b9e374c3976f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/atomicity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "atomicity"
-            }
-          },
-          {
-            "id": "b68dec00b3ca9597",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/status code-type/status code type (sct).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "status code type (sct)"
-            }
-          },
-          {
-            "id": "e9bd0a288828b3a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/status code-type/SCT = 0x0 — Generic Command Status.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SCT = 0x0 — Generic Command Status"
-            }
-          },
-          {
-            "id": "3394a06999fb33f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/status code-type/SCT = 0x1 — Command Specific Status.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SCT = 0x1 — Command Specific Status"
-            }
-          },
-          {
-            "id": "35747c23a6578419",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/status code-type/SCT = 0x0 — Generic Command Status.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SCT = 0x0 — Generic Command Status"
-            }
-          },
-          {
-            "id": "db14a30f15b8cdd4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/status code-type/SCT = 0x3 — Path Related Status.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SCT = 0x3 — Path Related Status"
-            }
-          },
-          {
-            "id": "11a7d51d42bfa862",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/scenarios/Causes for write fails in nvme drives.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Causes for write fails in nvme drives"
-            }
-          },
-          {
-            "id": "38671468f08df55a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/LOGS/logs.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "logs"
-            }
-          },
-          {
-            "id": "ed5da23aac0b72c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/LOGS/logs.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "logs"
-            }
-          },
-          {
-            "id": "415b53e77b3207f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/LOGS/LID = 0x02 S.M.A.R.T Log.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LID = 0x02 S.M.A.R.T Log"
-            }
-          },
-          {
-            "id": "d7ac7a35a4ce745c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Phase Tag (P).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Phase Tag (P)"
-            }
-          },
-          {
-            "id": "cfc04c56cc53c48c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "NVMe/pictures/host to nvme.png"
-              },
-              "icon": "lucide-image",
-              "title": "host to nvme"
-            }
-          },
-          {
-            "id": "84a72b1d22d0842b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/power/Sudden Power-Off Reset (SPOR).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sudden Power-Off Reset (SPOR)"
-            }
-          },
-          {
-            "id": "4567069ea304c0a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HW/Cyclic Redundancy Check (CRC).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cyclic Redundancy Check (CRC)"
-            }
-          },
-          {
-            "id": "1723e3645478bb94",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bible/Main Outline.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Main Outline"
-            }
-          },
-          {
-            "id": "4dae5b3820754f1a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/Disable.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Disable"
-            }
-          },
-          {
-            "id": "25f8e577f1890ca5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/Ordered Sets.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ordered Sets"
-            }
-          },
-          {
-            "id": "b4c67033e150ea68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Get Features.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Get Features"
-            }
-          },
-          {
-            "id": "e4043221283da948",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/NVMe CLI.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NVMe CLI"
-            }
-          },
-          {
-            "id": "8bc4461594504c7d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Logical Block Address (LBA).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Logical Block Address (LBA)"
-            }
-          },
-          {
-            "id": "166445eae9d04f04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Namespace.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Namespace"
-            }
-          }
-        ],
-        "currentTab": 27
->>>>>>> refs/remotes/origin/main
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "aa5b3ac959bcb8af",
+    "id": "0baf914fd9679f27",
     "type": "split",
     "children": [
       {
-        "id": "ee8fee6880cb710f",
+        "id": "ddfde3a81f376059",
         "type": "tabs",
         "children": [
           {
-            "id": "ac389a692824da69",
+            "id": "d3cca91a4e87df18",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -488,12 +48,12 @@
             }
           },
           {
-            "id": "87942d0513f9b071",
+            "id": "4bfeafd06c1817e4",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "SPDM",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -505,7 +65,7 @@
             }
           },
           {
-            "id": "8d5181af885f7c50",
+            "id": "edbc11006a540001",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -518,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 300
   },
   "right": {
-    "id": "3ff4f1a9ed564f50",
+    "id": "0f835676d6415f60",
     "type": "split",
     "children": [
       {
-        "id": "f984b83acfa9a8d8",
+        "id": "9c38db209a463271",
         "type": "tabs",
         "children": [
           {
-            "id": "d9442b2adbe7227c",
+            "id": "35cbd96b1c55613a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NVMe/MAIN.md",
+                "file": "8bit-10bit encoding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -544,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for MAIN"
+              "title": "Backlinks for 8bit-10bit encoding"
             }
           },
           {
-            "id": "bd093d05aba64bab",
+            "id": "f842a62bf43eb204",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NVMe/MAIN.md",
+                "file": "8bit-10bit encoding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from MAIN"
+              "title": "Outgoing links from 8bit-10bit encoding"
             }
           },
           {
-            "id": "15c7ce948631bbc6",
+            "id": "8830cf007d9621b2",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -577,7 +137,7 @@
             }
           },
           {
-            "id": "239632111dc899e4",
+            "id": "c45032a80b356b9a",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -591,18 +151,18 @@
             }
           },
           {
-            "id": "512285a219375df5",
+            "id": "31c19c85ff0c0733",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "NVMe/MAIN.md",
+                "file": "8bit-10bit encoding.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MAIN"
+              "title": "Outline of 8bit-10bit encoding"
             }
           }
         ]
@@ -623,85 +183,8 @@
       "bases:Create new base": false
     }
   },
-<<<<<<< HEAD
-  "active": "69c8799d29ac6661",
+  "active": "ec3895f88ebb3e50",
   "lastOpenFiles": [
-    "PCIe/MAIN.md",
-    "PCIe/Root Complex.md",
-    "PCIe/Link Training and Status State Machine (LTSSM).md",
-    "PCIe/Link Training.md",
-    "PCIe/PERST.md",
-    "NVMe/Logical Block Address (LBA).md",
-    "NVMe/NVMe CLI.md",
-    "NVMe/Get Features.md",
-    "NVMe/scenarios/Causes for write fails in nvme drives.md",
-    "NVMe/status code-type/SCT = 0x3 — Path Related Status.md",
-    "NVMe/status code-type/SCT = 0x0 — Generic Command Status.md",
-    "NVMe/status code-type/SCT = 0x1 — Command Specific Status.md",
-    "NVMe/status code-type/status code type (sct).md",
-    "NVMe/atomicity.md",
-    "Flush.md",
-    "NVMe/Set Features.md",
-    "NVMe/Autonomous Power State Transitions (APST).md",
-    "SSD/throughput vs bandwidth.md",
-    "Critical Warning.md",
-    "S.M.A.R.T Log.md",
-    "NVMe/logs.md",
-    "register.md",
-    "NVMe/status code-type/SCT = 0x7 — Vendor Specific.md",
-    "NVMe/status code-type/SCT = 0x2 — Media and Data Integrity Errors.md",
-    "NVMe/namespace/Namespace.md",
-    "NVMe/namespace/Namespace Globally Unique Identifier (NGUID).md",
-=======
-  "active": "25f8e577f1890ca5",
-  "lastOpenFiles": [
-    "Training Sequence 2 (TS2).md",
-    "PCIe/Ordered Sets.md",
-    "Training Sequence 1 (TS1).md",
-    "PCIe/scenario/PCIe link training process.md",
-    "PCIe/Disable.md",
-    "PCIe/Deskew.md",
-    "PCIe/Compliance.md",
-    "NVMe/Phase Tag (P).md",
-    "PCIe/scenario",
-    "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
-    "Memory-Mapped IO (MMIO).md",
-    "run_git.sh",
-    "NVMe/interrupt.md",
-    "PCIe/Base Address Register (BAR).md",
-    "NVMe/doorbell.md",
-    "Bible/Main Outline.md",
-    "HW/Cyclic Redundancy Check (CRC).md",
-    "Bible",
-    "NVMe/power/Normal Power-Off Reset (NPOR).md",
-    "HW",
-    "NVMe/power/Sudden Power-Off Reset (SPOR).md",
-    "NVMe/power",
-    "Pasted image 20260519205618.png",
-    "NVMe/pictures/host to nvme.png",
-    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
-    "HW/Register Transfer Level (RTL).md",
-    "NVMe/LOGS/LID = 0x02 S.M.A.R.T Log.md",
-    "NVMe/Critical Warning.md",
-    "SSD/Flush.md",
-    "NVMe/LOGS/LID = 0x04.md",
-    "NVMe/LOGS/logs.md",
-    "NVMe/LOGS/LID = 0x01.md",
-    "NVMe/LOGS/LID = 0x03.md",
-    "NVMe/LOGS",
->>>>>>> refs/remotes/origin/main
-    "NVMe/namespace",
-    "NVMe/status code-type",
-    "NVMe/scenarios",
-    "Untitled.canvas",
-    "Untitled.base",
-    "PCIe/pictures/Pasted image 20260204180311.png",
-    "PCIe/pictures/pcie_architecture.png",
-    "PCIe/pictures/pcie_architecture_2.png",
-    "PCIe/pictures/Pasted image 20260129203631.png",
-    "PCIe/pictures/Pasted image 20260127211333.png",
-    "PCIe/pictures/Pasted image 20260127211314.png",
-    "PCIe/pictures/Pasted image 20260127211256.png",
-    "PCIe/pictures/Pasted image 20260127211200.png"
+    "8bit-10bit encoding.md"
   ]
 }
