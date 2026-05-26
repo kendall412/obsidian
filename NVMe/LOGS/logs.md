@@ -39,7 +39,7 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 👉 Most frequently polled by OS and monitoring agents.
 
 ---
-### 2) Error Information Log (LID = 0x01)
+### 2) Error Information Log ([[LID = 0x01]])
 
 ![https://images.openai.com/static-rsc-4/KJ_v-dj7oyU2wO7HQIYc63GbsCP1uEKErqbnegucXXrmelJ5uN2xvdnOHecfF7ce0wYgjpasAdEMThWA6B8mNj-g6kxzrDKamDtJvY2RBkpN9Xi8MXFge44N7K06Am1ks2mdtTCccwGSNSNvaiUyffX-Rmcp02Q_Gq4lmT5d2ca1847ZjvC6R40D2ith9omN?purpose=fullsize|414](https://images.openai.com/static-rsc-4/aex-RnEVyVlywwa_0SojvI6Di-x28V0-4rwcd4mENOqmfEM3faELuytPHF2T4Uwyg2QjnbbJljgVbOEx03Voj1rhJmOUZgaFFgjfX4esLSZwS2SIzWCLhmJjRIESDZPtV9N-LhVYjduM4Bylgz3rOMJKX465q1U6dieyNPsDvQY?purpose=inline)
 
@@ -61,7 +61,7 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 👉 Critical for debugging I/O failures.
 
 ---
-### 3) Firmware Slot Information (LID = 0x03)
+### 3) Firmware Slot Information ([[LID = 0x03]])
 
 - Active firmware slot
 - Next activation slot

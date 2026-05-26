@@ -10,9 +10,9 @@ Think of it as a lightweight hardware signal:
 
 No commands are carried in the doorbell write itself—only the **queue index**. The actual command data is already in host memory (the SQ).
 
-### Where doorbells live: PCIe BAR mapping
+### Where doorbells live: PCIe [[Base Address Register (BAR)]] mapping
 
-NVMe exposes its controller registers via a PCIe **Base Address Register (BAR)**, typically **BAR0**. Within that MMIO space:
+NVMe exposes its controller registers via a PCIe **[[Base Address Register (BAR)]]**, typically **BAR0**. Within that MMIO space:
 ```
 BAR0 base
   ├─ 0x0000 … 0x0FFF : Controller registers (CAP, VS, CC, CSTS, AQA, ASQ, ACQ, …)

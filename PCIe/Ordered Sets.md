@@ -1,28 +1,28 @@
-In PCIe, an Ordered Set (OS) is a special, short control packet used for link management, like synchronization, training, and flow control, rather than sending user data; they ensure the physical link stays aligned, manage speed changes (like entering/exiting low power states), and signal link status, with common types including TS1/TS2 (Training Sequences), EIEOS (Electrical Idle Exit), and SKP (Skip) Ordered Sets, acting as the "punctuation" of the physical layer. 
+> In PCIe, an Ordered Set (OS) is a special, short control packet used for link management, like synchronization, training, and flow control, rather than sending user data; they ensure the physical link stays aligned, manage speed changes (like entering/exiting low power states), and signal link status, with common types including TS1/TS2 (Training Sequences), EIEOS (Electrical Idle Exit), and SKP (Skip) Ordered Sets, acting as the "punctuation" of the physical layer. 
 
 Purpose of Ordered Sets
 
-Link Training & Initialization: They help devices discover each other, establish a connection, and calibrate link parameters (deskewing, timing).
+- Link Training & Initialization: They help devices discover each other, establish a connection, and calibrate link parameters (deskewing, timing).
 
-Flow Control & Synchronization: SKP Ordered Sets, for instance, are used to adjust for clock frequency differences and maintain data alignment (elastic buffering).
+- Flow Control & Synchronization: SKP Ordered Sets, for instance, are used to adjust for clock frequency differences and maintain data alignment (elastic buffering).
 
-Power Management: They signal transitions into and out of low-power states, like L0s (Electrical Idle).
+- Power Management: They signal transitions into and out of low-power states, like L0s (Electrical Idle).
 
-Control Signals: They carry essential physical layer (PHY) control information, helping manage the link's state machine. 
+- Control Signals: They carry essential physical layer (PHY) control information, helping manage the link's state machine. 
 
-Key Types of Ordered Sets
+# Key Types of Ordered Sets
 
-TS1/TS2 (Training Sequence 1/2): Used extensively during link training for alignment and initial communication.
+- [[Training Sequence 1 (TS1)]]/[[Training Sequence 2 (TS2)]] (Training Sequence 1/2): Used extensively during link training for alignment and initial communication.
 
-EIEOS (Electrical Idle Exit Ordered Set): Signals the end of an electrical idle state, allowing the link to wake up.
+- EIEOS (Electrical Idle Exit Ordered Set): Signals the end of an electrical idle state, allowing the link to wake up.
 
-EIOS (Electrical Idle Ordered Set): Used to indicate entry into electrical idle.
+- EIOS (Electrical Idle Ordered Set): Used to indicate entry into electrical idle.
 
-SKP (Skip): Inserted periodically to compensate for clock drift, allowing receivers to adjust their elastic buffers.
+- SKP (Skip): Inserted periodically to compensate for clock drift, allowing receivers to adjust their elastic buffers.
 
-Control Skip: A special type for finer control, especially in newer PCIe versions like PCIe 6.0. 
+- Control Skip: A special type for finer control, especially in newer PCIe versions like PCIe 6.0. 
 
-How They Work
+# How They Work
 
 Framing: A special control bit (e.g., 10b in some encodings) marks a block of symbols as an Ordered Set versus regular data.
 
