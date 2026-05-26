@@ -9,17 +9,17 @@ The diagram below shows these main states and the paths between them:
 From power-up, then, the main flow is from the _Detect_ state which checks what’s connected electrically and that it’s electrically idle. After this it enters the polling state where both ends start transmitting TS ordered sets and waits to receive a certain number of ordered sets from the other link. Polarity inversion is done in this state. After this, the _Configuration_ state does a multitude of things with both ends sending ordered sets moving through assigning a link number (or numbers if splitting) and the lane numbers, with lane reversal if supported. In the configuration state the received TS ordered sets may direct the next state to be _Disabled_ or _Loopback_ and, in addition, scrambling may be disabled. Deskewing will be completed by the end of this state and the link will now be ’up’ and the state enters _L_0, the normal link-up state (assuming not directed to Loopback or Disabled).
 
 LTSSM consists of 11 top-level states:
-1. Detect
-2. Polling
-3. Configuration
-4. [[L0]]
-5. [[Recovery]]
+1. Detect - Initially detects receiver termination on the link partner.
+2. Polling - Symbol lock and lane reversal detection.
+3. Configuration - Negotiates link width and lane mapping.
+4. [[L0]] - The fully operational state.
+5. [[Recovery]] - Re-trains the link to change speed or fix errors.
 6. L0s
-7. [[L1]]
-8. [[L2]]
-9. [[Hot Reset]]
+7. [[L1]] - Power-saving states.
+8. [[L2]] - Power-saving states.
+9. [[Hot Reset]] - Resets or disables the link.
 10. [[Loopback]]
-11. [[Disable]]
+11. [[Disable]] - Resets or disables the link.
 
 The 11 top-level states can be categorized into 5 categories:
 1. Link Training states (PERST => Detect => Polling => Configuration => L0)
@@ -34,7 +34,7 @@ As mentioned before, the initialization states have sub-states, and the diagram 
 
 # PRE-DETECT
 Control signals:
-PERST# - PERST (fundamental reset) is performed. It is held low until all power rails are stable. Low to high signals indicate the beginning of link initialization.
+[[PERST]]# - PERST (fundamental reset) is performed. It is held low until all power rails are stable. Low to high signals indicate the beginning of link initialization.
 WAKE#
 CLKREQ#
 
@@ -54,6 +54,7 @@ In the _Detect.Quiet_ state the link waits for Electrical Idle to be broken. Ele
 
 # POLLING
 Polling - Then the Root Complex, Repeater, and the Endpoint will begin transmitting Ordered Sets of data called Training Sequences (TS) at PCIe Gen 1 speed in order to establish:
+
 - Achieve [[Bit Lock]] - BIt Lock refers to the crucial process during link training where the receiver synchronizes its internal clock with the transmitter's clock and locks onto the incoming data stream's timing to correctly sample and interpret individual bits, ensuring reliable high-speed data transfer between devices
 - Acquire [[Symbol Lock]] or Block Lock - Symbol Lock is a crucial step during link training where the receiver successfully aligns its clock and data grouping ([[Symbols]]) with the transmitter, understanding the specific patterns (like TS1/TS2 Ordered Sets) to correctly decode data, following Bit Lock (clock frequency sync), and allowing the link to move to configuration and normal operation (L0 state).
 - Correct lane polarity inversion, if needed
@@ -80,8 +81,8 @@ The diagram below summarizes these described steps for a normal non-split link i
 
 ![[TS_during_LTSSM.png]]
 
-o summarise these steps each link sends training sequences of a certain type and with certain values for link and lane values. When a certain number of TSs are seen, and on which lanes, the state is advanced, and configurations are set. There is a slight asymmetry in that a downstream link will switch type first to lead the upstream link into the next state. By the end of the process the link is configured for width, link number and lane assignment, with link reversal, lane inversion, and disabled scrambling where indicated. There are many variations of possible flow, such as being directed to Disabled or Loopback, or timeouts forcing the link back to Detect from Configuration states etc., which we want to describe in detail here.
+To summarise these steps each link sends training sequences of a certain type and with certain values for link and lane values. When a certain number of TSs are seen, and on which lanes, the state is advanced, and configurations are set. There is a slight asymmetry in that a downstream link will switch type first to lead the upstream link into the next state. By the end of the process the link is configured for width, link number and lane assignment, with link reversal, lane inversion, and disabled scrambling where indicated. There are many variations of possible flow, such as being directed to Disabled or Loopback, or timeouts forcing the link back to Detect from Configuration states etc., which we want to describe in detail here.
 
-A fragment of the output from the start of the link initialisation of the [pcievhost](https://github.com/wyvernSemi/pcievhost) model is shown below:
+A fragment of the output from the start of the link initialization of the [pcievhost](https://github.com/wyvernSemi/pcievhost) model is shown below:
 
 ![[Pasted image 20260127211200.png]]
