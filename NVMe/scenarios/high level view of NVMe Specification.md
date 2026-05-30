@@ -72,7 +72,6 @@ Controller Ready
 # 3. Queue Architecture
 
 This is the heart of NVMe.
-
 Unlike SATA/AHCI, NVMe uses many queues.
 
 Each queue pair consists of:
@@ -83,7 +82,6 @@ Completion Queue (CQ)
 ```
 
 Host places commands into SQ.
-
 Controller places results into CQ.
 
 ```

@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/registers/Controller Capabilities (CAP).md",
+                "file": "NVMe/scenarios/high level view of NVMe Specification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Controller Capabilities (CAP)"
+              "title": "high level view of NVMe Specification"
+            }
+          },
+          {
+            "id": "0da8ff90ee5043e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVMe/scenarios/2. process when submission queue is given by host.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2. process when submission queue is given by host"
             }
           },
           {
@@ -35,7 +49,8 @@
               "title": "pcie enumeration"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,12 +212,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "217fe168b6c5e7a5",
+  "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
+    "NVMe/scenarios/high level view of NVMe Specification.md",
+    "NVMe/scenarios/2. process when submission queue is given by host.md",
+    "NVMe/registers/Controller Capabilities (CAP).md",
     "PCIe/process/pcie enumeration.md",
     "PCIe/Base Address Register (BAR).md",
-    "NVMe/registers/Controller Capabilities (CAP).md",
-    "NVMe/scenarios/high level view of NVMe Specification.md",
     "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "Memory-Mapped IO (MMIO).md",
     "NVMe/registers/Admin Queue Attributes (AQA).md",
