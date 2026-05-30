@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/2. process when submission queue is given by host.md",
+                "file": "NVMe/scenarios/Causes for write fails in nvme drives.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. process when submission queue is given by host"
+              "title": "Causes for write fails in nvme drives"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/process/pcie enumeration.md",
+                "file": "NVMe/scenarios/how to change power state of nvme drives.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pcie enumeration"
+              "title": "how to change power state of nvme drives"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 390.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -214,10 +214,21 @@
   },
   "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
-    "NVMe/scenarios/high level view of NVMe Specification.md",
+    "NVMe/Completion Queue (CQ).md",
+    "2026-05-30.md",
+    "Untitled.canvas",
+    "Untitled.base",
+    "NVMe/Get Features.md",
+    "NVMe/scenarios/how to change power state of nvme drives.md",
+    "NVMe/Autonomous Power State Transitions (APST).md",
+    "NVMe/Commands/Flush Command.md",
+    "NVMe/scenarios/Causes for write fails in nvme drives.md",
     "NVMe/scenarios/2. process when submission queue is given by host.md",
-    "NVMe/registers/Controller Capabilities (CAP).md",
+    "NVMe/Completion Queue.md",
+    "NVMe/Completion Queue Entry (CQE).md",
     "PCIe/process/pcie enumeration.md",
+    "NVMe/scenarios/high level view of NVMe Specification.md",
+    "NVMe/registers/Controller Capabilities (CAP).md",
     "PCIe/Base Address Register (BAR).md",
     "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "Memory-Mapped IO (MMIO).md",
@@ -231,10 +242,7 @@
     "NVMe/command set/Command Set.md",
     "NVMe/command set",
     "NVMe/command set/IO Command Set.md",
-    "NVMe/registers/Version (VS).md",
     "NVMe/registers",
-    "PCIe/process",
-    "PCIe/Training Sequence 1 (TS1).md",
-    "8bit-10bit encoding.md"
+    "PCIe/process"
   ]
 }
