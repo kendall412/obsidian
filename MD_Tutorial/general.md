@@ -55,3 +55,18 @@ links
 images
 ![alt text](image.jpg)
 ```
+
+Super/Sub scripts
+
+```
+X<sup>2</sup>
+H<sub>2</sub>O
+```
+
+
+
+Italics
+
+*italicized text*
+_italicized text_
+***bold & italic***

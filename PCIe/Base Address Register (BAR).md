@@ -1,6 +1,5 @@
 
-In Computer Engineering, a **PCIe BAR** stands for **Base Address Register**.
-It is a register inside a PCIe device that tells the host system:
+> In Computer Engineering, a **PCIe BAR** stands for **Base Address Register**. It is a register inside a PCIe device that tells the host system:
 
 - **What type of memory/resource the device needs**
 - **How large that resource is**

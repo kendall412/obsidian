@@ -6,8 +6,7 @@
 With MMIO:
 
 ```
-Certain physical memory addresses
-do not point to RAM.
+Certain physical memory addresses do not point to RAM.
 They point to hardware registers.
 ```
 
@@ -77,11 +76,9 @@ CPU → PCIe root complex → PCIe device registers
 
 The CPU issues a memory transaction in both cases, but the destination differs.
 
-# Relationship Between BAR and MMIO
+# Relationship Between [[Base Address Register (BAR)]] and MMIO
 
-A PCIe device exposes resources through:
-
-Base Address Register
+A PCIe device exposes resources through [[Base Address Register (BAR)]]
 
 The BAR tells the OS:
 
@@ -167,9 +164,7 @@ Important NVMe registers accessed through MMIO:
 
 # Why `volatile` Is Used
 
-MMIO registers can change independently of software.
-
-Compiler optimizations are dangerous.
+MMIO registers can change independently of software. Compiler optimizations are dangerous.
 
 Example (in C):
 
@@ -194,7 +189,6 @@ Uncacheable (UC)
 ```
 
 because caching hardware registers would produce stale or invalid behavior.
-
 
 # MMIO vs Port-Mapped I/O (PMIO)
 

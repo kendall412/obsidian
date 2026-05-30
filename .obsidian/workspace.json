@@ -8,17 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ec3895f88ebb3e50",
+            "id": "217fe168b6c5e7a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8bit-10bit encoding.md",
+                "file": "NVMe/registers/Controller Capabilities (CAP).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8bit-10bit encoding"
+              "title": "Controller Capabilities (CAP)"
+            }
+          },
+          {
+            "id": "90a8d39cb46004b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/process/pcie enumeration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "pcie enumeration"
             }
           }
         ]
@@ -183,8 +197,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "ec3895f88ebb3e50",
+  "active": "217fe168b6c5e7a5",
   "lastOpenFiles": [
+    "PCIe/process/pcie enumeration.md",
+    "PCIe/Base Address Register (BAR).md",
+    "NVMe/registers/Controller Capabilities (CAP).md",
+    "NVMe/scenarios/high level view of NVMe Specification.md",
+    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
+    "Memory-Mapped IO (MMIO).md",
+    "NVMe/registers/Admin Queue Attributes (AQA).md",
+    "PCIe/Training Sequence 2 (TS2).md",
+    "NVMe/registers/Controller Configuration (CC).md",
+    "NVMe/registers/Doorbell Registers.md",
+    "MD_Tutorial/general.md",
+    "NVMe/doorbell.md",
+    "NVMe/registers/Controller Status (CSTS).md",
+    "NVMe/command set/Command Set.md",
+    "NVMe/command set",
+    "NVMe/command set/IO Command Set.md",
+    "NVMe/registers/Version (VS).md",
+    "NVMe/registers",
+    "PCIe/process",
+    "PCIe/Training Sequence 1 (TS1).md",
     "8bit-10bit encoding.md"
   ]
 }
