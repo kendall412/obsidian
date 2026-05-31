@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/how to change power state of nvme drives.md",
+                "file": "NVMe/LOGS/logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how to change power state of nvme drives"
+              "title": "logs"
             }
           }
         ],
@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 390.5
+    "width": 401.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -212,36 +212,38 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "90a8d39cb46004b8",
   "lastOpenFiles": [
+    "NVMe/atomicity.md",
+    "NVMe/TRIM.md",
+    "NVMe/Zoned Namespaces (ZNS).md",
+    "NVMe/command set/Vendor Specific Command Set.md",
+    "NVMe/Submission Queue Head Pointer (SQHD).md",
+    "NVMe/Submission Queue Entry (SQE).md",
+    "NVMe/Submission Queue.md",
+    "PCIe/Dual-Port.md",
+    "PCIe/port.md",
+    "NVMe/power/NVMe power states.md",
+    "NVMe/NVM Subsystem.md",
+    "NVMe/Number of Logical Blocks (NLB).md",
+    "NVMe/Logical Block Address Format (LBAF).md",
+    "NVMe/command set/Key-Value (KV) Command Set.md",
+    "NVMe/IO Queue.md",
+    "NVMe/IO Command Set Independence.md",
+    "NVMe/registers/doorbell.md",
+    "SSD/Extended Unique Identifier  64 bit (EUI64).md",
+    "SSD/EPPID.md",
+    "NVMe/Completion Queue.md",
     "NVMe/Completion Queue (CQ).md",
-    "2026-05-30.md",
+    "NVMe/Completion Queue Entry (CQE).md",
+    "NVMe/command set/NVMe Key Value (NVMe-KV) Command Set.md",
+    "NVMe/power/Normal Power-Off Reset (NPOR).md",
+    "NVMe/Set Features.md",
+    "NVMe/pictures/host to nvme.png",
+    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "Untitled.canvas",
     "Untitled.base",
-    "NVMe/Get Features.md",
-    "NVMe/scenarios/how to change power state of nvme drives.md",
-    "NVMe/Autonomous Power State Transitions (APST).md",
-    "NVMe/Commands/Flush Command.md",
-    "NVMe/scenarios/Causes for write fails in nvme drives.md",
-    "NVMe/scenarios/2. process when submission queue is given by host.md",
-    "NVMe/Completion Queue.md",
-    "NVMe/Completion Queue Entry (CQE).md",
-    "PCIe/process/pcie enumeration.md",
-    "NVMe/scenarios/high level view of NVMe Specification.md",
-    "NVMe/registers/Controller Capabilities (CAP).md",
-    "PCIe/Base Address Register (BAR).md",
-    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
-    "Memory-Mapped IO (MMIO).md",
-    "NVMe/registers/Admin Queue Attributes (AQA).md",
-    "PCIe/Training Sequence 2 (TS2).md",
-    "NVMe/registers/Controller Configuration (CC).md",
-    "NVMe/registers/Doorbell Registers.md",
-    "MD_Tutorial/general.md",
-    "NVMe/doorbell.md",
-    "NVMe/registers/Controller Status (CSTS).md",
-    "NVMe/command set/Command Set.md",
     "NVMe/command set",
-    "NVMe/command set/IO Command Set.md",
     "NVMe/registers",
     "PCIe/process"
   ]

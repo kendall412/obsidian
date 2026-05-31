@@ -2,7 +2,7 @@
 > The **NVMe Set Features command** is an **[[Admin Command Set]]** used by the host to **configure controller or namespace behavior** at runtime.
 
 ---
-# 🔹 1) Purpose
+#  1) Purpose
 
 It allows software (OS/driver/tools) to modify parameters such as:
 
@@ -17,11 +17,11 @@ It allows software (OS/driver/tools) to modify parameters such as:
 
 > “Set Features = write configuration knobs into the SSD”
 
-# 🔹 2) Command Identification
+#  2) Command Identification
 
 - **Opcode**: `0x09` (Admin command set)
 
-# 🔹 3) Command Structure (SQE Fields)
+#  3) Command Structure (SQE Fields)
 
 Key fields inside the Submission Queue Entry:
 
@@ -41,7 +41,7 @@ Optional:
 
 - **PRP/SGL** → used if feature requires data buffer
 
-# 🔹 4) Completion Result
+#  4) Completion Result
 
 On success, the controller may return:
 
@@ -50,7 +50,7 @@ DW0 (CQE):
   Result field → feature-specific response value
 ```
 
-# 🔹 5) Common Feature Identifiers (FID)
+#  5) Common Feature Identifiers (FID)
 
 Here are the most important ones:
 
@@ -72,7 +72,7 @@ Here are the most important ones:
 |0x0E|Timestamp|
 |0x10+|Vendor-specific / extended|
 
-# 🔹 6) Example: Set Power State
+#  6) Example: Set Power State
 
 To change power state:
 
@@ -87,7 +87,7 @@ Example:
 DW11 = 0x00000003 → set PS3
 ```
 
-# 🔹 7) Example: Enable APST
+#  7) Example: Enable APST
 
 ```
 FID = 0x0C (APST)
@@ -96,7 +96,7 @@ DW11 = 1 → enable APST
 Data buffer (PRP) → APST table
 ```
 
-# 🔹 8) Example: Enable Write Cache
+#  8) Example: Enable Write Cache
 
 ```
 FID = 0x06 (Volatile Write Cache)
@@ -107,7 +107,7 @@ DW11 bit 0:
 ```
 
 
-# 🔹 9) Persistence Behavior
+#  9) Persistence Behavior
 
 Features can be:
 
@@ -119,13 +119,13 @@ Controlled via:
 - Feature definition
 - Save bit (in some features)
 
-# 🔹 10) Relationship with Get Features
+#  10) Relationship with Get Features
 
 - **Set Features** → configure value
 - **Get Features (Opcode 0x0A)** → read current value
 
 
-# 🔹 11) Error Handling
+#  11) Error Handling
 
 Common failures:
 
@@ -138,7 +138,7 @@ Returned via:
 - NVMe status codes in CQE
 
 
-# 🔹 12) Real Usage (Linux Example)
+#  12) Real Usage (Linux Example)
 
 Using nvme-cli:
 
@@ -150,7 +150,7 @@ nvme set-feature /dev/nvme0 -f 2 -v 3
 
 👉 Sets power state to PS3
 
-# 🔹 13) Key Insight
+#  13) Key Insight
 
 - Set Features modifies **controller behavior without firmware changes**
 - It’s essential for:
@@ -158,15 +158,14 @@ nvme set-feature /dev/nvme0 -f 2 -v 3
     - power optimization
     - system integration
 
-
-# 🔹 One-Line Summary
+#  One-Line Summary
 
 **NVMe Set Features is an admin command (opcode 0x09) that allows the host to configure SSD behavior by writing feature-specific parameters identified by a Feature ID (FID).**
 
 ---
 ## Submission Queue EXAMPLE for Set Feature for APST command
 
-# 🔹 Scenario
+#  Scenario
 
 - Command: **Set Features**
 - Feature: **APST (FID = 0x0C)**
@@ -199,7 +198,7 @@ DWORD14 : Reserved
 DWORD15 : Reserved
 ```
 
-# 🔹 Example Values (Hex Dump)
+#  Example Values (Hex Dump)
 
 Assume:
 
@@ -208,7 +207,7 @@ Assume:
 - PRP1 = `0x0000001000000000` (APST table buffer)
 - APST enabled
 
-🔹 SQE DWORD-by-DWORD
+SQE DWORD-by-DWORD
 ```
 DW0  : 0x00091234
 DW1  : 0x00000000
@@ -234,7 +233,7 @@ DW14 : 0x00000000
 DW15 : 0x00000000
 ```
 
-# 🔹 Field Breakdown
+#  Field Breakdown
 
 ## ✔ DW0 (Command Header)
 
@@ -279,7 +278,7 @@ FID = 0x0C
 
 - Bit 0 = 1 → APST enabled
 
-# 🔹 APST Table (Referenced by PRP1)
+#  APST Table (Referenced by PRP1)
 
 At the memory pointed by PRP1:
 
@@ -296,7 +295,7 @@ Entry 1:
 Encoded as NVMe-defined structure.
 
 
-# 🔹 Completion Queue Entry (CQE)
+#  Completion Queue Entry (CQE)
 
 On success:
 
@@ -305,14 +304,14 @@ DW0 : Result (optional)
 DW3 : Status = SUCCESS
 ```
 
-# 🔹 Key Observations
+#  Key Observations
 
 - **Opcode (0x09)** defines Set Features
 - **FID (DW10)** selects APST
 - **DW11** enables/disables feature
 - **[[Physical Region Page (PRP)]]1** is required to pass APST policy table
 
-# 🔹 One-Line Summary
+#  One-Line Summary
 
 A Set Features APST SQE uses **OPC=0x09, FID=0x0C in DW10, enable flag in DW11, and PRP1 pointing to the APST table**, with all fields packed into a 16-DWORD submission queue entry.
 

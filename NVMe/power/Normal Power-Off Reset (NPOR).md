@@ -1,11 +1,11 @@
 
 In NVMe, **NPOR** commonly refers to:
 
-# 🔹 Normal Power-On Reset
+#  Normal Power-On Reset
 
 > It means the controller experienced a **full power cycle reset**, where power was removed and then restored under normal operating conditions. **NPOR (Normal Power-On Reset) is a full power-cycle reset event where the NVMe SSD loses volatile state, reboots firmware, reconstructs FTL state, and restores persistent storage operation.**
 
-# 🔹 What Happens During NPOR
+#  What Happens During NPOR
 
 During an NPOR event:
 
@@ -28,7 +28,7 @@ The SSD performs:
 - Metadata reconstruction
 - Queue reinitialization
 
-# 🔹 What Is Lost During NPOR
+#  What Is Lost During NPOR
 
 Anything volatile:
 
@@ -40,7 +40,7 @@ Anything volatile:
 |NAND data|✅|
 |Persistent metadata|✅|
 
-# 🔹 NPOR vs Other Reset Types
+#  NPOR vs Other Reset Types
 
 |Reset Type|Description|
 |---|---|
@@ -49,7 +49,7 @@ Anything volatile:
 |PCIe FLR|Function-level reset|
 |NSSR|NVM subsystem reset|
 |Warm reset|No full power loss|
-# 🔹 Why NPOR Matters
+#  Why NPOR Matters
 
 NPOR is important because the SSD must recover safely from:
 
@@ -58,7 +58,7 @@ NPOR is important because the SSD must recover safely from:
 - AC power cycle
 - Datacenter failover
 
-# 🔹 NPOR Recovery Process
+#  NPOR Recovery Process
 
 Typical sequence:
 
@@ -73,7 +73,7 @@ Typical sequence:
 8. Controller becomes READY
 ```
 
-# 🔹 Relation to Unsafe Shutdowns
+#  Relation to Unsafe Shutdowns
 
 If power loss was unexpected:
 
@@ -89,7 +89,7 @@ Controller may:
 - recover metadata
 - validate mapping consistency
 
-# 🔹 NPOR in Validation / Testing
+#  NPOR in Validation / Testing
 
 SSD validation teams test:
 
@@ -107,7 +107,7 @@ Write workload
 → verify no corruption
 ```
 
-# 🔹 Related SMART Metrics
+#  Related SMART Metrics
 
 NPOR-related indicators:
 
@@ -115,7 +115,7 @@ NPOR-related indicators:
 - Unsafe Shutdowns
 - Media Errors
 
-# 🔹 Important Clarification
+#  Important Clarification
 
 NPOR is **industry terminology**, not a primary NVMe command or register field.
 
@@ -146,7 +146,7 @@ Power loss is orderly or expected
 
 but the SSD still undergoes a complete reboot and state reconstruction.
 
-# 🔹 Purpose of NPOR Testing
+#  Purpose of NPOR Testing
 
 Verify that after power cycling:
 
@@ -158,7 +158,7 @@ Data remains accessible
 No firmware/FTL corruption occurs
 ```
 
-# 🔹 What NPOR Tests Validate
+#  What NPOR Tests Validate
 
 |Area|Validation|
 |---|---|
@@ -171,7 +171,7 @@ No firmware/FTL corruption occurs
 |Queue handling|No stale queue state|
 |Data integrity|Previously written data readable|
 
-# 🔹 Typical NPOR Test Flow
+#  Typical NPOR Test Flow
 
 # 1) Precondition Drive
 
@@ -294,7 +294,7 @@ power cycles
 
 to validate long-term reliability.
 
-# 🔹 Example NPOR Validation Script
+#  Example NPOR Validation Script
 
 ```
 loop:
@@ -306,7 +306,7 @@ loop:
   check SMART/errors
 ```
 
-# 🔹 Common Failure Modes Found
+#  Common Failure Modes Found
 
 ## ❌ Controller fails to become ready
 
@@ -336,7 +336,7 @@ Controller stuck during init
 
 Persistent counters incorrect after reboot.
 
-# 🔹 NPOR vs SPOR Testing
+#  NPOR vs SPOR Testing
 
 |Aspect|NPOR|SPOR|
 |---|---|---|
@@ -346,7 +346,7 @@ Persistent counters incorrect after reboot.
 |Atomicity stress|Moderate|Severe|
 |FTL recovery complexity|Moderate|High|
 
-# 🔹 Enterprise Qualification
+#  Enterprise Qualification
 
 Enterprise SSD vendors heavily stress:
 
@@ -356,6 +356,6 @@ Enterprise SSD vendors heavily stress:
 - NPOR during firmware activation
 
 ---
-# 🔹 Key Insight
+#  Key Insight
 
 > NPOR testing validates the SSD’s ability to completely reboot and reconstruct persistent state correctly after losing all volatile controller state.

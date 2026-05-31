@@ -129,7 +129,7 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 
 ---
 
-## 🏭 Vendor-Specific Logs
+##  Vendor-Specific Logs
 
 Vendors define additional LIDs (typically ≥ `0xC0`), e.g.:
 
@@ -170,7 +170,7 @@ nvme telemetry-log /dev/nvme0 --host
 |Vendor logs|Vendor-defined|Advanced analysis|
 
 ---
-## 🧩 Key Insight
+##  Key Insight
 
 > **NVMe logs are structured telemetry endpoints accessed via Get Log Page—ranging from lightweight health counters to deep firmware diagnostics.**
 
