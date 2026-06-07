@@ -36,17 +36,45 @@
             }
           },
           {
-            "id": "90a8d39cb46004b8",
+            "id": "b8e9aeb788b048cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/LOGS/logs.md",
+                "file": "NVMe/scenarios/high level view of NVMe Specification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "logs"
+              "title": "high level view of NVMe Specification"
+            }
+          },
+          {
+            "id": "4eca7f0b7bba48cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/process/pcie enumeration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "pcie enumeration"
+            }
+          },
+          {
+            "id": "021750e1a2649495",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/PCIe Stack.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PCIe Stack"
             }
           }
         ],
@@ -107,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5
+    "width": 253.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -212,8 +240,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "90a8d39cb46004b8",
+  "active": "b8e9aeb788b048cb",
   "lastOpenFiles": [
+    "NVMe/LOGS/logs.md",
+    "PCIe/process/pcie enumeration.md",
+    "NVMe/scenarios/high level view of NVMe Specification.md",
+    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
+    "NVMe/scenarios/how to change power state of nvme drives.md",
+    "NVMe/scenarios/Causes for write fails in nvme drives.md",
+    "NVMe/scenarios/2. process when submission queue is given by host.md",
+    "PCIe/scenario/PCIe link training process.md",
+    "PCIe/PCIe PHY.md",
+    "PCIe/PCIe Stack.md",
+    "MD_Tutorial/general.md",
     "NVMe/atomicity.md",
     "NVMe/TRIM.md",
     "NVMe/Zoned Namespaces (ZNS).md",
@@ -229,18 +268,7 @@
     "NVMe/Logical Block Address Format (LBAF).md",
     "NVMe/command set/Key-Value (KV) Command Set.md",
     "NVMe/IO Queue.md",
-    "NVMe/IO Command Set Independence.md",
-    "NVMe/registers/doorbell.md",
-    "SSD/Extended Unique Identifier  64 bit (EUI64).md",
-    "SSD/EPPID.md",
-    "NVMe/Completion Queue.md",
-    "NVMe/Completion Queue (CQ).md",
-    "NVMe/Completion Queue Entry (CQE).md",
-    "NVMe/command set/NVMe Key Value (NVMe-KV) Command Set.md",
-    "NVMe/power/Normal Power-Off Reset (NPOR).md",
-    "NVMe/Set Features.md",
     "NVMe/pictures/host to nvme.png",
-    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "Untitled.canvas",
     "Untitled.base",
     "NVMe/command set",
