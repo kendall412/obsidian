@@ -1,5 +1,5 @@
 
-> The **CAP (Controller Capabilities)** register is one of the most important registers in an NVMe controller. The Controller Capabilities (CAP) register is a key memory-mapped register in an NVMe controller that provides host software with read-only information about the fundamental features and capabilities of the device. It is a **64-bit read-only register** located in the NVMe controller's **PCIe MMIO register space (BAR0/BAR1)**. The host reads CAP during controller initialization to determine what the controller supports before enabling it.
+> The **CAP (Controller Capabilities)** register is one of the most important registers in an NVMe controller. The Controller Capabilities (CAP) register is a key memory-mapped register in an NVMe controller that provides host software with **read-only information about the fundamental features and capabilities of the device**. It is a **64-bit read-only register** located in the NVMe controller's **PCIe MMIO register space (BAR0/BAR1)**. The host reads CAP during controller initialization to determine what the controller supports before enabling it.
 
 # Where CAP is Located
 
