@@ -1,6 +1,8 @@
 
 > The **Controller Configuration (CC)** register is one of the most important registers in NVMe. It is a **memory-mapped controller register** that the host writes to configure and enable the NVMe controller. The CC register is located in the NVMe controller's PCIe BAR space and is accessed through [[Memory-Mapped IO (MMIO)]].
 
+> (NVMe Base Spec Rev. 2.3: 3.1.4.5) This property modifies settings for the controller. A host shall set the Arbitration Mechanism Selected (CC.AMS), the Memory Page Size (CC.MPS), and the I/O Command Set Selected (CC.CSS) to valid values prior to enabling the controller by setting CC.EN to ‘1’. Attempting to create an I/O queue before initializing the I/O Completion Queue Entry Size (CC.IOCQES) and the I/O Submission Queue Entry Size (CC.IOSQES) shall cause a controller to abort a Create I/O Completion Queue command or a Create I/O Submission Queue command with a status code of Invalid Queue Size.
+
 # Purpose of CC Register
 
 The host uses the CC register to:
