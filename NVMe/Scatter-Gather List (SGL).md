@@ -78,8 +78,6 @@ In an NVMe command ([[Submission Queue]] Entry), instead of PRP fields:
         - **SGL flag in command**
         - **Controller capability (Identify Controller → SGL support)**
 
-
-
 ### PRP vs SGL (important distinction)
 
 | Feature       | PRP                        | SGL                               |
@@ -100,12 +98,9 @@ SGL is typically used in:
     - Non-contiguous DMA mappings
 - High-performance drivers optimizing memory usage
 
-
 ## Key takeaway
 
 A **scatter–gather list in NVMe** is a **flexible DMA mapping mechanism** that allows a command to operate on **multiple discontiguous memory buffers via a chain of descriptors**, instead of requiring a contiguous memory region.
-
----
 
 # SGL Descriptor Format (16 bytes)
 

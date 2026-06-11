@@ -1,8 +1,7 @@
 
 > The **Submission Queue Head Pointer (SQ Head)** in NVMe is a pointer maintained by the **controller** that indicates **the next command entry in the Submission Queue (SQ) to be processed**.
 
----
-# 🔹 Where It Fits
+# Where It Fits
 
 NVMe Submission Queue is a circular buffer:
 
@@ -14,11 +13,11 @@ Controller consumes → advances SQ Head
 - **SQ Tail (host-owned)** → where new commands are posted
 - **SQ Head (controller-owned)** → which commands have been consumed
 
-# 🔹 Definition
+# Definition
 
 > **SQ Head Pointer = index of the next SQ entry the controller will read/process**
 
-# 🔹 How It Works
+# How It Works
 
 ## ✔ Step-by-step
 
@@ -38,13 +37,13 @@ Executes command
 Head++
 ```
 
-# 🔹 Circular Behavior
+# Circular Behavior
 
 ```
 Head = (Head + 1) % Queue Size
 ```
 
-# 🔹 Example
+#  Example
 
 Queue size = 8
 
@@ -69,7 +68,7 @@ Index:   0   1   2   3   4   5   6   7
        (Head=2)
 ```
 
-# 🔹 Where SQ Head Is Reported
+# Where SQ Head Is Reported
 
 The host does **not directly read SQ Head from memory**.
 
@@ -85,7 +84,7 @@ CQE DW2:
 
 > “I have consumed commands up to this point”
 
-# 🔹 Why SQ Head Matters
+# Why SQ Head Matters
 
 ## ✔ Flow Control
 
@@ -103,19 +102,17 @@ Available space = (Queue Size - (Tail - Head))
 
 - Enables lock-free producer/consumer model
 
-# 🔹 Relationship with [[doorbell]]
+# Relationship with [[doorbell]]
 
 - Host updates **SQ Tail Doorbell**
 - Controller updates **SQ Head internally**
 - Host learns SQ Head via CQE
 
----
-
-# 🔹 Key Insight
+# Key Insight
 
 > The host produces commands, the controller consumes them—SQ Head is the controller’s progress marker.
 
-# 🔹 One-Line Summary
+# One-Line Summary
 
 **The Submission Queue Head Pointer is the controller-maintained index of the next command to process in the SQ, reported back to the host via completion entries to enable flow control and synchronization.**
 
