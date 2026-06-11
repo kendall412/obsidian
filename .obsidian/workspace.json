@@ -312,6 +312,7 @@
   },
   "active": "dc90d55547b9f488",
   "lastOpenFiles": [
+    "NVMe/NVM_whitepaper.pdf",
     "NVMe/PRP or SGL for Data Transger (PSDT).md",
     "NVMe/Physical Region Page (PRP) vs Scatter Gather List (SGL).md",
     "NVMe/Physical Region Page (PRP).md",
@@ -337,7 +338,6 @@
     "NVMe/scenarios/high level view of NVMe Specification.md",
     "NVMe/LOGS/logs.md",
     "PCIe/process/pcie enumeration.md",
-    "NVMe/scenarios/process of host submits a READ request to nvme ssd.md",
     "NVMe/pictures/host to nvme.png",
     "Untitled.canvas",
     "Untitled.base",
