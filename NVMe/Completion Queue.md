@@ -142,13 +142,6 @@ If you want, I can go deeper into:
 
 
 
-
-
-
-
-
-
-
 ---
 
 

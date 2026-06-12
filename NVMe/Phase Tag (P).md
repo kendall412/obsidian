@@ -1,7 +1,17 @@
 
 > In NVMe, the **Phase Tag (P bit)** is a **1-bit field in each Completion Queue Entry (CQE)** used by the host to determine whether an entry is **new (just written by the controller)** or **old/stale (already processed or not yet updated)**.
 
-# 🔹 Where the Phase Tag Is
+This is one of the most important NVMe queue concepts.
+
+The short answer is:
+
+> **Doorbells tell the controller and host where the queue pointers are.**
+> 
+> **Phase Tags tell the host whether a Completion Queue Entry (CQE) is new or old after the queue wraps around.**
+
+They solve different problems.
+
+# Where the Phase Tag Is
 
 The Phase Tag is located in the **Status field of a CQE**:
 
@@ -18,7 +28,7 @@ DW3:
 - **P = bit 0 of DW3**
 - 1 bit only
 
-# 🔹 Why Phase Tag Exists
+# Why Phase Tag Exists
 
 Completion queues are **circular (ring buffers)**.
 
@@ -32,7 +42,7 @@ Is this leftover from a previous cycle?
 
 👉 The Phase Tag solves this without clearing memory.
 
-# 🔹 How It Works
+# How It Works
 
 ## Host maintains an expected phase value:
 
@@ -54,7 +64,7 @@ Else:
     → Entry is OLD → stop processing
 ```
 
-# 🔹 Wraparound Example
+# Wraparound Example
 
 Assume:
 
@@ -85,9 +95,7 @@ Phase:   0   0   ?   ?   ← new entries
 - Expected phase flips to 0
 - Now only entries with P=0 are considered new
 
----
-
-# 🔹 Key Insight
+# Key Insight
 
 The Phase Tag allows:
 
@@ -95,7 +103,7 @@ The Phase Tag allows:
 - No need to clear CQ memory
 - Efficient hardware/software synchronization
 
-# 🔹 Relationship with Head/Tail
+# Relationship with Head/Tail
 
 - **Controller updates CQ tail**
 - **Host updates CQ head**
@@ -103,7 +111,7 @@ The Phase Tag allows:
     - Tail wraps around
     - Entries are reused
 
-# 🔹 Why Not Use Pointers Alone?
+# Why Not Use Pointers Alone?
 
 Pointers alone can’t distinguish:
 
@@ -112,7 +120,7 @@ Pointers alone can’t distinguish:
 
 👉 Phase Tag adds that missing context.
 
-# 🔹 One-Line Summary
+# One-Line Summary
 
 **The Phase Tag in NVMe is a 1-bit flag in each completion queue entry that toggles on wraparound, allowing the host to distinguish new completions from old entries in a circular queue.**
 
