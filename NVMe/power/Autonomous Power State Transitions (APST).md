@@ -1,9 +1,7 @@
 
 > **Autonomous Power State Transitions (APST)** is an NVMe feature that lets the **SSD controller automatically move between power states based on idle time**, without the host having to issue commands each time.
-
----
-
-# 🔹 What APST Does
+ 
+# What APST Does
 
 With APST enabled:
 
@@ -14,14 +12,13 @@ I/O arrives → SSD wakes → returns to active state (PS0)
 
 👉 It’s **device-driven power management**, guided by a policy set by the host.
 
-# 🔹 Why APST Exists
+# Why APST Exists
 
 - Reduce **power consumption** during idle periods
 - Avoid constant host intervention (lower CPU overhead)
 - Balance **power vs latency**
 
-
-# 🔹 How It Works
+# How It Works
 
 ## 1) Host Programs APST Policy
 
@@ -62,16 +59,14 @@ Example:
 Exit low-power state → return to PS0 → process command
 ```
 
-# 🔹 Power States Context
+# Power States Context
 
 - **PS0** → full performance
 - **PS1–PSn** → lower power, higher latency
 
 APST moves the device **down the ladder automatically**.
 
-
-
-# 🔹 APST Table Structure (Conceptual)
+# APST Table Structure (Conceptual)
 
 ```
 Entry:
@@ -81,7 +76,7 @@ Entry:
 
 Multiple entries define a hierarchy of transitions.
 
-# 🔹 Trade-Off
+# Trade-Off
 
 ```
 Lower Power ↔ Higher Exit Latency
@@ -90,7 +85,7 @@ Lower Power ↔ Higher Exit Latency
 - Deep states save more power
 - But take longer to wake up
 
-# 🔹 Example Behavior
+# Example Behavior
 
 ### Laptop / light workload:
 
@@ -111,20 +106,19 @@ Idle 500 ms → PS1 only
 → Avoid deep states to keep latency low
 
 
-# 🔹 Interaction with Other Mechanisms
+# Interaction with Other Mechanisms
 
 - Works with **NVMe Power States (PS0–PSn)**
 - Complementary to **PCIe ASPM (link power management)**
 - Controlled by firmware + host policy
 
-# 🔹 When APST Is Disabled
+# When APST Is Disabled
 
 - SSD stays in host-selected power state (often PS0)
 - Higher power consumption
 - Lower latency consistency
 
-
-# 🔹 Key Insight
+# Key Insight
 
 > APST shifts power management from **host-driven control** to **policy-driven autonomy inside the SSD**.
 

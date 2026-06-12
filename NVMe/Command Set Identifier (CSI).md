@@ -1,9 +1,6 @@
-The **Command Set Identifier (CSI)** in the NVMe specification is a field that tells the controller **which command set a command belongs to and how to interpret its command-specific payload**.
-It exists because modern NVMe is no longer just “block storage (read/write)”—it can support multiple storage models on the same controller. The **Command Set Identifier (CSI)** in NVMe specifies which command set (e.g., NVM, ZNS, KV) is used to interpret a command’s fields and behavior, enabling multiple storage models under a unified NVMe architecture. It exists because modern NVMe is no longer just “block storage (read/write)”—it can support multiple storage models on the same controller.
+> The **Command Set Identifier (CSI)** in the NVMe specification is a field that tells the controller **which command set a command belongs to and how to interpret its command-specific payload**. It exists because modern NVMe is no longer just “block storage (read/write)”—it can support multiple storage models on the same controller. The **Command Set Identifier (CSI)** in NVMe specifies which command set (e.g., NVM, ZNS, KV) is used to interpret a command’s fields and behavior, enabling multiple storage models under a unified NVMe architecture. It exists because modern NVMe is no longer just “block storage (read/write)”—it can support multiple storage models on the same controller.
 
----
-
-# 🔹 What CSI Is
+# What CSI Is
 
 It defines:
 
@@ -13,7 +10,7 @@ It defines:
 CSI is **not a per-command inline bitfield** like OPC or CID.
 
 What exists instead is:
-### 🔹 1. CSI Location (Actual Encoding)
+### 1. CSI Location (Actual Encoding)
 
 ### **Identify Admin Command → CDW11[31:24]**
 
@@ -26,7 +23,7 @@ bits 15:0  → CNSID / NVM Set ID (context dependent)
 
 👉 This is **8 bits (1 byte)**, not 3 bits.
 
-# 🔹 2. CSI in Identify Namespace Data Path
+# 2. CSI in Identify Namespace Data Path
 
 CSI is returned indirectly via:
 
@@ -40,7 +37,7 @@ Byte 0 : NIDT  (descriptor type = CSI)Byte 1 : NIDL  (length = 1)Byte 4 : NID[0]
 
 👉 Again: **CSI = 1 byte**
 
-# 🔹 3. CSI in Normal I/O Commands (Critical Point)
+# 3. CSI in Normal I/O Commands (Critical Point)
 
 Inside a normal **Submission Queue Entry (SQE)**:
 
@@ -55,7 +52,7 @@ SQE interpretation = f(Queue context, Namespace CSI, Opcode)
 ```
 
 
-# 🔹 4. Where the “3-bit” Confusion Comes From
+# 4. Where the “3-bit” Confusion Comes From
 
 You’re likely mixing CSI with:
 
@@ -69,7 +66,7 @@ But:
 - It is **stored in an 8-bit field**
 - Only a subset of values is currently used
 
-# 🔹 5. How Hardware Actually Uses It
+# 5. How Hardware Actually Uses It
 
 Internally, controller logic behaves like:
 
@@ -84,7 +81,7 @@ Command arrives:
 ```
 
 
-# 🔹 6. Summary Table
+# 6. Summary Table
 
 | Location                   | Field Size             | Notes                 |
 | -------------------------- | ---------------------- | --------------------- |
@@ -92,12 +89,11 @@ Command arrives:
 | Namespace Descriptor (NID) | 8 bits                 | Reports CSI           |
 | Submission Queue Entry     | ❌ none                 | CSI not present       |
 | Internal controller state  | implementation-defined | Used for decoding     |
-# 🔹 Key Takeaway
+# Key Takeaway
 
 > CSI is **not a 3-bit field in any NVMe command structure**.  
 > It is an **8-bit identifier used in Identify commands and namespace descriptors**, and otherwise **inferred from queue/namespace context during I/O execution**.
 
----
 
 If you want, I can next show:
 
@@ -105,8 +101,7 @@ If you want, I can next show:
 - or how Linux (`nvme-cli`) retrieves CSI via **Identify CNS=0x03**
 - or how CSI affects **ZNS vs NVM command decoding at CDW level**
 
----
-# 🔹 Why CSI Exists
+# Why CSI Exists
 
 Originally, NVMe only supported one command set:
 
@@ -120,7 +115,7 @@ But NVMe expanded to support multiple storage paradigms:
 
 So instead of redefining the whole protocol, NVMe introduced CSI.
 
-# 🔹 Where CSI Is Used
+# Where CSI Is Used
 
 CSI appears in multiple places:
 
@@ -137,14 +132,12 @@ Example:
 - Zoned Namespace (ZNS)
 - Key-Value (KV)
 
-
 ### 2. Namespace Attachment
 
 Each namespace is tied to a command set:
 
 - Namespace A → NVM (block storage)
 - Namespace B → ZNS (sequential zones)
-
 
 ### 3. I/O Queue Association
 
@@ -164,7 +157,7 @@ CDW10–15 → interpreted based on CSI
 ```
 
 
-# 🔹 CSI Values (Examples from NVMe spec)
+# CSI Values (Examples from NVMe spec)
 
 |CSI Value|Command Set|
 |---|---|
@@ -173,7 +166,7 @@ CDW10–15 → interpreted based on CSI
 |0x03|Key-Value Command Set|
 |0xFF (vendor-defined range)|Vendor-specific|
 
-# 🔹 Key Point: CSI is NOT inside SQE directly
+# Key Point: CSI is NOT inside SQE directly
 
 Important nuance:
 
@@ -194,7 +187,7 @@ Controller uses CSI to decode CDW fields
 ```
 
 
-# 🔹 Simple Analogy
+# Simple Analogy
 
 Think of CSI like selecting a “language mode”:
 
@@ -205,7 +198,7 @@ Think of CSI like selecting a “language mode”:
 Same structure, different interpretation rules.
 
 
-# 🔹 Why CSI Matters
+# Why CSI Matters
 
 CSI enables NVMe to:
 
@@ -214,16 +207,14 @@ CSI enables NVMe to:
 - Avoid redesigning the base protocol
 - Allow future extensibility (new command sets without breaking NVMe)
 
-# 🔹 One-Line Summary
+# One-Line Summary
 
 The **Command Set Identifier (CSI)** in NVMe specifies which command set (e.g., NVM, ZNS, KV) is used to interpret a command’s fields and behavior, enabling multiple storage models under a unified NVMe architecture.
 
-
----
 ## How CSI interacts with Identify Namespace structures or queue creation (Create I/O Queue command)
 
 
-# 🔹 1. CSI in Identify Namespace (NS Identification)
+# 1. CSI in Identify Namespace (NS Identification)
 
 When the host issues:
 
@@ -249,7 +240,7 @@ Identify Namespace data
 I/O Command Set Identifier (CSI)
 ```
 
-## 🔹 Example Mapping
+## Example Mapping
 
 |Namespace|CSI|Meaning|
 |---|---|---|
@@ -257,7 +248,7 @@ I/O Command Set Identifier (CSI)
 |NSID 2|0x02|Zoned Namespace (sequential zones)|
 |NSID 3|0x03|Key-Value storage|
 
-## 🔹 What This Means Practically
+## What This Means Practically
 
 When OS sees a namespace:
 
@@ -269,7 +260,7 @@ When OS sees a namespace:
 
 👉 So **namespace → defines CSI**
 
-# 🔹 2. CSI in Create I/O Queue Command
+# 2. CSI in Create I/O Queue Command
 
 Now we go to queue creation.
 
@@ -292,7 +283,7 @@ Inside the command:
 
 👉 The queue is bound to a **CSI indirectly via controller + namespace association**
 
-## 🔹 How CSI is Applied to the Queue
+## How CSI is Applied to the Queue
 
 The process is:
 
@@ -307,7 +298,7 @@ Queue becomes valid only for namespaces with matching CSI
 ```
 
 
-## 🔹 In Modern NVMe (important nuance)
+## In Modern NVMe (important nuance)
 
 Depending on NVMe version:
 
@@ -324,14 +315,14 @@ Depending on NVMe version:
     - implicitly bound to a CSI via namespace
     - or explicitly configured via controller capabilities
 
-## 🔹 Key Rule
+## Key Rule
 
 > A queue does NOT pick CSI freely.  
 > CSI compatibility is enforced by namespace + controller.
 
 ---
 
-# 🔹 3. Full Interaction Flow (End-to-End)
+# 3. Full Interaction Flow (End-to-End)
 
 Here is the real system-level sequence:
 ```
@@ -364,7 +355,7 @@ Controller uses:
 Interprets command correctly (NVM/ZNS/KV)
 ```
 
-# 🔹 4. Concrete Example
+# 4. Concrete Example
 
 ### Case: Zoned Namespace
 
@@ -391,7 +382,7 @@ Queue 5 → used for NSID 10 only
 
 - Read/Write becomes **Zoned Append / Zone Reset / Zone Mgmt commands**
 
-# 🔹 5. Key Insight
+# 5. Key Insight
 
 CSI is NOT a field you “pass per command”.
 
@@ -399,9 +390,7 @@ Instead:
 
 > CSI is a **namespace-level attribute that flows into queue behavior and determines how SQE payloads are interpreted**
 
----
-
-# 🔹 6. Mental Model
+# 6. Mental Model
 
 Think of it like this:
 
@@ -415,11 +404,9 @@ Queue → inherits CSI via namespace binding
 Command → interpreted using CSI rules
 ```
 
-# 🔹 One-Line Summary
+# One-Line Summary
 
 CSI interacts with Identify Namespace and Create I/O Queue by being **defined per namespace and inherited by I/O queues, which then determine how submitted commands are interpreted by the controller.**
-
----
 
 If you want next level detail, I can show:
 

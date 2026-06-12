@@ -2,7 +2,7 @@
 > NVMe SSDs don’t run at a fixed power level—they **dynamically scale power** using a combination of **host-controlled power states**, **autonomous idle transitions**, and **thermal protection**. The mechanism is defined in the NVMe spec and implemented by controller firmware.
 
 
-# 🔹 1) NVMe Power States (Primary Mechanism)
+# 1. NVMe Power States (Primary Mechanism)
 
 Each controller advertises a set of **Power States (PS0…PSn)** in _Identify Controller_:
 
@@ -22,7 +22,7 @@ Each state includes:
 PS0 (active) → PS1 → PS2 → … → PSn (deep idle)
 ```
 
-# 🔹 2) [[Autonomous Power State Transitions (APST)]]
+# 2. [[Autonomous Power State Transitions (APST)]]
 
 With **APST enabled**, the SSD can _self-manage_ power:
 
@@ -43,7 +43,7 @@ Idle 5 s → PS4 (deep sleep)
 
 👉 This is the main way laptops/servers save power without constant host intervention.
 
-# 🔹 3) Dynamic Power Scaling Inside PS0
+# 3. Dynamic Power Scaling Inside PS0
 
 Even within PS0, controllers adjust power in real time:
 
@@ -63,7 +63,7 @@ Even within PS0, controllers adjust power in real time:
 
 👉 Think of PS0 as a **range**, not a single fixed wattage.
 
-# 🔹 4) Thermal Throttling (Reactive Control)
+# 4. Thermal Throttling (Reactive Control)
 
 When temperature rises:
 
@@ -76,7 +76,7 @@ If needed:
 - Enter **lower power state**
 - In extreme cases, **pause writes**
 
-# 🔹 5) PCIe Link Power Management
+# 5. PCIe Link Power Management
 
 Power also changes at the **PCIe link layer**:
 
@@ -88,7 +88,7 @@ Power also changes at the **PCIe link layer**:
 - Lower link power when idle
 - Resume on activity
 
-# 🔹 6) NVMe Low-Power States (Idle/Deep Sleep)
+# 6. NVMe Low-Power States (Idle/Deep Sleep)
 
 Lower states (PS3/PS4/PS5 depending on device):
 
@@ -102,7 +102,7 @@ Trade-off:
 Lower power ↔ Higher wake-up latency
 ```
 
-# 🔹 7) Firmware-Level Controls
+# 7. Firmware-Level Controls
 
 The controller firmware dynamically manages:
 
@@ -116,7 +116,7 @@ Example:
 High I/O → prioritize performance → higher powerIdle → run GC slowly → low power
 ```
 
-# 🔹 8) Putting It All Together
+# 8. Putting It All Together
 
 ```
 Host policy (Set Features)
@@ -131,7 +131,7 @@ Actual power draw changes
 ```
 
 
-# 🔹 9) Real-World Behavior Example
+# 9. Real-World Behavior Example
 
 ### Heavy workload:
 
@@ -154,17 +154,13 @@ APST → PS3/PS4
 → Very low power (<100 mW)
 ```
 
-# 🔹 10) Key Insight
+# 10. Key Insight
 
 > NVMe SSD power is controlled by **policy (host) + autonomy (firmware) + physics (temperature)** working together.
 
----
-
-# 🔹 One-Line Summary
+# One-Line Summary
 
 **An NVMe SSD changes power draw by transitioning between defined power states (PS0–PSn), using autonomous idle policies (APST), dynamically scaling internal activity, and reacting to thermal and PCIe link conditions.**
-
----
 
 If you want, I can:
 

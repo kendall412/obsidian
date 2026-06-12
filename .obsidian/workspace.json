@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/registers/Admin Queue Attributes (AQA).md",
+                "file": "NVMe/Compare and Write.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Admin Queue Attributes (AQA)"
+              "title": "Compare and Write"
             }
           },
           {
@@ -242,6 +242,16 @@
   },
   "active": "aa514ce22f958e31",
   "lastOpenFiles": [
+    "NVMe/Completion Queue.md",
+    "NVMe/Command Set Identifier (CSI).md",
+    "NVMe/Circular Queue (ring buffer).md",
+    "NVMe/pictures/Pasted image 20260129210326.png",
+    "NVMe/pictures/Pasted image 20260129210256.png",
+    "NVMe/power/Autonomous Power State Transitions (APST).md",
+    "NVMe/power/Normal Power-Off Reset (NPOR).md",
+    "NVMe/power/NVMe power states.md",
+    "NVMe/power/Sudden Power-Off Reset (SPOR).md",
+    "NVMe/registers/Admin Queue Attributes (AQA).md",
     "NVMe/registers/controller registers.md",
     "PCIe/Base Address Register (BAR).md",
     "NVMe/pictures/controller_BAR.png",
@@ -250,10 +260,7 @@
     "NVMe/pictures/Pasted image 20260129210349.png",
     "NVMe/pictures/Pasted image 20260129210408.png",
     "NVMe/pictures/SQE.png",
-    "NVMe/pictures/Pasted image 20260129210326.png",
-    "NVMe/pictures/Pasted image 20260129210256.png",
     "NVMe/pictures/DWORD0.png",
-    "NVMe/registers/Admin Queue Attributes (AQA).md",
     "NVMe/scenarios/high level view of NVMe Specification.md",
     "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
     "NVMe/scenarios/2. process when submission queue is given by host.md",
@@ -270,12 +277,6 @@
     "NVMe/CDW/CDW0 - Command Header.md",
     "NVMe/command set/Vendor Specific Command Set.md",
     "NVMe/command set/Command Set.md",
-    "NVMe/command set/IO Command Set.md",
-    "NVMe/Circular Queue (ring buffer).md",
-    "NVMe/Commands/Command Structure.md",
-    "NVMe/Admin Command Set OPCODE (OPC).md",
-    "NVMe/scenarios/what happens when submission queue is full?.md",
-    "NVMe/Physical Region Page 1 (PRP1).md",
     "NVMe/pictures/host to nvme.png",
     "Untitled.canvas",
     "Untitled.base",

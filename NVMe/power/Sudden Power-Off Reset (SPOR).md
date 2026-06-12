@@ -9,7 +9,7 @@ It refers to **the SSD’s ability to**:
 - preserve data integrity and metadata consistency
 
 > SPOR is fundamentally about ensuring the SSD never exposes an inconsistent logical storage state after unexpected power loss. **SPOR (Sudden Power-Off Recovery) is the SSD’s mechanism for surviving unexpected power loss while preserving data integrity, FTL consistency, and [[atomicity]] during recovery.**
-# 🔹 What SPOR Scenario Means
+# What SPOR Scenario Means
 
 A sudden power loss occurs while the SSD is actively processing I/O:
 
@@ -29,7 +29,7 @@ No shutdown notification
 No graceful completion
 ```
 
-# 🔹 Why SPOR Is Critical
+# Why SPOR Is Critical
 
 Without proper SPOR handling:
 
@@ -41,7 +41,7 @@ Without proper SPOR handling:
 
 could occur.
 
-# 🔹 What SSD Must Protect During SPOR
+# What SSD Must Protect During SPOR
 
 ## ✔ User Data
 
@@ -59,7 +59,7 @@ Need replay/recovery support after reboot.
 
 Incomplete NAND operations must be detected and handled safely.
 
-# 🔹 SPOR Internal Protection Mechanisms
+# SPOR Internal Protection Mechanisms
 
 # 1) Power Loss Protection (PLP)
 
@@ -97,7 +97,7 @@ SPOR recovery:
   validate metadata
 ```
 
-# 🔹 SPOR vs [[Normal Power-Off Reset (NPOR)]]
+# [[Sudden Power-Off Reset (SPOR)]] vs [[Normal Power-Off Reset (NPOR)]]
 
 | Term | Meaning                           |
 | ---- | --------------------------------- |
@@ -108,12 +108,11 @@ SPOR recovery:
 
 Graceful/expected reboot.
 
-## ✔ SPOR
+##  [[Sudden Power-Off Reset (SPOR)]]
 
 Unexpected crash/power cut.
 
-
-# 🔹 Typical SPOR Test
+# Typical SPOR Test
 
 SSD validation commonly performs:
 
@@ -129,7 +128,7 @@ SSD validation commonly performs:
 
 This is one of the most important SSD qualification tests.
 
-# 🔹 Example Failure Modes Without Proper SPOR
+# Example Failure Modes Without Proper SPOR
 
 ## ❌ Torn Write
 
@@ -147,7 +146,7 @@ LBA map points to invalid NAND page
 
 Consumer SSDs without PLP are vulnerable here.
 
-# 🔹 Enterprise vs Consumer SSD
+# Enterprise vs Consumer SSD
 
 |Feature|Consumer SSD|Enterprise SSD|
 |---|---|---|
@@ -155,7 +154,7 @@ Consumer SSDs without PLP are vulnerable here.
 |SPOR robustness|Lower|Very high|
 |Metadata protection|Basic|Extensive|
 
-# 🔹 SPOR Recovery Sequence
+# SPOR Recovery Sequence
 
 ```
 Power restored
