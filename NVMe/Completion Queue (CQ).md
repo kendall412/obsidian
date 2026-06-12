@@ -8,7 +8,7 @@ DW1 : Reserved
 DW2 : SQ Head Pointer (SQHD) | SQ Identifier (SQID)
 DW3 : Command Identifier (CID) | Status Field (SF)
 ```
----
+
 # DW0 — Command-Specific Result (32 bits)
 ```
 Bits 31:0 → Command-Specific Result
@@ -17,14 +17,14 @@ Bits 31:0 → Command-Specific Result
 - For **Admin commands**, this often returns meaningful data:
     - e.g., **Identify**, **Get Log Page**, **Set Features**
 - For many I/O commands, may be unused or command-dependent
----
+
 # DW1 — Reserved (32 bits)
 ```
 Bits 31:0 → Reserved (0)
 ```
 
 - Typically ignored by host
----
+
 # DW2 — SQ Head Pointer + SQ Identifier
 ```
 Bits 15:0  → SQHD (Submission Queue Head Pointer)
@@ -38,7 +38,7 @@ Bits 31:16 → SQID (Submission Queue Identifier)
     - Helps host reclaim SQ entries
 - **SQID**:
     - Identifies which SQ this completion corresponds to
----
+
 # DW3 — CID + Status Field
 ```
 Bits 15:0  → CID  (Command Identifier)
@@ -69,13 +69,13 @@ Bit 5 → More (M)
 Bit 4 → Do Not Retry (DNR)
 Bits 3:0 → Reserved
 ```
----
+
 ## Field meanings
 
 ### Phase Tag (P)
 - Toggles each time CQ wraps
 - Used by host to detect new vs stale entries
----
+
 ### Status Code (SC)
 
 - Indicates result of command:
@@ -89,7 +89,6 @@ Bits 3:0 → Reserved
 | 2     | Media/Data integrity |
 | 3     | Path-related         |
 
----
 # Example CQE (decoded)
 
 ```
@@ -116,7 +115,6 @@ DW3 = 0xA005002A
     - SC = 0 (success)
     - SCT = 0 (generic)
 
----
 ### Key nuances
 
 #### 1. Same format for Admin and I/O CQs
