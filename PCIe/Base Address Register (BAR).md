@@ -70,7 +70,150 @@ BARs are located in the device’s:
 Traditional PCI devices can have up to:
 
 - 6 BARs (BAR0–BAR5)
+---
 
+Here is a visual representation of the most common PCIe BAR formats.
+### 32-bit Memory BAR
+
+```
+Bit
+31                                                         0
++---------------------------------------------------------+
+|                 Base Address [31:4]               |T|T|0|
++---------------------------------------------------------+
+                                                          ^
+                                                          |
+                                                      Memory BAR
+
+Where:
+
+Bit 0     = 0  (Memory Space Indicator)
+
+Bits 2:1  = Type
+            00 = 32-bit BAR
+            10 = 64-bit BAR
+
+Bit 3     = Prefetchable
+            0 = Non-prefetchable
+            1 = Prefetchable
+
+Bits 31:4 = Base Address assigned by BIOS/OS
+```
+
+Example:
+
+```
+BAR0 = 0x80002008
+
+Binary:
+
+1000 0000 0000 0000 0010 0000 0000 1000
+                                    ||||
+                                    |||+-- Bit0 = 0 (Memory BAR)
+                                    ||+--- Bits2:1 = 00 (32-bit)
+                                    |+---- Bit3 = 1 (Prefetchable)
+                                    +----- Address bits
+
+Base Address = 0x80002000
+```
+
+
+### 64-bit Memory BAR
+
+A 64-bit BAR consumes two BAR registers.
+
+```
+BAR0 (Lower 32 bits)
+
+31                                                         0
++---------------------------------------------------------+
+|              Address[31:4]                        |T|T|0|
++---------------------------------------------------------+
+
+BAR1 (Upper 32 bits)
+
+31                                                         0
++---------------------------------------------------------+
+|                 Address[63:32]                          |
++---------------------------------------------------------+
+```
+
+Combined:
+
+```
+Address[63:32]          Address[31:0]
++----------------------+----------------------+
+|        BAR1          |         BAR0         |
++----------------------+----------------------+
+```
+
+Example:
+
+```
+BAR1 = 0x00000010
+BAR0 = 0x00000004
+
+64-bit Address:
+
+0x00000010_00000000
+```
+
+(Bit 2 in BAR0 indicates a 64-bit BAR.)
+
+### PCIe Configuration Space View
+
+```
+PCIe Configuration Header
+
+Offset
+------  ----------------------------------
+0x00    Vendor ID / Device ID
+0x04    Command / Status
+0x08    Class Code
+0x0C    Header Type
+0x10    BAR0
+0x14    BAR1
+0x18    BAR2
+0x1C    BAR3
+0x20    BAR4
+0x24    BAR5
+```
+
+For a typical NVMe SSD:
+
+```
+PCIe Config Space
+        |
+        v
++-------------------+
+| BAR0=80000000h    |
++-------------------+
+        |
+        v
+MMIO Region
+0x80000000
++-------------------+
+| CAP               |
++-------------------+
+| VS                |
++-------------------+
+| CC                |
++-------------------+
+| CSTS              |
++-------------------+
+| AQA               |
++-------------------+
+| ASQ               |
++-------------------+
+| ACQ               |
++-------------------+
+| Doorbells         |
++-------------------+
+```
+
+> This is the picture most NVMe engineers keep in mind: **BAR0 in PCIe configuration space points to the base of the NVMe MMIO register block, and all NVMe controller registers are accessed as offsets from that BAR address.**
+
+---
 # BAR Types
 
 ## 1. Memory BAR

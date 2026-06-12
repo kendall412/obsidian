@@ -9,7 +9,7 @@
 
 Controller Registers
 
-![[Pasted image 20260129210623.png]]
+![[controller_BAR.png]]
 
 NVMe controllers feature several memory-mapped registers located within memory regions defined by the Base Address Registers (BARs). These registers convey the controller's status, enable the host to configure operational settings, and facilitate error reporting.
 

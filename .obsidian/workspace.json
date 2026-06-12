@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "217fe168b6c5e7a5",
+            "id": "abf818475b8db796",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,133 +22,63 @@
             }
           },
           {
-            "id": "0da8ff90ee5043e5",
+            "id": "aa514ce22f958e31",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/Causes for write fails in nvme drives.md",
+                "file": "NVMe/registers/Admin Queue Attributes (AQA).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Causes for write fails in nvme drives"
+              "title": "Admin Queue Attributes (AQA)"
             }
           },
           {
-            "id": "b8e9aeb788b048cb",
+            "id": "edff355f29e165a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/high level view of NVMe Specification.md",
+                "file": "NVMe/registers/controller registers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "high level view of NVMe Specification"
+              "title": "controller registers"
             }
           },
           {
-            "id": "be09a49b59992959",
+            "id": "07a9b75942d91376",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/Arbitration Mechanism.md",
+                "file": "PCIe/Base Address Register (BAR).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arbitration Mechanism"
+              "title": "Base Address Register (BAR)"
             }
           },
           {
-            "id": "87a89958d7bfe00c",
+            "id": "3ed45d8aca6a5a37",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/how a single NVMe submission queue can have multiple commands.md",
+                "file": "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how a single NVMe submission queue can have multiple commands"
-            }
-          },
-          {
-            "id": "4eca7f0b7bba48cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/process/pcie enumeration.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "pcie enumeration"
-            }
-          },
-          {
-            "id": "021750e1a2649495",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/PCIe Stack.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PCIe Stack"
-            }
-          },
-          {
-            "id": "d251f02e4c465467",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Submission Queue Head Pointer (SQHD).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Submission Queue Head Pointer (SQHD)"
-            }
-          },
-          {
-            "id": "cf9a0bd86da98dac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Physical Region Page (PRP).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Physical Region Page (PRP)"
-            }
-          },
-          {
-            "id": "dc90d55547b9f488",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/Physical Region Page (PRP).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Physical Region Page (PRP)"
+              "title": "Message Signaled Interrupts eXtended (MSI-X)"
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 423.5
+    "width": 371.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -310,34 +240,42 @@
       "bases:Create new base": false
     }
   },
-  "active": "dc90d55547b9f488",
+  "active": "aa514ce22f958e31",
   "lastOpenFiles": [
+    "NVMe/registers/controller registers.md",
+    "PCIe/Base Address Register (BAR).md",
+    "NVMe/pictures/controller_BAR.png",
+    "NVMe/Controller.md",
+    "NVMe/pictures/Pasted image 20260129210339.png",
+    "NVMe/pictures/Pasted image 20260129210349.png",
+    "NVMe/pictures/Pasted image 20260129210408.png",
+    "NVMe/pictures/SQE.png",
+    "NVMe/pictures/Pasted image 20260129210326.png",
+    "NVMe/pictures/Pasted image 20260129210256.png",
+    "NVMe/pictures/DWORD0.png",
+    "NVMe/registers/Admin Queue Attributes (AQA).md",
+    "NVMe/scenarios/high level view of NVMe Specification.md",
+    "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
+    "NVMe/scenarios/2. process when submission queue is given by host.md",
+    "NVMe/Fuse.md",
+    "NVMe/Compare and Write.md",
+    "race conditions.md",
+    "NVMe/Commands/Read Command.md",
+    "NVMe/Commands/Flush Command.md",
+    "NVMe/Physical Region Page (PRP).md",
     "NVMe/NVM_whitepaper.pdf",
     "NVMe/PRP or SGL for Data Transger (PSDT).md",
     "NVMe/Physical Region Page (PRP) vs Scatter Gather List (SGL).md",
-    "NVMe/Physical Region Page (PRP).md",
     "NVMe/CDW/CDW.md",
     "NVMe/CDW/CDW0 - Command Header.md",
     "NVMe/command set/Vendor Specific Command Set.md",
     "NVMe/command set/Command Set.md",
     "NVMe/command set/IO Command Set.md",
     "NVMe/Circular Queue (ring buffer).md",
-    "NVMe/Commands/Flush Command.md",
     "NVMe/Commands/Command Structure.md",
     "NVMe/Admin Command Set OPCODE (OPC).md",
     "NVMe/scenarios/what happens when submission queue is full?.md",
     "NVMe/Physical Region Page 1 (PRP1).md",
-    "NVMe/Scatter-Gather List (SGL).md",
-    "NVMe/scenarios/2. process when submission queue is given by host.md",
-    "PCIe/PCIe PHY.md",
-    "PCIe/PCIe Device Control Register (PXDC).md",
-    "NVMe/Submission Queue Head Pointer (SQHD).md",
-    "NVMe/queue depth - iodepth.md",
-    "NVMe/scenarios/how a single NVMe submission queue can have multiple commands.md",
-    "NVMe/Arbitration Mechanism.md",
-    "NVMe/scenarios/high level view of NVMe Specification.md",
-    "NVMe/LOGS/logs.md",
-    "PCIe/process/pcie enumeration.md",
     "NVMe/pictures/host to nvme.png",
     "Untitled.canvas",
     "Untitled.base",

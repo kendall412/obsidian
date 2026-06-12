@@ -36,8 +36,8 @@ Examples:
 - [[Controller Status (CSTS)]]
 - [[Doorbell Registers]]
 - [[Admin Queue Attributes (AQA)]]
-- Admin Submission Queue Address (ASQ)
-- Admin Completion Queue Address (ACQ)
+	-  Admin Submission Queue Address (ASQ)
+	- Admin Completion Queue Address (ACQ)
 
 # 2. Controller Register Interface
 
