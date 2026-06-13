@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/scenarios/2. process when submission queue is given by host.md",
+                "file": "PCIe/LTSSM/L0.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. process when submission queue is given by host"
+              "title": "L0"
+            }
+          },
+          {
+            "id": "1ad6bc6988cc8838",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/LTSSM/POLLING.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "POLLING"
             }
           },
           {
@@ -50,71 +64,17 @@
             }
           },
           {
-            "id": "73d4d68f56d2864b",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "NVMe/NVM_whitepaper.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "NVM_whitepaper"
-            }
-          },
-          {
             "id": "143ea9500fb1007d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/registers/doorbell.md",
+                "file": "PCIe/DMA Controller.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "doorbell"
-            }
-          },
-          {
-            "id": "edff355f29e165a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/registers/controller registers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "controller registers"
-            }
-          },
-          {
-            "id": "07a9b75942d91376",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/Base Address Register (BAR).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Base Address Register (BAR)"
-            }
-          },
-          {
-            "id": "3ed45d8aca6a5a37",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Message Signaled Interrupts eXtended (MSI-X)"
+              "title": "DMA Controller"
             }
           }
         ]
@@ -149,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "MMIO",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -174,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 293.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -281,42 +241,43 @@
   },
   "active": "abf818475b8db796",
   "lastOpenFiles": [
-    "NVMe/scenarios/high level view of NVMe Specification.md",
-    "NVMe/data buffer (NVMe).md",
-    "NVMe/scenarios/2. process when submission queue is given by host.md",
-    "NVMe/metadata.md",
-    "NVMe/Phase Tag (P).md",
-    "NVMe/Logical Block Address Format (LBAF).md",
-    "NVMe/registers/doorbell.md",
-    "NVMe/queue pointer.md",
-    "NVMe/scenarios/interaction between CQ, interrupts, and doorbell.md",
+    "PCIe/LTSSM/Link Training and Status State Machine (LTSSM).md",
+    "PCIe/LTSSM/L0.md",
+    "PCIe/LTSSM/POLLING.md",
+    "PCIe/LTSSM/DETECT.md",
+    "PCIe/LTSSM/CONFIGURATION.md",
+    "PCIe/Training Sequence 1 (TS1).md",
+    "PCIe/Training Sequence 2 (TS2).md",
+    "PCIe/LTSSM",
+    "PCIe/Symbol Lock.md",
+    "PCIe/Symbols.md",
+    "Link Training.md",
+    "PCIe/Bit Lock.md",
+    "PCIe/lanes.md",
+    "Link Status Register (LnkSta).md",
+    "PCIe/PCIe Stack.md",
+    "PCIe/Training Sequences (TS).md",
+    "PCIe/link width.md",
+    "PCIe/Link Training.md",
+    "PCIe/process/pcie enumeration.md",
+    "PCIe/process/PCIe link training process.md",
+    "NVMe/PRP or SGL for Data Transger (PSDT).md",
+    "NVMe/LOGS/logs.md",
+    "NVMe/LOGS/LID = 0x04 Changed Namespace List Log Page.md",
+    "NVMe/LOGS/LID = 0x01 Error Information Log Page.md",
+    "NVMe/LOGS/LID = 0x03 Firmware Slot Info Log Page.md",
+    "NVMe/process/what happens when submission queue is full?.md",
+    "NVMe/process/process of host submits a READ request to nvme ssd.md",
     "NVMe/NVM_whitepaper.pdf",
     "NVMe/pictures/queue_cycle.png",
-    "NVMe/Completion Queue.md",
-    "NVMe/Completion Queue (CQ).md",
-    "NVMe/Compare and Write.md",
-    "NVMe/Command Set Identifier (CSI).md",
-    "NVMe/Circular Queue (ring buffer).md",
     "NVMe/pictures/Pasted image 20260129210326.png",
     "NVMe/pictures/Pasted image 20260129210256.png",
-    "NVMe/power/Autonomous Power State Transitions (APST).md",
-    "NVMe/power/Normal Power-Off Reset (NPOR).md",
-    "NVMe/power/NVMe power states.md",
-    "NVMe/power/Sudden Power-Off Reset (SPOR).md",
-    "NVMe/registers/Admin Queue Attributes (AQA).md",
-    "NVMe/registers/controller registers.md",
-    "PCIe/Base Address Register (BAR).md",
     "NVMe/pictures/controller_BAR.png",
-    "NVMe/Controller.md",
     "NVMe/pictures/Pasted image 20260129210339.png",
     "NVMe/pictures/Pasted image 20260129210349.png",
     "NVMe/pictures/Pasted image 20260129210408.png",
     "NVMe/pictures/SQE.png",
     "NVMe/pictures/DWORD0.png",
-    "PCIe/Message Signaled Interrupts eXtended (MSI-X).md",
-    "NVMe/Fuse.md",
-    "race conditions.md",
-    "NVMe/Commands/Read Command.md",
     "NVMe/pictures/host to nvme.png",
     "Untitled.canvas",
     "Untitled.base",

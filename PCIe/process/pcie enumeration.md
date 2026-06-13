@@ -1,7 +1,6 @@
 
 > **PCIe enumeration** is the process by which a system firmware (BIOS/UEFI) and operating system discover, identify, configure, and allocate resources to all PCIe devices in the system after power-on or reset.
 
-
 Think of enumeration as the host asking:
 
 > "What PCIe devices are connected, what resources do they need, and how should I configure them?"
@@ -62,7 +61,7 @@ Before enumeration can begin:
 
 must establish a working PCIe link.
 
-The LTSSM (Link Training and Status State Machine) performs:
+The [[Link Training and Status State Machine (LTSSM)]] performs:
 
 - Detect
 - Polling

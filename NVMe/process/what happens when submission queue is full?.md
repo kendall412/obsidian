@@ -62,11 +62,7 @@ Outstanding commands = 63
 SQ is full
 ```
 
-The host wants to submit another Read command.
-
-It cannot write the command because doing so would overwrite an unprocessed command.
-
-The host must wait.
+The host wants to submit another Read command. It cannot write the command because doing so would overwrite an unprocessed command. The host must wait.
 
 ## Host Driver Behavior
 

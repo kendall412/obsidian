@@ -1,5 +1,4 @@
 
-
 > MSI-X is a modern PCIe interrupt mechanism that **allows a PCIe device to generate interrupts by sending specially formatted memory write transactions instead of asserting a physical interrupt pin.**
 
 MSI-X stands for:
@@ -106,7 +105,6 @@ MSI-X provides:
 |Widely used today|Sometimes|Yes|
 
 Modern high-performance PCIe devices almost always use MSI-X.
-
 
 # Why NVMe Uses MSI-X
 
