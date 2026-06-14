@@ -1,4 +1,4 @@
-PCIe retimers regenerate signals by recovering clocks and retransmitting clean data, effectively doubling channel reach and correcting complex impairments like random jitter (RJ) and lane skew, but are complex and costly; redrivers amplify signals, offer simple, low-cost, low-latency solutions for modest losses but don't reset jitter and can't fully extend range, making them better for shorter, well-understood links where high-frequency noise amplification isn't a major issue. 
+> PCIe retimers regenerate signals by recovering clocks and retransmitting clean data, effectively doubling channel reach and correcting complex impairments like random jitter (RJ) and lane skew, but are complex and costly; redrivers amplify signals, offer simple, low-cost, low-latency solutions for modest losses but don't reset jitter and can't fully extend range, making them better for shorter, well-understood links where high-frequency noise amplification isn't a major issue. 
 
 PCIe Retimer
 
