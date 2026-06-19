@@ -34,7 +34,7 @@ This provides:
 
 # Where Doorbells Are Located
 
-Doorbells are [[Memory-Mapped IO (MMIO)]] registers located in the controller's PCIe BAR.
+Doorbells are [[MMIO (Memory-Mapped IO)]] registers located in the controller's PCIe BAR.
 
 Usually:
 

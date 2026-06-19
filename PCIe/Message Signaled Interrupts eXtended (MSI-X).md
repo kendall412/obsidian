@@ -252,7 +252,7 @@ In NVMe:
 
 | Mechanism               | Direction     |
 | ----------------------- | ------------- |
-| Doorbell [[Memory-Mapped IO (MMIO)]] write | Host → Device |
+| Doorbell [[MMIO (Memory-Mapped IO)]] write | Host → Device |
 | MSI-X interrupt         | Device → Host |
 
 Doorbells notify the SSD.
