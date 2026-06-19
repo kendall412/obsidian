@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/ACK NAK.md",
+                "file": "PCIe/PCIe Stack/LCRC (Link Cyclic Redundancy Check).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ACK NAK"
+              "title": "LCRC (Link Cyclic Redundancy Check)"
             }
           },
           {
@@ -383,7 +383,9 @@
   "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
     "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
-    "PCIe/ACK NAK.md",
+    "PCIe/PCIe Stack/LCRC (Link Cyclic Redundancy Check).md",
+    "PCIe/PCIe Stack/Flow Control.md",
+    "PCIe/PCIe Stack/ACK NAK.md",
     "ACK/NAK 1.md",
     "ACK_NAK.md",
     "ACK/NAK.md",
@@ -408,8 +410,6 @@
     "PCIe/LTSSM/RECOVERY.md",
     "PCIe/LTSSM/Link Training and Status State Machine (LTSSM).md",
     "8bit-10bit encoding.md",
-    "hardware state machine.md",
-    "race conditions.md",
     "PCIe/LTSSM",
     "NVMe/NVM_whitepaper.pdf",
     "NVMe/pictures/queue_cycle.png",

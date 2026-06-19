@@ -298,3 +298,171 @@ Memory Write
 Completion
 ```
 
+### DLLP
+
+Data Link Layer Packet
+
+Examples:
+
+```
+ACK
+NAK
+Flow Control Update
+```
+
+ACK/NAK never reach NVMe firmware.
+
+They are handled entirely by PCIe hardware.
+
+#### NVMe Doorbell Example
+
+Host updates SQ Tail Doorbell.
+
+Transaction Layer creates:
+
+```
+Memory Write TLP
+```
+
+Data Link Layer adds:
+
+```
+Seq# = 200
+LCRC
+```
+
+Transmit:
+
+```
+Host --------------------> SSD
+        TLP #200
+```
+
+SSD verifies packet.
+
+If good:
+
+```
+SSD --------------------> Host
+           ACK
+```
+
+Doorbell write is considered successfully delivered.
+
+#### NVMe DMA Example
+
+SSD wants to read a command from host memory.
+
+SSD sends:
+
+```
+Memory Read TLP
+```
+
+Host checks:
+
+```
+LCRC OK
+Sequence OK
+```
+
+Host sends:
+
+```
+ACK DLLP
+```
+
+SSD knows the request arrived correctly.
+
+## ACK/NAK and LTSSM Recovery
+
+If many NAKs occur:
+
+```
+Repeated Replay
+Repeated CRC Errors
+Replay Timeout
+```
+
+the link may be considered unstable.
+
+The LTSSM can transition:
+
+```
+L0
+ |
+ v
+Recovery
+```
+
+to retrain the link.
+
+## Real PCIe Gen4 Example
+
+Suppose:
+
+```
+PCIe Gen4 x4
+```
+
+A noisy lane causes occasional errors.
+
+Sequence:
+
+```
+TLP #500 sent
+```
+
+Receiver detects:
+
+```
+LCRC failure
+```
+
+Receiver sends:
+
+```
+NAK
+```
+
+Sender replays:
+
+```
+TLP #500
+```
+
+This happens automatically in hardware. Software and NVMe firmware never see it.
+
+## Summary
+
+ACK and NAK are **Data Link Layer Packets (DLLPs)** used by PCIe hardware for reliable delivery.
+
+|DLLP|Meaning|
+|---|---|
+|ACK|Packet received correctly|
+|NAK|Packet corrupted, retransmit|
+
+Flow:
+
+```
+Sender
+   |
+   | TLP
+   v
+Receiver
+   |
+   +--> Good → ACK
+   |
+   +--> Bad  → NAK
+```
+
+ogether with:
+
+```
+Sequence Numbers
+Replay Buffers
+LCRC
+```
+
+> ACK and NAK allow PCIe to reliably transport TLPs between devices such as a host and an NVMe SSD, even when occasional transmission errors occur.
+

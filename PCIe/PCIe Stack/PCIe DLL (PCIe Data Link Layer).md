@@ -27,10 +27,10 @@ Its primary job is:
 The Data Link Layer is responsible for:
 
 1. Sequence Numbers
-2. LCRC Generation
+2. [[LCRC (Link Cyclic Redundancy Check)]] Generation
 3. [[ACK NAK]] Handling
 4. Replay Buffer
-5. Flow Control
+5. [[Flow Control]]
 6. TLP Delivery Verification
 
 It does **not** understand NVMe commands.
