@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/PCIe Stack/PCIe TLP.md",
+                "file": "PCIe/PCIe Stack/PCIe TLP (PCIe Transaction Layer Packet).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PCIe TLP"
+              "title": "PCIe TLP (PCIe Transaction Layer Packet)"
             }
           },
           {
@@ -97,12 +97,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/PCIe Stack/PCIe TL (PCIe Transaction Layer).md",
+                "file": "PCIe/PCIe Stack/PCIe Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PCIe TL (PCIe Transaction Layer)"
+              "title": "PCIe Stack"
+            }
+          },
+          {
+            "id": "0a90a000522e6cba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PCIe DLL (PCIe Data Link Layer)"
             }
           },
           {
@@ -204,7 +218,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -366,16 +380,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "da5a49f58e3b0d73",
+  "active": "0a90a000522e6cba",
   "lastOpenFiles": [
-    "MMIO (Memory-Mapped IO).md",
-    "PCIe/PCIe Stack/PCIe TL (PCIe Transaction Layer).md",
-    "NVMe/registers/Doorbell Registers.md",
-    "PCIe/PCIe Stack/PCIe TLP.md",
-    "PCIe/PCIe Stack/Physical Layer.md",
-    "PCIe/PCIe Stack/PCIe PHY.md",
-    "PCIe/PCIe Stack",
     "PCIe/PCIe Stack/PCIe Stack.md",
+    "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
+    "PCIe/PCIe Stack/PCIe PHY (PCIe Physical Layer).md",
+    "PCIe/PCIe Stack/Physical Layer.md",
+    "PCIe/PCIe Stack/PCIe TLP (PCIe Transaction Layer Packet).md",
+    "PCIe/PCIe Stack/PCIe TL (PCIe Transaction Layer).md",
+    "MMIO (Memory-Mapped IO).md",
+    "NVMe/registers/Doorbell Registers.md",
+    "PCIe/PCIe Stack",
     "PCIe/sideband management.md",
     "smbus.md",
     "PCIe/LTSSM/Training Sequence 1 (TS1).md",
@@ -394,7 +409,6 @@
     "Link Training.md",
     "PCIe/LTSSM/DETECT.md",
     "PCIe/LTSSM/L0.md",
-    "NVMe/Admin Command Set OPCODE (OPC).md",
     "PCIe/LTSSM",
     "NVMe/NVM_whitepaper.pdf",
     "NVMe/pictures/queue_cycle.png",

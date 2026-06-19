@@ -270,7 +270,7 @@ Power Management DLLP
 
 DLLPs never reach software.
 
-# 3. Physical Layer [[PCIe PHY]]
+# 3. Physical Layer [[PCIe PHY (PCIe Physical Layer)]]
 
 The Physical Layer moves bits across PCIe lanes.
 

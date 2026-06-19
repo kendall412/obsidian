@@ -313,7 +313,28 @@ NVMe command itself is not automatically the same thing as a TLP.
 |Data Link Layer|Adds sequence numbers, LCRC, ACK/NAK, replay|
 |Physical Layer|Serializes and transmits bits over lanes|
 
-The Transaction Layer decides **what transaction to perform**.
+The Transaction Layer decides **what transaction to perform**. The Data Link Layer ensures the packet is delivered reliably across one link.
 
-The Data Link Layer ensures the packet is delivered reliably across one link.
+## Simple summary
+
+The **PCIe Transaction Layer** is responsible for packetizing high-level requests into **TLPs**.
+
+For NVMe, it handles:
+
+```
+MMIO register access
+Doorbell writes
+DMA reads/writes
+PCIe configuration access
+Interrupt messages
+Completions
+```
+
+In short:
+
+```
+NVMe command = storage operation
+PCIe TLP = transport transaction carrying memory/config/message operations
+Transaction Layer = creates and processes those TLPs
+```
 
