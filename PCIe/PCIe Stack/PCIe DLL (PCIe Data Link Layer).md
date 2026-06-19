@@ -28,7 +28,7 @@ The Data Link Layer is responsible for:
 
 1. Sequence Numbers
 2. LCRC Generation
-3. ACK/NAK Handling
+3. [[ACK NAK]] Handling
 4. Replay Buffer
 5. Flow Control
 6. TLP Delivery Verification
