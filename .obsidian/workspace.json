@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/PCIe Stack/LCRC (Link Cyclic Redundancy Check).md",
+                "file": "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LCRC (Link Cyclic Redundancy Check)"
+              "title": "PCIe DLL (PCIe Data Link Layer)"
             }
           },
           {
@@ -380,10 +380,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "0a90a000522e6cba",
   "lastOpenFiles": [
-    "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
     "PCIe/PCIe Stack/LCRC (Link Cyclic Redundancy Check).md",
+    "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
     "PCIe/PCIe Stack/Flow Control.md",
     "PCIe/PCIe Stack/ACK NAK.md",
     "ACK/NAK 1.md",
