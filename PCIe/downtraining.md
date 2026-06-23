@@ -4,7 +4,8 @@
 For a Gen4 NVMe SSD, the most common outcome is:
 
 ```
-Expected: Gen4 x4 (16 GT/s per lane)Actual:   Gen3 x4 (8 GT/s per lane)
+Expected: Gen4 x4 (16 GT/s per lane)
+Actual:   Gen3 x4 (8 GT/s per lane)
 ```
 
 This process is called **downtraining**.

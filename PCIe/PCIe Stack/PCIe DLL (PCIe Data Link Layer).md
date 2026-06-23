@@ -1,5 +1,5 @@
 
-The **PCIe Data Link Layer (DLL)** sits between the Transaction Layer and the Physical Layer.
+The **PCIe Data Link Layer (DLL)** sits between the [[PCIe TL (PCIe Transaction Layer)]]  and the [[PCIe PHY (PCIe Physical Layer)]].
 
 Its primary job is:
 
