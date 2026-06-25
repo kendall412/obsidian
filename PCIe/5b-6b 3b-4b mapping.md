@@ -158,3 +158,11 @@ The encoder simply performs a table lookup based on:
 1. The 8-bit input value.
 2. The current running disparity.
 
+## Summary
+
+The complete 8b/10b mapping table contains **256 data-byte mappings plus control-character mappings**, with separate outputs depending on the running disparity. In practice, it is implemented as two lookup tables:
+
+- **5b → 6b** encoder (32 entries)
+- **3b → 4b** encoder (8 entries)
+
+These are combined to produce the final 10-bit transmission character used by PCIe Gen1/Gen2, SATA, Fibre Channel, and other serial protocols.
