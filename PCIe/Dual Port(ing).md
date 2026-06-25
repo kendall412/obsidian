@@ -1,4 +1,4 @@
-Dual-porting in NVMe refers to two main concepts: connecting two NVMe SSDs to a single PCIe slot via an adapter card, and using enterprise SSDs that have two physical ports for redundant data paths. An adapter card allows you to install two M.2 NVMe drives in a single PCIe slot, provided the motherboard's BIOS and CPU support bifurcation. Enterprise-grade dual-port NVMe SSDs, common in servers, use their two ports for redundancy and high availability, ensuring data access even if one connection path fails. 
+> Dual-porting in NVMe refers to two main concepts: connecting two NVMe SSDs to a single PCIe slot via an adapter card, and using enterprise SSDs that have two physical ports for redundant data paths. An adapter card allows you to install two M.2 NVMe drives in a single PCIe slot, provided the motherboard's BIOS and CPU support bifurcation. Enterprise-grade dual-port NVMe SSDs, common in servers, use their two ports for redundancy and high availability, ensuring data access even if one connection path fails. 
 
 Dual M.2 adapters 
 

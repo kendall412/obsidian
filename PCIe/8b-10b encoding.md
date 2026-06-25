@@ -576,12 +576,6 @@ Gen3+     -> 128b/130b
 
 > During PCIe link training (TS1/TS2), ordered sets and control symbols are encoded with 8b/10b on Gen1/Gen2 links before being transmitted across the PCIe lanes.
 
-
-
-
-
-
-
 ---
 How it works
 

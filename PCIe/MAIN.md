@@ -1,4 +1,23 @@
+# Key Topics
 
+- Configuration Space and Access Methods
+- Enumeration Process
+- Packet Types and Fields
+- Transaction Ordering
+- Traffic Classes, Virtual Channels and Arbitration (QoS)
+- Flow Control
+- ACK/NAK Protocol
+- Logical PHY (8b/10b, 128b/130b, Scrambling)
+- Electrical PHY
+- Link Training and Initialization
+- Interrupt Delivery (Legacy, MSI, MSI-X)
+- Error Detection and Reporting
+- Power Management (both software and hardware)
+- 2.0 and 2.1 Features (5.0GT/s, TLP hints and multi-casting)
+- 3.0 Features (8.0GT/s, and new encoding scheme)
+- High speed signaling (Equalization)
+
+---
 Unlike its predecessor, PCI, PCIe is not a bus. It is a point-to-point protocol, more like AXI for example. The structure of the PCIe system consists of a number of point-to-point interfaces, with multiple peripherals and modules connected through an infrastructure, or fabric.
 
 ![[pcie_architecture.png]]
