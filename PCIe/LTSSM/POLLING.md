@@ -106,7 +106,7 @@ and the LTSSM remains in Polling.Active or falls back.
 
 ### Step 4: Symbol Lock
 
-> Acquire [[Symbol Lock]] or Block Lock - Symbol Lock is a crucial step during link training where **the receiver successfully aligns its clock and data grouping** ([[Symbols]]) with the transmitter, understanding the specific patterns (like TS1/TS2 Ordered Sets) to correctly decode data, following Bit Lock (clock frequency sync), and allowing the link to move to configuration and normal operation (L0 state). After clock recovery, the receiver must determine symbol boundaries.
+> Acquire [[Symbol Lock]] or Block Lock - Symbol Lock is a crucial step during link training where **the receiver successfully aligns its clock and data grouping** ([[PCIe/symbols/general]]) with the transmitter, understanding the specific patterns (like TS1/TS2 Ordered Sets) to correctly decode data, following Bit Lock (clock frequency sync), and allowing the link to move to configuration and normal operation (L0 state). After clock recovery, the receiver must determine symbol boundaries.
 
 For Gen1/Gen2:
 

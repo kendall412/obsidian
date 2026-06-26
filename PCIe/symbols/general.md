@@ -1,3 +1,4 @@
+
 > In PCIe, symbols are the fundamental units of data and control signaling, representing encoded groups of bits (like 10 bits in older Gen, 130 bits in newer Gen) that carry actual data bytes or special control functions (like starting a packet or linking) across the physical lanes, forming parts of Ordered Sets (OS) for link training or framing TLPs/DLLPs. They are crucial for the physical layer's encoding/decoding, ensuring data integrity and managing the link's state, with different symbols (e.g., K-symbols, COM, TS0, EIEOS) defining operations like data transmission, error correction, or link initialization. 
 
 
