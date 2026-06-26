@@ -223,12 +223,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/symbols/D-Codes.md",
+                "file": "PCIe/Scrambling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "D-Codes"
+              "title": "Scrambling"
             }
           },
           {
@@ -480,19 +480,20 @@
   },
   "active": "55f9ebb1b7b18bf4",
   "lastOpenFiles": [
-    "PCIe/symbols/K-Codes.md",
+    "PCIe/MAIN.md",
+    "PCIe/PCIe Stack/Flow Control.md",
+    "PCIe/symbols/128b_130b encoding.md",
     "PCIe/symbols/D-Codes.md",
+    "PCIe/symbols/K-Codes.md",
     "PCIe/symbols/general.md",
     "PCIe/symbols/5b-6b 3b-4b mapping.md",
     "symbols.md",
     "PCIe/symbols",
     "PCIe/symbols/8b-10b encoding.md",
-    "PCIe/symbols/128b_130b encoding.md",
     "PCIe/pictures/5b-6b 3b-4b mapping table a.png",
     "PCIe/pictures/5b-6b 3b-4b mapping table b.png",
     "PCIe/Dual Port(ing).md",
     "PCIe/Dual-Port.md",
-    "PCIe/MAIN.md",
     "PCIe/Loopback.md",
     "PCIe/Power Management & States/what is the difference between PCIe device power state and NVMe power states?.md",
     "PCIe/Power Management & States/PCIe Power Management.md",
@@ -502,7 +503,6 @@
     "PCIe/downtraining.md",
     "PCIe/PCIe Stack/PCIe DLL (PCIe Data Link Layer).md",
     "PCIe/PCIe Stack/LCRC (Link Cyclic Redundancy Check).md",
-    "PCIe/PCIe Stack/Flow Control.md",
     "PCIe/PCIe Stack/ACK NAK.md",
     "ACK/NAK 1.md",
     "ACK_NAK.md",

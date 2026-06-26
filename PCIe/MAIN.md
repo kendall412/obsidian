@@ -5,8 +5,8 @@
 - Packet Types and Fields
 - Transaction Ordering
 - Traffic Classes, Virtual Channels and Arbitration (QoS)
-- Flow Control
-- ACK/NAK Protocol
+- [[Flow Control]]
+- [[ACK NAK]] Protocol
 - Logical PHY (8b/10b, 128b/130b, Scrambling)
 - Electrical PHY
 - Link Training and Initialization
