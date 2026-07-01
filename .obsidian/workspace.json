@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/process/what does admin commands do when first starting up.md",
+                "file": "PCIe/SIDEBAND/NVMe-MI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what does admin commands do when first starting up"
+              "title": "NVMe-MI"
             }
           },
           {
@@ -358,7 +358,7 @@
             }
           }
         ],
-        "currentTab": 19
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -520,10 +520,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "465c4a13a80bef3e",
   "lastOpenFiles": [
-    "PCIe/SIDEBAND/sideband.md",
+    "NVMe/process/what does admin commands do when first starting up.md",
     "PCIe/SIDEBAND/NVMe-MI.md",
+    "PCIe/SIDEBAND/sideband.md",
     "SIDEBAND.md",
     "PCIe/SIDEBAND",
     "SMBUS/SMBus vs I2C.md",
@@ -553,7 +554,6 @@
     "PCIe/Power Management & States",
     "PCIe/L2.md",
     "PCIe/L1.md",
-    "PCIe/downtraining.md",
     "ACK",
     "PCIe/PCIe Stack",
     "PCIe/LTSSM",
