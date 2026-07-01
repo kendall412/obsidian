@@ -1,7 +1,5 @@
 
-**SMBus** stands for **System Management Bus**.
-
-> It is a low-speed, two-wire communication bus derived from I²C and is commonly used in PCs, servers, and PCIe systems for **management and monitoring** rather than high-speed data transfer.
+> **SMBus** stands for **System Management Bus**. It is a low-speed, two-wire communication bus derived from I²C and is commonly used in PCs, servers, and PCIe systems for **management and monitoring** rather than high-speed data transfer.
 
 ## High-Level Idea
 
