@@ -22,7 +22,7 @@ Each state includes:
 PS0 (active) → PS1 → PS2 → … → PSn (deep idle)
 ```
 
-# 2. [[Autonomous Power State Transitions (APST)]]
+# 2. [[APST (Autonomous Power State Transitions)]]
 
 With **APST enabled**, the SSD can _self-manage_ power:
 

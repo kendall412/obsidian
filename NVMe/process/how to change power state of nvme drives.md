@@ -254,7 +254,7 @@ Meaning:
 Current power state = PS3
 ```
 
-# [[Autonomous Power State Transitions (APST)]]
+# [[APST (Autonomous Power State Transitions)]]
 
 Modern NVMe SSDs usually do not rely solely on manual power-state changes.
 

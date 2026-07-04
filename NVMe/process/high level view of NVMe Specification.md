@@ -329,7 +329,7 @@ Supports:
 
 - Active power states
 - Idle power states
-- [[Autonomous Power State Transitions (APST)]]
+- [[APST (Autonomous Power State Transitions)]]
 
 # 10. Error Reporting
 

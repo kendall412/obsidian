@@ -97,18 +97,18 @@ SPOR recovery:
   validate metadata
 ```
 
-# [[Sudden Power-Off Reset (SPOR)]] vs [[Normal Power-Off Reset (NPOR)]]
+# [[SPOR (Sudden Power-Off Reset)]] vs [[NPOR (Normal Power-Off Reset)]]
 
 | Term | Meaning                           |
 | ---- | --------------------------------- |
 | NPOR | Normal Power-On Reset             |
 | SPOR | Sudden/abrupt power loss recovery |
 
-## ✔ [[Normal Power-Off Reset (NPOR)]]
+## ✔ [[NPOR (Normal Power-Off Reset)]]
 
 Graceful/expected reboot.
 
-##  [[Sudden Power-Off Reset (SPOR)]]
+##  [[SPOR (Sudden Power-Off Reset)]]
 
 Unexpected crash/power cut.
 
