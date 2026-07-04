@@ -5,13 +5,13 @@ Before PCIe can exchange TS1/TS2 training sequences, it must first detect that a
 
 - Power-on reset
 - Hot reset
-- Fundamental reset ([[PCIe/PERST#]])
+- Fundamental reset ([[PERST#]])
 - Some recovery scenarios
 
 The initial state after reset (PERST). In this state, after all the devices are powered and REFCLK is provided a Receiver circuit in each lane will determine if there is a link partner to pair with. **Each lane will begin transmitting serial data at 2.5 Gb/s (Gen 1 speed).** Detect may also be entered from a number of other LTSSM states. 
 
 Detect Receiver Present
-1. After reset or power-up ([[PCIe/PERST#]]), Transmitters drive a stable voltage on the D+ and D- terminal
+1. After reset or power-up ([[PERST#]]), Transmitters drive a stable voltage on the D+ and D- terminal
 2. Transmitters then change the common mode voltage in a positive direction by no more than the V<sub>TX-RCV-DETECT</sub> amount of 600mV specified for all three data rates.
 3. Detect logic measures the charge time:
 	- Receiver is absent if the charge time is short

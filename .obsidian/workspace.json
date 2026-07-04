@@ -41,12 +41,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/SIDEBAND/NVMe-MI.md",
+                "file": "PCIe/SIDEBAND-OOB/sideband.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sideband"
+            }
+          },
+          {
+            "id": "2d87b807aedcbbc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/SIDEBAND-OOB/sideband signals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sideband signals"
+            }
+          },
+          {
+            "id": "d9073b7968adf6b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/SIDEBAND-OOB/NVMe-MI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "NVMe-MI"
+            }
+          },
+          {
+            "id": "b4816e953df78606",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/SIDEBAND-OOB/sideband signals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sideband signals"
             }
           },
           {
@@ -358,7 +400,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -520,15 +562,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "465c4a13a80bef3e",
+  "active": "d9073b7968adf6b4",
   "lastOpenFiles": [
+    "PCIe/SIDEBAND-OOB/management data.md",
+    "PCIe/SIDEBAND-OOB/CLKREQ.md",
+    "PCIe/SIDEBAND-OOB/sideband signals.md",
+    "PCIe/SIDEBAND-OOB/PRSNT.md",
+    "PCIe/SIDEBAND-OOB/sideband management.md",
+    "PCIe/SIDEBAND-OOB/PEWAKE.md",
+    "PCIe/SIDEBAND-OOB/REFCLK.md",
+    "PCIe/SIDEBAND-OOB/sideband vs out of band.md",
+    "PCIe/SIDEBAND-OOB/PERST.md",
+    "PCIe/SIDEBAND-OOB/sideband.md",
+    "PCIe/SIDEBAND-OOB/NVMe-MI.md",
     "NVMe/process/what does admin commands do when first starting up.md",
-    "PCIe/SIDEBAND/NVMe-MI.md",
-    "PCIe/SIDEBAND/sideband.md",
     "SIDEBAND.md",
-    "PCIe/SIDEBAND",
+    "PCIe/SIDEBAND-OOB",
     "SMBUS/SMBus vs I2C.md",
-    "PCIe/sideband management.md",
     "MD_Tutorial/general.md",
     "SMBUS/SMBus.md",
     "SMBUS/SMBRST.md",
@@ -543,17 +593,9 @@
     "PCIe/symbols/5b-6b 3b-4b mapping.md",
     "symbols.md",
     "PCIe/symbols",
-    "PCIe/symbols/8b-10b encoding.md",
     "PCIe/pictures/5b-6b 3b-4b mapping table a.png",
     "PCIe/pictures/5b-6b 3b-4b mapping table b.png",
-    "PCIe/Dual Port(ing).md",
-    "PCIe/Dual-Port.md",
-    "PCIe/Loopback.md",
-    "PCIe/Power Management & States/what is the difference between PCIe device power state and NVMe power states?.md",
-    "PCIe/Power Management & States/PCIe Power Management.md",
     "PCIe/Power Management & States",
-    "PCIe/L2.md",
-    "PCIe/L1.md",
     "ACK",
     "PCIe/PCIe Stack",
     "PCIe/LTSSM",

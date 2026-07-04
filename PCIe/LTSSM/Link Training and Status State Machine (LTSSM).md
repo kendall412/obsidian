@@ -226,7 +226,7 @@ The diagram below shows these main states and the paths between them:
 From power-up, then, the main flow is from the _Detect_ state which checks what’s connected electrically and that it’s electrically idle. After this it enters the polling state where both ends start transmitting TS ordered sets and waits to receive a certain number of ordered sets from the other link. Polarity inversion is done in this state. After this, the _Configuration_ state does a multitude of things with both ends sending ordered sets moving through assigning a link number (or numbers if splitting) and the lane numbers, with lane reversal if supported. In the configuration state the received TS ordered sets may direct the next state to be _Disabled_ or _Loopback_ and, in addition, scrambling may be disabled. Deskewing will be completed by the end of this state and the link will now be ’up’ and the state enters _L_0, the normal link-up state (assuming not directed to Loopback or Disabled).
 
 LTSSM consists of 11 top-level states:
-- [[PCIe/PERST#]] (not part of LTSSM)
+- [[PERST#]] (not part of LTSSM)
 1. [[Detect]] - Initially detects receiver termination on the link partner.
 2. [[Polling]] - Symbol lock and lane reversal detection.
 3. [[Configuration]] - Negotiates link width and lane mapping.
