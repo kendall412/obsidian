@@ -69,12 +69,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/SIDEBAND-OOB/active low signal.md",
+                "file": "PCIe/power mgmt & states/ASPM (Active State Power Management).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "active low signal"
+              "title": "ASPM (Active State Power Management)"
+            }
+          },
+          {
+            "id": "191fb1961c35a4e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PCIe/PLL (phase lock loop).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PLL (phase lock loop)"
             }
           },
           {
@@ -83,7 +97,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/power mgmt/NVMe power states.md",
+                "file": "NVMe/power mgmt & states/NVMe power states.md",
                 "mode": "source",
                 "source": false
               },
@@ -392,7 +406,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -556,15 +570,17 @@
   },
   "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
-    "PCIe/SIDEBAND-OOB/CLKREQ.md",
+    "PCIe/CDR (Clock Data Recovery).md",
+    "PCIe/PLL (phase lock loop).md",
+    "PCIe/power mgmt & states/ASPM (Active State Power Management).md",
+    "NVMe/power mgmt & states/APST (Autonomous Power State Transitions).md",
+    "PCIe/power mgmt & states/PCIe Power Management.md",
     "PCIe/SIDEBAND-OOB/active low signal.md",
+    "PCIe/SIDEBAND-OOB/CLKREQ.md",
     "PCIe/SIDEBAND-OOB/sideband signals.md",
-    "NVMe/power mgmt/ASPM (Active State Power Management).md",
-    "NVMe/power mgmt/NVMe power states.md",
-    "NVMe/power mgmt/APST (Autonomous Power State Transitions).md",
-    "NVMe/power mgmt/SPOR (Sudden Power-Off Reset).md",
-    "NVMe/power mgmt/NPOR (Normal Power-Off Reset).md",
-    "Untitled.md",
+    "NVMe/power mgmt & states/NVMe power states.md",
+    "NVMe/power mgmt & states/SPOR (Sudden Power-Off Reset).md",
+    "NVMe/power mgmt & states/NPOR (Normal Power-Off Reset).md",
     "NVMe/power management",
     "PCIe/SIDEBAND-OOB/NVMe-MI.md",
     "PCIe/SIDEBAND-OOB/management data.md",
@@ -583,12 +599,10 @@
     "SMBUS/SMBus.md",
     "SMBUS/SMBRST.md",
     "SMBUS",
-    "PCIe/Scrambling.md",
-    "PCIe/MAIN.md",
     "PCIe/symbols",
     "PCIe/pictures/5b-6b 3b-4b mapping table a.png",
     "PCIe/pictures/5b-6b 3b-4b mapping table b.png",
-    "PCIe/Power Management & States",
+    "PCIe/power mgmt & states",
     "ACK",
     "PCIe/PCIe Stack",
     "PCIe/LTSSM",

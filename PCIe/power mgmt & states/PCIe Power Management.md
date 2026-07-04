@@ -8,7 +8,7 @@ PCIe power management exists at **multiple levels**, and this often confuses eng
 
 Let's focus first on the **PCIe Link Power States**, which are part of the [[Link Training and Status State Machine (LTSSM)]].
 
-# PCIe Link Power States Overview
+## PCIe Link Power States Overview
 
 ```
           Active
@@ -212,7 +212,7 @@ Enumeration
 
 must occur again.
 
-## ASPM (Active State Power Management)
+## [[ASPM (Active State Power Management)]]
 
 ASPM automatically moves the link between:
 
