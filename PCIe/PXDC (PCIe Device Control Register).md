@@ -1,9 +1,5 @@
 
-> The **PCIe Device Control Register** is a register in the **PCI Express Capability Structure** that allows software (BIOS, OS, or device driver) to control certain behaviors of a PCIe device.
-
-It is part of the PCIe Configuration Space.
-
-## Location
+> The **PCIe Device Control Register** is a register in the **PCI Express Capability Structure** that allows software (BIOS, OS, or device driver) to control certain behaviors of a PCIe device. It is part of the PCIe Configuration Space.
 
 Inside the PCIe Capability Structure:
 
@@ -21,7 +17,6 @@ PCI Configuration Space
 ```
 
 The Device Control Register is a **16-bit register**.
-
 ## Purpose
 
 The register controls:
@@ -62,8 +57,6 @@ More detailed:
 |11|No Snoop Enable|
 |12-14|Max Read Request Size (MRRS)|
 |15|Initiate Function Level Reset (optional in newer PCIe versions)|
-
-# Important Fields
 
 ## 1. Maximum Payload Size (MPS)
 
