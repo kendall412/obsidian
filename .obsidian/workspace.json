@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/PLL (phase lock loop).md",
+                "file": "PCIe/SPDM (Security Protocol and Data Model).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PLL (phase lock loop)"
+              "title": "SPDM (Security Protocol and Data Model)"
             }
           },
           {
@@ -568,10 +568,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "191fb1961c35a4e6",
   "lastOpenFiles": [
-    "PCIe/CDR (Clock Data Recovery).md",
+    "PCIe/SERDES Interface and PIPE.md",
     "PCIe/PLL (phase lock loop).md",
+    "PCIe/CDR (Clock Data Recovery).md",
     "PCIe/power mgmt & states/ASPM (Active State Power Management).md",
     "NVMe/power mgmt & states/APST (Autonomous Power State Transitions).md",
     "PCIe/power mgmt & states/PCIe Power Management.md",
@@ -597,7 +598,6 @@
     "SMBUS/SMBus vs I2C.md",
     "MD_Tutorial/general.md",
     "SMBUS/SMBus.md",
-    "SMBUS/SMBRST.md",
     "SMBUS",
     "PCIe/symbols",
     "PCIe/pictures/5b-6b 3b-4b mapping table a.png",
