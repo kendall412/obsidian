@@ -582,8 +582,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "6472afe5c5370a6a",
   "lastOpenFiles": [
+    "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "PCIe/PXDC (PCIe Device Control Register).md",
     "IOCTL/what is ioctl.md",
     "IOCTL",
@@ -611,7 +612,6 @@
     "PCIe/SIDEBAND-OOB/PERST.md",
     "PCIe/SIDEBAND-OOB/sideband.md",
     "NVMe/process/what does admin commands do when first starting up.md",
-    "SIDEBAND.md",
     "PCIe/SIDEBAND-OOB",
     "SMBUS",
     "PCIe/symbols",
