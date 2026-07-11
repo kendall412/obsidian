@@ -1,4 +1,8 @@
 {
   "cssTheme": "Obsidian Nord",
-  "baseFontSize": 14
+  "baseFontSize": 14,
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "atom-color"
+  ]
 }

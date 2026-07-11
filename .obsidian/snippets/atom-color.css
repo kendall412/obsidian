@@ -1,0 +1,6 @@
+a.tag, .cm-s-obsidian span.cm-hashtag {
+  color: #d19a66 !important; /* Orange */
+}
+a.internal-link, .cm-s-obsidian span.cm-hmd-internal-link {
+  color: #61afef !important; /* Blue */
+}
