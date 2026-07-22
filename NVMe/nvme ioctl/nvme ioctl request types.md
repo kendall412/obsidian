@@ -1,4 +1,33 @@
 
+
+> Linux provides several `ioctl` request types to interface directly with NVMe devices, primarily categorized into ==passthrough commands and controller-level management functions==. These enable user-space applications to send native NVMe specifications to both Admin and I/O submission queues. [1](https://manpages.debian.org/testing/nvme-cli/nvme.1.en.html), [2](https://github.com/torvalds/linux/blob/master/include/uapi/linux/nvme_ioctl.h)
+
+## 1. Passthrough Commands
+
+These are arbitrary NVMe commands that are forwarded directly to the device. [1](https://zonedstorage.io/docs/linux/overview)
+
+- **`NVME_IOCTL_ADMIN_CMD`**: Submits Admin commands (e.g., Get Log Page, Identify) to the controller's Admin Queue.
+- **`NVME_IOCTL_IO_CMD`**: Submits I/O commands to an I/O Submission Queue.
+- **`NVME_IOCTL_ADMIN64_CMD`**: A 64-bit variant of the Admin command passthrough designed to handle larger data payloads and more complex command structures on modern kernels.
+- **`NVME_IOCTL_IO64_CMD`**: A 64-bit variant of the I/O command passthrough. [1](https://github.com/linux-nvme/libnvme/blob/master/src/nvme/ioctl.h), [2](https://github.com/multi-stream/nvme-cli/blob/master/nvme-ioctl.c), [3](https://spdk.io/doc/nvme.html), [4](https://superuser.com/questions/1533501/getting-message-read-nvme-identify-controller-failed-nvme-ioctl-admin-cmd-ba)
+
+## 2. Standard I/O Submissions
+
+Instead of building a raw passthrough, the kernel provides simplified `ioctl` macros to submit standard NVM I/O operations directly.
+
+- **`NVME_IOCTL_SUBMIT_IO`**: Used for standard block operations like `Read`, `Write`, and `Compare`. [1](https://github.com/multi-stream/nvme-cli/blob/master/nvme-ioctl.c)
+
+## 3. Controller Management and Status
+
+These `ioctl` commands are used to manage the state of the NVMe controller itself rather than interacting with the storage media.
+
+- **`NVME_IOCTL_RESET`**: Performs a soft reset of the entire NVMe controller.
+- **`NVME_IOCTL_SUBSYS_RESET`**: Performs a reset on the whole NVMe Subsystem (for NVMe-oF or multi-controller environments).
+- **`NVME_IOCTL_ID`**: Returns the Namespace ID (NSID) associated with a specific file descriptor. [1](https://github.com/multi-stream/nvme-cli/blob/master/nvme-ioctl.c)
+
+For detailed C-struct definitions and how the parameters are mapped into user space, you can review the [GitHub libnvme ioctl.h Source](https://github.com/linux-nvme/libnvme/blob/master/src/nvme/ioctl.h).
+
+---
 # Linux NVMe `ioctl` functions
 
 In Linux, NVMe does not have a separate C function for every NVMe command. Applications call the generic system call:
@@ -35,7 +64,6 @@ Definition:
 Purpose:
 
 - Returns the namespace ID associated with an NVMe namespace device.
-    
 - Normally used with a namespace file such as:
     
 
