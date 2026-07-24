@@ -86,7 +86,7 @@ Because NVMe queues are circular:
 - The system needs a way to distinguish:
     - **new vs old entries**
 
-👉 This is why NVMe uses the **[[Phase Tag (P)]]**
+👉 This is why NVMe uses the **[[P (Phase Tag)]]**
 
 
 # 🔹 Simple Analogy

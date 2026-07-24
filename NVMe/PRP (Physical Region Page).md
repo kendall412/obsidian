@@ -15,9 +15,9 @@ PRPs provide the **physical memory addresses** that the controller should read f
 
 ### Where PRP appears
 
-PRPs are embedded in the **[[Submission Queue]] Entry (SQE)** of an NVMe command:
+PRPs are embedded in the **[[SQ (Submission Queue)]] Entry (SQE)** of an NVMe command:
 
-- **[[Physical Region Page 1 (PRP1)]]** → first data buffer (always present)
+- **[[PRP1 (Physical Region Page 1)]]** → first data buffer (always present)
 - **[[PRP2]]** → either:
     - second buffer, OR
     - pointer to a **PRP List**
@@ -81,7 +81,7 @@ PRP list:
 
 ---
 
-### Physical Region Page (PRP) vs [[Scatter-Gather List (SGL)]] (quick comparison)
+### Physical Region Page (PRP) vs [[SGL (Scatter-Gather List)]] (quick comparison)
 
 | Feature      | PRP                   | SGL                       |
 | ------------ | --------------------- | ------------------------- |

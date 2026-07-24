@@ -1,4 +1,4 @@
-An NVMe Function Level Reset (FLR) is a PCIe mechanism that allows a specific function on a device to be reset without affecting other functions or the entire system. This is useful for error recovery and in virtualized environments, like with Single Root I/O Virtualization (SR-IOV), where it isolates virtual functions for security and stability. An FLR is initiated by writing a '1' to a specific sysfs file in Linux or through a similar mechanism on other operating systems. 
+> An NVMe Function Level Reset (FLR) is a PCIe mechanism that allows a specific function on a device to be reset without affecting other functions or the entire system. This is useful for error recovery and in virtualized environments, like with Single Root I/O Virtualization (SR-IOV), where it isolates virtual functions for security and stability. An FLR is initiated by writing a '1' to a specific sysfs file in Linux or through a similar mechanism on other operating systems. 
 
 How FLR works:
 PCIe specification: FLR is initiated by setting a bit in a device's configuration space, which is a standard PCI Express capability.

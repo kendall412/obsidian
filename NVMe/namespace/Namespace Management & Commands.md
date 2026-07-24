@@ -56,7 +56,7 @@ It is presented to the host as a separate storage target or block device, often 
 - Performance and endurance: Using overprovisioning to improve performance and longevity.
 
 
-[[Zoned Namespaces (ZNS)]]: A specific type of namespace that exposes a zoned block storage interface for more explicit data placement. 
+[[ZNS (Zoned Namespaces)]]: A specific type of namespace that exposes a zoned block storage interface for more explicit data placement. 
 
 Common namespace management commands 
 

@@ -12,7 +12,7 @@
 ### Core Concepts
 
 1. **Queue-Based Architecture**
-Uses [[Submission Queue]]s (SQs) and [[Completion Queue (CQ)]]
+Uses [[SQ (Submission Queue)]]s (SQs) and [[CQ (Completion Queue)]]
 	Each queue can hold thousands of commands.
 	64K queues
 	64K commands per queue
@@ -25,7 +25,7 @@ This allows massive parallel I/O compared to AHCI (which has only 1 queue with 3
 	
 	- [[Admin Command Set]] - Mandatory (see also [[Admin Command Set OPCODE (OPC)]])
 	- [[IO Command Set]] - Mandatory
-	- [[NVMe/Zoned Namespaces (ZNS)]]
+	- [[ZNS (Zoned Namespaces)]]
 	- [[Key-Value (KV) Command Set]]
 	- [[IO Command Set Independence]]
 	- [[Vendor Specific Command Set]]

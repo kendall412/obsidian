@@ -119,7 +119,7 @@ Host buffer  : physical address 0x00000010_00002000
 
 ## 2. NVMe Write SQE hex dump
 
-64-byte [[Submission Queue Entry (SQE)]]:
+64-byte [[SQE (Submission Queue Entry)]]:
 
 ```
 Offset  Bytes
@@ -167,7 +167,7 @@ DW12 = 0x00000000
        NLB = 0 → transfer 1 logical block
 ```
 
-Important: in NVMe NVM Read/Write, **[[Number of Logical Blocks (NLB)]] is zero-based**.
+Important: in NVMe NVM Read/Write, **[[NLB (Number of Logical Blocks)]] is zero-based**.
 ```
 NLB = 0  → 1 block
 NLB = 1  → 2 blocks

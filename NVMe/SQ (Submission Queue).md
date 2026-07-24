@@ -18,7 +18,7 @@ Each entry in the SQ is a **Submission Queue Entry (SQE)**:
 - Contains:
     - Opcode (read, write, admin, etc.)
     - Namespace ID
-    - Data pointers (**[[Physical Region Page (PRP)]] or [[Scatter-Gather List (SGL)]]**)
+    - Data pointers (**[[PRP (Physical Region Page)]] or [[SGL (Scatter-Gather List)]]**)
     - Command-specific fields
 
 ---
@@ -104,7 +104,7 @@ This enables:
     - Dataset management
 
 ---
-### [[Submission Queue Entry (SQE)]] overview
+### [[SQE (Submission Queue Entry)]] overview
 
 ### Why SQ design matters
 

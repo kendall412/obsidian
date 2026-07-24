@@ -1,6 +1,5 @@
 
-> The **VS (Version)** register is a **32-bit read-only NVMe controller register** that tells the host which version of the NVMe specification the controller implements. Like [[Controller Capabilities (CAP)]], VS is located in the controller's PCIe MMIO register space and is typically read during controller initialization.
-
+> The **VS (Version)** register is a **32-bit read-only NVMe controller register** that tells the host which version of the NVMe specification the controller implements. Like [[CAP (Controller Capabilities)]], VS is located in the controller's PCIe MMIO register space and is typically read during controller initialization.
 
 # Location of VS Register
 

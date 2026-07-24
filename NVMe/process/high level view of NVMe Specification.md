@@ -30,12 +30,12 @@ The controller exposes memory-mapped registers through [[Base Address Register (
 
 Examples:
 
-- [[Controller Capabilities (CAP)]]
-- [[Version (VS)]]
-- [[Controller Configuration (CC)]]
-- [[Controller Status (CSTS)]]
+- [[CAP (Controller Capabilities)]]
+- [[VS (Version )]]
+- [[CC (Controller Configuration)]]
+- [[CSTS (Controller Status)]]
 - [[Doorbell Registers]]
-- [[Admin Queue Attributes (AQA)]]
+- [[AQA (Admin Queue Attributes)]]
 	-  Admin Submission Queue Address (ASQ)
 	- Admin Completion Queue Address (ACQ)
 

@@ -183,7 +183,7 @@ in the NVMe command.
 
 # Where Is Metadata Defined?
 
-Metadata capability is described in the namespace's [[Logical Block Address Format (LBAF)]].
+Metadata capability is described in the namespace's [[LBAF (Logical Block Address Format)]].
 
 The Identify Namespace data structure contains:
 

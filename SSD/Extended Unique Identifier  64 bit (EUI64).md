@@ -10,7 +10,7 @@
 
 ## 📦 Where It Appears in NVMe
 
-Inside the **Identify Namespace ([[Controller or Namespace Structure (CNS)]] = 0x00)** response:
+Inside the **Identify Namespace ([[CNS (Controller or Namespace Structure)]] = 0x00)** response:
 ```
 Byte Offset: 120–127
 Field:       EUI64

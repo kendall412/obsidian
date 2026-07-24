@@ -19,7 +19,7 @@ but not both for the same data transfer.
 |Command fields used|PRP1, PRP2|SGL descriptor|
 |Controller support required|Mandatory|Optional|
 
-# [[Physical Region Page (PRP)]]
+# [[PRP (Physical Region Page)]]
 
 PRP is the original NVMe mechanism.
 
@@ -100,7 +100,7 @@ PRP is optimized for:
 
 Most NVMe SSD traffic uses PRPs.
 
-# [[Scatter-Gather List (SGL)]]
+# [[SGL (Scatter-Gather List)]]
 
 SGL is more flexible.
 Instead of page pointers, it uses descriptors.

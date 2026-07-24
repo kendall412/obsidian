@@ -239,7 +239,7 @@ After training completes, software can read the negotiated width.
 
 In the PCIe Capability structure:
 
-[[Link Status Register (LnkSta)]]
+[[LnkSta (Link Status Register)]]
 
 Contains:
 

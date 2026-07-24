@@ -81,7 +81,7 @@ Case 3 (>2 pages):
     - Small I/O (fast path via PRP1)
     - Large I/O (scalable via PRP list)
 
-# 🔹 7) Relation to [[Scatter-Gather List (SGL)]]
+# 🔹 7) Relation to [[SGL (Scatter-Gather List)]]
 
 - PRP = simpler, page-based
 - SGL = more flexible (non-contiguous buffers)

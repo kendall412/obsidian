@@ -23,7 +23,7 @@ Each LBA maps to a fixed-size chunk of data (e.g., 512B or 4KB).
 
 ### Logical block = data unit
 
-- Size defined by **[[Logical Block Address Format (LBAF)]]** in the Identify Namespace structure
+- Size defined by **[[LBAF (Logical Block Address Format)]]** in the Identify Namespace structure
 - Common sizes:
     - **512 bytes**
     - **4096 bytes (4K)**

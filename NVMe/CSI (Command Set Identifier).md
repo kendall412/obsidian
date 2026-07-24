@@ -27,7 +27,7 @@ bits 15:0  → CNSID / NVM Set ID (context dependent)
 
 CSI is returned indirectly via:
 
-### **Namespace Identification Descriptor List ([[Controller or Namespace Structure (CNS)]] = 0x03)**
+### **Namespace Identification Descriptor List ([[CNS (Controller or Namespace Structure)]] = 0x03)**
 
 Structure:
 
@@ -218,7 +218,7 @@ The **Command Set Identifier (CSI)** in NVMe specifies which command set (e.g., 
 
 When the host issues:
 
-> **Identify Namespace ([[Controller or Namespace Structure (CNS)]] = 0x00 or 0x11 depending on NVMe version)**
+> **Identify Namespace ([[CNS (Controller or Namespace Structure)]] = 0x00 or 0x11 depending on NVMe version)**
 
 the controller returns a **[[Namespace]] data structure** that includes which command set the namespace supports.
 

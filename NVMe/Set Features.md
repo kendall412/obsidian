@@ -309,7 +309,7 @@ DW3 : Status = SUCCESS
 - **Opcode (0x09)** defines Set Features
 - **FID (DW10)** selects APST
 - **DW11** enables/disables feature
-- **[[Physical Region Page (PRP)]]1** is required to pass APST policy table
+- **[[PRP (Physical Region Page)]]1** is required to pass APST policy table
 
 #  One-Line Summary
 

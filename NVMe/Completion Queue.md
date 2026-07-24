@@ -31,7 +31,7 @@ Key fields:
 
 - **CID**: matches the original command
 - **SQHD**: tells host how far the SQ has been consumed
-- **Status**: success/error + **[[Phase Tag (P)]]**
+- **Status**: success/error + **[[P (Phase Tag)]]**
 ---
 ### How CQ works (step-by-step)
 
@@ -94,7 +94,7 @@ Each CQE includes a **Phase Tag**:
 ---
 ### Types of Completion Queues
 
-#### 1. [[Completion Queue (CQ)]]
+#### 1. [[CQ (Completion Queue)]]
 
 - Queue ID = 0
 - Used for admin commands

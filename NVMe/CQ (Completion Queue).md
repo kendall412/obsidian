@@ -33,7 +33,7 @@ Bits 31:16 → SQID (Submission Queue Identifier)
 
 ### Meaning
 
-- **[[Submission Queue Head Pointer (SQHD)]]**:
+- **[[SQHD (Submission Queue Head Pointer)]]**:
     - Indicates how far the controller has consumed the SQ
     - Helps host reclaim SQ entries
 - **SQID**:

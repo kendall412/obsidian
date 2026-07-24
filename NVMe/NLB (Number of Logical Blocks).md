@@ -1,8 +1,6 @@
 
 > **NLB (Number of Logical Blocks)** in NVMe is a field in read/write commands that specifies **how many logical blocks (LBAs) to transfer**—but it uses a **zero-based encoding**.
 
----
-
 # 🔹 Where NLB Is Located
 
 In an NVMe Read/Write Submission Queue Entry:

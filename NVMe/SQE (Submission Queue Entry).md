@@ -57,13 +57,13 @@ DW3: bits 63:32  → MPTR[63:32]
 
 This 128-bit field is interpreted differently depending on **PSDT**.
 
-### Case A: [[Physical Region Page (PRP)]] mode (PSDT = 00)
+### Case A: [[PRP (Physical Region Page)]] mode (PSDT = 00)
 ```
 DW4–DW5 → PRP1 (first data buffer)
 DW6–DW7 → PRP2 (second buffer or PRP list pointer)
 ```
 
-### Case B: [[Scatter-Gather List (SGL)]] mode (PSDT = 01 or 10)
+### Case B: [[SGL (Scatter-Gather List)]] mode (PSDT = 01 or 10)
 ```
 DW4–DW7 → 16-byte SGL descriptor (inline)
 ```

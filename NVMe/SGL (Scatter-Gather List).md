@@ -70,7 +70,7 @@ Controller processes all entries sequentially.
 ---
 ### Where SGL appears in NVMe
 
-In an NVMe command ([[Submission Queue]] Entry), instead of PRP fields:
+In an NVMe command ([[SQ (Submission Queue)]] Entry), instead of PRP fields:
 
 - The command includes:
     - **SGL Descriptor pointer (or inline descriptor)**

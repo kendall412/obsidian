@@ -11,7 +11,7 @@ The host reads CSTS during:
 
 ## Relationship Between CC and CSTS
 
-The host controls the controller through the [[Controller Configuration (CC)]] register.
+The host controls the controller through the [[CC (Controller Configuration)]] register.
 The controller reports its status through the **Controller Status (CSTS)** register.
 
 Example:
@@ -246,7 +246,7 @@ it knows controller state may have changed and reinitialization may be required.
 
 ### Step 1
 
-Read [[Controller Capabilities (CAP)]] register.
+Read [[CAP (Controller Capabilities)]] register.
 
 ```
 CAP

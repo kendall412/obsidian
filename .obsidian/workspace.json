@@ -8,503 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "abf818475b8db796",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/LTSSM/RECOVERY.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RECOVERY"
-            }
-          },
-          {
-            "id": "09cd42cef54c1244",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/LTSSM/Equalization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Equalization"
-            }
-          },
-          {
-            "id": "465c4a13a80bef3e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/SIDEBAND-OOB/sideband.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "sideband"
-            }
-          },
-          {
-            "id": "2d87b807aedcbbc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/SIDEBAND-OOB/sideband signals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "sideband signals"
-            }
-          },
-          {
-            "id": "d9073b7968adf6b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/power mgmt & states/ASPM (Active State Power Management).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ASPM (Active State Power Management)"
-            }
-          },
-          {
-            "id": "191fb1961c35a4e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/PXDC (PCIe Device Control Register).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PXDC (PCIe Device Control Register)"
-            }
-          },
-          {
-            "id": "6472afe5c5370a6a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/nvme ioctl/ioctl.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ioctl"
-            }
-          },
-          {
-            "id": "d6dca30e991d4be2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/NVMe Validation/validation overview.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "validation overview"
-            }
-          },
-          {
-            "id": "1f880c3f900f8f03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/NVMe Validation/Validation automation development guide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Validation automation development guide"
-            }
-          },
-          {
-            "id": "8660cc64dbb15af0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/NVMe Validation/SPDK (Storage Performance Development Kit).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SPDK (Storage Performance Development Kit)"
-            }
-          },
-          {
-            "id": "231d691d0fae0746",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/nvme ioctl/ioctl.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ioctl"
-            }
-          },
-          {
-            "id": "bebaa72a16354368",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/nvme ioctl/nvme ioctl request types.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "nvme ioctl request types"
-            }
-          },
-          {
-            "id": "530a22cc78c08b22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/nvme ioctl/ioctl.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ioctl"
-            }
-          },
-          {
-            "id": "b4816e953df78606",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/power mgmt & states/NVMe power states.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NVMe power states"
-            }
-          },
-          {
-            "id": "814880bc81425392",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "614f6b482f138c0b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "db7bec5f453436d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/PCIe Stack/PCIe TLP (PCIe Transaction Layer Packet).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PCIe TLP (PCIe Transaction Layer Packet)"
-            }
-          },
-          {
-            "id": "da5a49f58e3b0d73",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/PCIe Stack/PCIe Stack.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PCIe Stack"
-            }
-          },
-          {
-            "id": "0a90a000522e6cba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/L2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "L2"
-            }
-          },
-          {
-            "id": "0371b8b215912e6b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/Power Management & States/PCIe Power Management.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PCIe Power Management"
-            }
-          },
-          {
-            "id": "97899d38e7808d2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/symbols/8b-10b encoding.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "8b-10b encoding"
-            }
-          },
-          {
-            "id": "841df84d481fb83c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/symbols/8b-10b encoding.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "8b-10b encoding"
-            }
-          },
-          {
-            "id": "7460da42131bcb4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/symbols/general.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "general"
-            }
-          },
-          {
-            "id": "6107a8aff81657b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/symbols/general.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "general"
-            }
-          },
-          {
-            "id": "be5650b176fd86a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/symbols/K-Codes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "K-Codes"
-            }
-          },
-          {
-            "id": "945a9aa4c53288d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/symbols/D-Codes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "D-Codes"
-            }
-          },
-          {
-            "id": "55f9ebb1b7b18bf4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SMBUS/SMBus.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SMBus"
-            }
-          },
-          {
-            "id": "8f6d2b63db6f001d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SMBUS/SMBus.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SMBus"
-            }
-          },
-          {
-            "id": "1d3cb16699757fb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SMBUS/SMBus vs I2C.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SMBus vs I2C"
-            }
-          },
-          {
-            "id": "682adc4cb2f5385f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/SIDEBAND/sideband.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "sideband"
-            }
-          },
-          {
-            "id": "a865151c00e542e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/SIDEBAND/NVMe-MI.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NVMe-MI"
-            }
-          },
-          {
-            "id": "05415f5bcb530a59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/Repeater.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Repeater"
-            }
-          },
-          {
-            "id": "1ad6bc6988cc8838",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/LTSSM/POLLING.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "POLLING"
-            }
-          },
-          {
             "id": "488700c92724f69d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/data buffer (NVMe).md",
+                "file": "PCIe/SPDM (Security Protocol and Data Model).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "data buffer (NVMe)"
-            }
-          },
-          {
-            "id": "bc61d547244dce64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NVMe/metadata.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "metadata"
-            }
-          },
-          {
-            "id": "143ea9500fb1007d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCIe/DMA Controller.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DMA Controller"
+              "title": "SPDM (Security Protocol and Data Model)"
             }
           }
-        ],
-        "currentTab": 12
+        ]
       }
     ],
     "direction": "vertical"
@@ -561,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5
+    "width": 339.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -666,38 +183,38 @@
       "bases:Create new base": false
     }
   },
-  "active": "530a22cc78c08b22",
+  "active": "488700c92724f69d",
   "lastOpenFiles": [
-    "NVMe/nvme ioctl/nvme ioctl request types.md",
-    "NVMe/nvme ioctl/nvme ioctl.md",
-    "NVMe/nvme ioctl/ioctl.md",
-    "NVMe/NVMe Validation/Example of SPDK read validation.md",
-    "NVMe/NVMe Validation/SPDK (Storage Performance Development Kit).md",
-    "NVMe/NVMe Validation/Validation automation development guide.md",
-    "NVMe/NVMe Validation/validation overview.md",
+    "PCIe/PXDC (PCIe Device Control Register).md",
+    "PCIe/PLL (phase lock loop).md",
+    "PCIe/LnkSta (Link Status Register).md",
+    "PCIe/HIB (Host Interface Board).md",
+    "PCIe/FLR (Functional Level Reset).md",
+    "NVMe/registers/VS (Version ).md",
+    "NVMe/registers/CSTS (Controller Status).md",
+    "NVMe/registers/CC (Controller Configuration).md",
+    "NVMe/registers/CAP (Controller Capabilities).md",
+    "NVMe/registers/AQA (Admin Queue Attributes).md",
+    "NVMe/Admin Command Set OPCODE (OPC).md",
+    "NVMe/CSI (Command Set Identifier).md",
+    "NVMe/CQ (Completion Queue).md",
+    "NVMe/CNS (Controller or Namespace Structure).md",
+    "NVMe/LBA (Logical Block Address).md",
+    "NVMe/LBAF (Logical Block Address Format).md",
+    "NVMe/NLB (Number of Logical Blocks).md",
+    "NVMe/queue depth - iodepth.md",
+    "NVMe/TRIM.md",
+    "NVMe/ZNS (Zoned Namespaces).md",
+    "NVMe/SQHD (Submission Queue Head Pointer).md",
+    "NVMe/SQ (Submission Queue).md",
+    "NVMe/SQE (Submission Queue Entry).md",
+    "NVMe/SGL (Scatter-Gather List).md",
+    "NVMe/P (Phase Tag).md",
+    "NVMe/PSID (Physical Security ID ).md",
     "NVMe/NVMe Validation",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
-    "PCIe/PXDC (PCIe Device Control Register).md",
     "NVMe/nvme ioctl",
-    "PCIe/SPDM (Security Protocol and Data Model).md",
-    "PCIe/SERDES Interface and PIPE.md",
-    "PCIe/PLL (phase lock loop).md",
-    "PCIe/CDR (Clock Data Recovery).md",
-    "PCIe/power mgmt & states/ASPM (Active State Power Management).md",
-    "NVMe/power mgmt & states/APST (Autonomous Power State Transitions).md",
-    "PCIe/power mgmt & states/PCIe Power Management.md",
-    "PCIe/SIDEBAND-OOB/active low signal.md",
-    "PCIe/SIDEBAND-OOB/CLKREQ.md",
-    "PCIe/SIDEBAND-OOB/sideband signals.md",
-    "NVMe/power mgmt & states/NVMe power states.md",
-    "NVMe/power mgmt & states/SPOR (Sudden Power-Off Reset).md",
-    "NVMe/power mgmt & states/NPOR (Normal Power-Off Reset).md",
     "NVMe/power management",
-    "PCIe/SIDEBAND-OOB/NVMe-MI.md",
-    "PCIe/SIDEBAND-OOB/management data.md",
-    "PCIe/SIDEBAND-OOB/PRSNT.md",
-    "PCIe/SIDEBAND-OOB/sideband management.md",
-    "PCIe/SIDEBAND-OOB/PEWAKE.md",
     "PCIe/SIDEBAND-OOB",
     "SMBUS",
     "PCIe/symbols",

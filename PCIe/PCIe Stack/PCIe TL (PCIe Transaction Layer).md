@@ -29,7 +29,7 @@ The Transaction Layer handles operations like:
 For NVMe, it is what turns host actions like:
 
 1. write NVMe [[doorbell registers]]
-2. read [[Controller Capabilities (CAP)]] register
+2. read [[CAP (Controller Capabilities)]] register
 3. fetch command from host memory
 4. DMA data to host memory
 
