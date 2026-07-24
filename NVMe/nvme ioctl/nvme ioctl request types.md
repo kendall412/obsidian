@@ -120,25 +120,15 @@ Purpose:
 - Examples include:
     
     - Identify
-        
     - Get Log Page
-        
     - Get Features
-        
     - Set Features
-        
     - Firmware Download
-        
     - Firmware Commit
-        
     - Namespace Management
-        
     - Format NVM
-        
     - Security Send
-        
     - Security Receive
-        
 
 Typical device:
 
@@ -234,8 +224,6 @@ int main(void)
     return status != 0;
 }
 ```
-
----
 
 ## 3. `NVME_IOCTL_SUBMIT_IO`
 
