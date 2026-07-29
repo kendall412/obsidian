@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/nvme ioctl/nvme ioctl request types.md",
+                "file": "PCIe/process/pcie enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nvme ioctl request types"
+              "title": "pcie enumeration"
             }
           },
           {
@@ -106,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 249.5
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -213,10 +213,11 @@
   },
   "active": "488700c92724f69d",
   "lastOpenFiles": [
+    "PCIe/pcie configuration space.md",
+    "NVMe/nvme ioctl/nvme ioctl request types.md",
     "C/memset().md",
     "C/byte alignment.md",
     "C/posix_memalign().md",
-    "NVMe/nvme ioctl/nvme ioctl request types.md",
     "C",
     "NVMe/Admin Command Set OPCODE (OPC).md",
     "NVMe/nvme ioctl/ioctl.md",
@@ -239,7 +240,6 @@
     "NVMe/CNS (Controller or Namespace Structure).md",
     "NVMe/LBA (Logical Block Address).md",
     "NVMe/LBAF (Logical Block Address Format).md",
-    "NVMe/NLB (Number of Logical Blocks).md",
     "NVMe/NVMe Validation",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "NVMe/nvme ioctl",

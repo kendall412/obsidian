@@ -1,6 +1,8 @@
 
 > **PCIe enumeration** is the process by which a system firmware (BIOS/UEFI) and operating system discover, identify, configure, and allocate resources to all PCIe devices in the system after power-on or reset.
 
+https://www.linkedin.com/posts/ayyappa-masavarapu_nvme-pcie-ssd-share-7456726062161383424-iS_F/
+
 Think of enumeration as the host asking:
 
 > "What PCIe devices are connected, what resources do they need, and how should I configure them?"
