@@ -1,8 +1,7 @@
 
 > The **NVMe Get Features command** is the counterpart to _[[Set Features]]_: it lets the host **query the current value and capabilities of a specific feature** from the controller or a namespace.
 
----
-# 🔹 1) Purpose
+# 1. Purpose
 
 - Read configuration/state of NVMe features (power, queues, cache, APST, etc.)
 - Verify what was set via **[[Set Features]]**
@@ -12,13 +11,12 @@
 
 > “Get Features = read configuration knobs from the SSD”
 
-# 🔹 2) Command Identification
+# 2. Command Identification
 
 - **Opcode**: `0x0A` (Admin command set)
 
----
 
-# 🔹 3) Command Structure (SQE Fields)
+# 3. Command Structure (SQE Fields)
 
 ```
 DW10:
@@ -35,8 +33,8 @@ PRP/SGL:
   Used if the feature returns a data buffer
 ```
 
-## 🔹 Select (SEL) Field (Important)
-
+## Select (SEL) Field (Important)
+#sel
 Located in **DW10[10:8]**, it controls _what value you want_:
 
 |SEL|Meaning|
@@ -49,14 +47,13 @@ Located in **DW10[10:8]**, it controls _what value you want_:
 👉 This is a key difference vs Set Features.
 
 
-# 🔹 4) Completion Result
+# 4. Completion Result
 
 - Returned in **CQE DW0 (Result field)** for simple features
 - Or via **data buffer** (PRP/SGL) for complex features
 
-
-# 🔹 5) Common Feature Identifiers (FID)
-
+# 5. Common Feature Identifiers (FID)
+#fid
 Same as Set Features:
 
 |FID|Feature|
@@ -68,7 +65,7 @@ Same as Set Features:
 |0x08|Interrupt Coalescing|
 |0x0C|APST|
 |0x0D|Host Memory Buffer|
-# 🔹 6) Example: Get Power State
+# 6. Example: Get Power State
 
 ```
 FID = 0x02 (Power Management)
@@ -81,7 +78,7 @@ Result:
 CQE DW0 → current power state (PS index)
 ```
 
-# 🔹 7) Example: Get Write Cache Status
+# 7. Example: Get Write Cache Status
 
 ```
 FID = 0x06
@@ -95,7 +92,7 @@ bit 0:
   0 → disabled
 ```
 
-# 🔹 8) Example: Get APST Configuration
+# 8. Example: Get APST Configuration
 
 ```
 FID = 0x0C
@@ -105,7 +102,7 @@ FID = 0x0C
     - APST enabled/disabled (DW0)
     - APST table (via data buffer)
 
-# 🔹 9) Buffer-Based Features
+# 9. Buffer-Based Features
 
 Some features require memory:
 
@@ -118,7 +115,7 @@ Examples:
 - APST table
 - Host Memory Buffer (HMB)
 
-# 🔹 10) Relationship with Set Features
+# 10. Relationship with Set Features
 
 ```
 Set Features → write valueGet Features → read value
@@ -129,7 +126,7 @@ Typical workflow:
 1. Set feature
 2. Get feature → verify
 
-# 🔹 11) Real Example (Linux)
+# 11. Real Example (Linux)
 
 Using nvme-cli:
 
@@ -140,8 +137,7 @@ nvme get-feature /dev/nvme0 -f 2
 
 👉 Returns current power state
 
-
-# 🔹 12) Key Insight
+# 12. Key Insight
 
 - Get Features is **non-destructive**
 - Used heavily for:
@@ -149,11 +145,45 @@ nvme get-feature /dev/nvme0 -f 2
     - validation
     - capability discovery
 
+---
+# nvme cli
+#nvme_cli
+
+To use the get-feature command in nvme-cli, execute the basic syntax sudo nvme `get-feature <device> --feature-id=<fid>`.
+
+```
+sudo nvme get-feature <device> [options]
+```
+
+### Essential Parameters & Flags<br>
+- `<device>`: Mandatory. The NVMe character device (e.g., `/dev/nvme0`) or namespace block device (e.g., `/dev/nvme0n1`).
+- `-f <fid>` / `--feature-id=<fid>`: Mandatory. The ID of the feature you want to fetch, provided in hexadecimal format.
+- `-H / --human-readable`: Parses the bit fields into a readable layout rather than raw numbers.
+- `-n <nsid> / --namespace-id=<nsid>`: Specifies the target namespace (only needed if a feature applies to a specific namespace rather than the entire controller).
+- `-s <select> / --sel=<select>`: Selects which value to return:
+    - 0 = Current
+    - 1 = Default
+    - 2 = Saved
+    - 3 = Supported capabilities
+### Example:
+
+1. Check Power Management StateTo view the current power state configuration on /dev/nvme0, run:<br>
+```bash
+sudo nvme get-feature /dev/nvme0 -f 0x02
+```
+
+2. Get the Number of Configured Queues (Human Readable)<br>
+To check how many submission and completion queues are allocated on the drive, use the -H flag:
+
+```bash
+sudo nvme get-feature /dev/nvme0 -f 0x07 -H
+```
+
+
 # 🔹 One-Line Summary
 
 **NVMe Get Features (opcode 0x0A) retrieves the current, default, saved, or supported values of a feature identified by FID, returning results via CQE or a data buffer.**
 
----
 
 If you want, I can:
 

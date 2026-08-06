@@ -1,9 +1,7 @@
 
 In NVMe, “logs” are data structures returned by the **Get Log Page** admin command (opcode `0x02`). Each log page is identified by a **Log Page Identifier (LID)** and exposes controller/namespace telemetry, health, errors, and feature-specific state.
 
----
-
-## 🧠 How log retrieval works
+## How log retrieval works
 
 - Command: **Get Log Page**
 - Key fields:
@@ -12,10 +10,9 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
     - **NUMD / LPO** → transfer size and offset (for large logs)
 - Returned via **Completion Queue** as a data buffer (often 4 KB chunks, but many logs are larger and require pagination).
 
----
-## 📦 Core NVMe log pages (standard)
+## Core NVMe log pages (standard)
 
-### 1) SMART / Health Information (LID = 0x02)
+#### 1) SMART / Health Information (LID = 0x02)
 
 ![https://images.openai.com/static-rsc-4/KJ_v-dj7oyU2wO7HQIYc63GbsCP1uEKErqbnegucXXrmelJ5uN2xvdnOHecfF7ce0wYgjpasAdEMThWA6B8mNj-g6kxzrDKamDtJvY2RBkpN9Xi8MXFge44N7K06Am1ks2mdtTCccwGSNSNvaiUyffX-Rmcp02Q_Gq4lmT5d2ca1847ZjvC6R40D2ith9omN?purpose=fullsize|403](https://images.openai.com/static-rsc-4/aex-RnEVyVlywwa_0SojvI6Di-x28V0-4rwcd4mENOqmfEM3faELuytPHF2T4Uwyg2QjnbbJljgVbOEx03Voj1rhJmOUZgaFFgjfX4esLSZwS2SIzWCLhmJjRIESDZPtV9N-LhVYjduM4Bylgz3rOMJKX465q1U6dieyNPsDvQY?purpose=inline)
 
@@ -37,9 +34,7 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 - Power Cycles, Power-On Hours
 
 👉 Most frequently polled by OS and monitoring agents.
-
----
-### 2) Error Information Log ([[LID = 0x01 Error Information Log Page]])
+#### 2) Error Information Log ([[LID = 0x01 Error Information Log Page]])
 
 ![https://images.openai.com/static-rsc-4/KJ_v-dj7oyU2wO7HQIYc63GbsCP1uEKErqbnegucXXrmelJ5uN2xvdnOHecfF7ce0wYgjpasAdEMThWA6B8mNj-g6kxzrDKamDtJvY2RBkpN9Xi8MXFge44N7K06Am1ks2mdtTCccwGSNSNvaiUyffX-Rmcp02Q_Gq4lmT5d2ca1847ZjvC6R40D2ith9omN?purpose=fullsize|414](https://images.openai.com/static-rsc-4/aex-RnEVyVlywwa_0SojvI6Di-x28V0-4rwcd4mENOqmfEM3faELuytPHF2T4Uwyg2QjnbbJljgVbOEx03Voj1rhJmOUZgaFFgjfX4esLSZwS2SIzWCLhmJjRIESDZPtV9N-LhVYjduM4Bylgz3rOMJKX465q1U6dieyNPsDvQY?purpose=inline)
 
@@ -60,8 +55,7 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 
 👉 Critical for debugging I/O failures.
 
----
-### 3) Firmware Slot Information ([[LID = 0x03 Firmware Slot Info Log Page]])
+#### 3) Firmware Slot Information ([[LID = 0x03 Firmware Slot Info Log Page]])
 
 - Active firmware slot
 - Next activation slot
@@ -69,26 +63,24 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 
 👉 Used during firmware update workflows.
 
----
-### 4) Changed Namespace List (LID = 0x04)
+#### 4) Changed Namespace List (LID = 0x04)
 
 - NSIDs that have changed since last read  
     👉 Used for hot-plug / dynamic namespace management.
----
-### 5) Commands Supported and Effects (LID = 0x05)
+
+#### 5) Commands Supported and Effects (LID = 0x05)
 
 - Which commands are supported
 - Side effects (e.g., may change namespace, require reset)
 
 👉 Important for driver capability discovery.
 
----
-### 6) Device Self-test Log (LID = 0x06)
+#### 6) Device Self-test Log (LID = 0x06)
 
 - Results of background or host-initiated self-tests
 - Pass/fail status, segment failures
----
-### 7) Telemetry Logs (LIDs = 0x07, 0x08)
+
+#### 7) Telemetry Logs (LIDs = 0x07, 0x08)
 
 ![https://images.openai.com/static-rsc-4/yEDgD_Z-iN37LHhzxRVXXM-U6BSj2XzQO8m3lkSxnGkgeYnHL4F1x-Nsr9xAzikWbZM2hchMi3teyrXmml5Ig1AOZERjPG6MCTVxlOrR30jOFOYACvBFk8yRX194rmHoOef55UwsNQ1aDPEeNq8a0EHbOFBV-K-1MENT7IKzn7SFv0g3x-ldkO1UBNr-cto9?purpose=fullsize|425](https://images.openai.com/static-rsc-4/wQPzPeUGAxOdtz2jum6L0VxK3pfPjf6cjlvTHWzo7oxjCCvGRlp-5wTR7j8HQAiGJ4hWikaXrjKavbiquXVteQzFQnUFXw295XLIWNDcZSFJewCkNoQzmEbfPvrnemmQytV3GaMMKeknNTB0sZuMnLcdEbiIDr4o1CryNBp2jDM?purpose=inline)
 
@@ -107,27 +99,22 @@ In NVMe, “logs” are data structures returned by the **Get Log Page** admin c
 
 👉 Typically large and segmented; used for advanced debugging.
 
----
-### 8) Endurance Group Log (LID = 0x09)
+
+#### 8) Endurance Group Log (LID = 0x09)
 
 - Endurance group metrics (NVMe 1.4+)
 - Wear and usage at group level
 
----
-
-### 9) Predictable Latency / NVM Set Logs (various LIDs)
+#### 9) Predictable Latency / NVM Set Logs (various LIDs)
 
 - Latency monitoring windows
 - NVM set statistics
 
 👉 Used in QoS-sensitive deployments.
 
----
-### 10) Sanitize Status (LID = 0x81)
+#### 10) Sanitize Status (LID = 0x81)
 
 - Progress/status of sanitize operations (block erase, crypto erase)
-
----
 
 ##  Vendor-Specific Logs
 
@@ -142,8 +129,9 @@ Accessed via:
 
 - **nvme-cli**
 - Vendor tools (Samsung, Intel, Kioxia, etc.)
----
-## 🔧 Practical Example
+- 
+###  Practical Example
+
 bash
 ```
 # SMART / health
@@ -159,7 +147,7 @@ nvme fw-log /dev/nvme0
 nvme telemetry-log /dev/nvme0 --host
 ```
 
----
+
 ## ⚖️ Log Scope Summary
 |Log Type|Scope|Use Case|
 |---|---|---|
@@ -169,7 +157,6 @@ nvme telemetry-log /dev/nvme0 --host
 |Telemetry|Controller/internal|Deep diagnostics|
 |Vendor logs|Vendor-defined|Advanced analysis|
 
----
 ##  Key Insight
 
 > **NVMe logs are structured telemetry endpoints accessed via Get Log Page—ranging from lightweight health counters to deep firmware diagnostics.**

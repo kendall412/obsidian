@@ -1,9 +1,7 @@
 
 > In NVMe, the **Error Information Log Page (LID = 0x01)** is the primary mechanism to retrieve **records of failed or problematic commands**.
 
----
-
-## 🧠 Definition
+## Definition
 
 > **LID = 0x01 returns a circular log of error entries maintained by the controller.**
 
@@ -11,15 +9,13 @@
 - Scope: **controller-wide**
 - Each entry corresponds to a **command that completed with an error status**
 
----
-
-## 📦 Structure Overview
+## Structure Overview
 
 - Log is composed of **N entries** (controller-defined, e.g., 64 or 256)
 - Each entry is **64 bytes**
 - Entries are ordered by **Error Count (monotonic counter)**
 
-## 🔍 Error Log Entry Layout (64 bytes)
+## Error Log Entry Layout (64 bytes)
 
 Below is the canonical NVMe structure (simplified but precise):
 ```
@@ -35,31 +31,26 @@ Byte 29–31  : Reserved
 Byte 32–63  : Command Specific Information / Reserved
 ```
 
-## 🧩 Field-Level Meaning
+## Field-Level Meaning
 
-### 🔹 Error Count
+### Error Count
 
 - 64-bit counter
 - Increments for each error
 - Helps detect **new vs old entries**
 
----
-
-### 🔹 SQID (Submission Queue ID)
-
+### SQID (Submission Queue ID)
+#sqid
 - Which queue the command came from
 - Useful in multi-queue NVMe systems
 
----
-
-### 🔹 CID (Command Identifier)
-
+### CID (Command Identifier)
+#cid
 - Matches the original command
 - Correlates with **SQE → CQE**
 
----
-### 🔹 Status Field (SF)
-
+### Status Field (SF)
+#sf
 - Same format as **Completion Queue Entry status**
 - Contains:
     - **Status Code (SC)**
@@ -71,39 +62,32 @@ Examples:
 - `0x4004` → Invalid Field
 - `0x4001` → Invalid Opcode
 
----
-### 🔹 Parameter Error Location
+### Parameter Error Location
 
 - Indicates which **DWORD/byte/bit** caused the error
 - Critical for debugging malformed commands
 
----
-
-### 🔹 LBA
-
+### LBA
+#lba
 - Logical Block Address related to error
 - Valid for read/write/media errors
 
----
-
-### 🔹 NSID (Namespace ID)
+### NSID (Namespace ID)
 
 - Identifies affected namespace
 
----
-
-### 🔹 Vendor Specific
+### Vendor Specific
 
 - If set, additional info may be available via vendor logs
----
-## 🔄 Behavior
+
+
+## Behavior
 
 - Acts like a **circular buffer**
 - Old entries are overwritten when full
 - Host must periodically read to avoid losing history
 
----
-## 🔧 Practical Retrieval
+## Practical Retrieval
 
 Using **nvme-cli**:
 `nvme error-log /dev/nvme0`
@@ -121,24 +105,20 @@ Entry[ 0]
   nsid            : 1
 ```
 
----
-## ⚠️ Important Notes
+## Important Notes
 
 - **Successful commands are NOT logged**
 - Some controllers may log **only critical errors**
 - Log depth is **limited → must be polled regularly**
 
----
 
-## ⚖️ Related Logs
+## Related Logs
 
 - **SMART / Health (LID 0x02)** → aggregate error counters
 - **Telemetry logs (0x07/0x08)** → deep debugging
 - **Vendor logs** → extended error context
 
----
-
-## 🧩 Key Insight
+## Key Insight
 
 > **The Error Information Log is your first line of visibility into NVMe command failures—mapping directly back to the offending command, queue, and address.**
 

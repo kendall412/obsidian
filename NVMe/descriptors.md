@@ -1,6 +1,5 @@
-# Descriptors
 
-Descriptors are data structures that provide metadata describing specific attributes, capabilities, or states of the NVMe subsystem. They act as a standardized "ID card" or "spec sheet" that the host (CPU/OS) reads to understand how to communicate with the drive.
+> Descriptors are data structures that provide metadata describing specific attributes, capabilities, or states of the NVMe subsystem. They act as a standardized "ID card" or "spec sheet" that the host (CPU/OS) reads to understand how to communicate with the drive.
 
 Unlike older protocols (like SATA/AHCI) which often relied on fixed register bits, NVMe uses flexible, extensible descriptor structures.
 

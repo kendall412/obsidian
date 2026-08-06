@@ -5,7 +5,7 @@
 > 
 > SCT tells you **what category the error belongs to**, while SC tells you **the exact error**.
 
-# 🔹 Where SCT Is Located
+# Where SCT Is Located
 
 In CQE **DW3 (Status field)**:
 
@@ -16,9 +16,9 @@ bits 5:1   → Flags
 bit 0      → Phase Tag (P)
 ```
 
-# 🔹 All SCT Values (per NVMe spec)
+# All SCT Values (per NVMe spec)
 
-## ✔ 0x0 — Generic Command Status
+## `0x0` — Generic Command Status
 
 - Applies to **all command sets**
 - Most commonly used
@@ -30,7 +30,7 @@ Examples:
 - Invalid Field
 - Data Transfer Error
 
-## ✔ 0x1 — Command Specific Status
+## `0x1` — Command Specific Status
 
 - Errors specific to a **particular command**
 
@@ -40,7 +40,7 @@ Examples:
 - Invalid log page
 - Invalid firmware slot
 
-## ✔ 0x2 — Media and Data Integrity Errors
+## `0x2` — Media and Data Integrity Errors
 
 - Related to **NAND/media issues or data corruption**
 
@@ -50,7 +50,7 @@ Examples:
 - End-to-end guard check failure
 - LBA out of range (in some contexts)
 
-## ✔ 0x3 — Path Related Status
+## `0x3` — Path Related Status
 
 - Used in **multi-path / multi-controller environments**
 
@@ -60,22 +60,22 @@ Examples:
 - Path unavailable
 - Controller path errors
 
-## ✔ 0x4 — Reserved
+## `0x4` — Reserved
 
 - Not defined in current spec (reserved for future use)
 
-## ✔ 0x5 — Reserved
+## `0x5` — Reserved
 
-## ✔ 0x6 — Reserved
+## `0x6` — Reserved
 
-## ✔ 0x7 — Vendor Specific
+## `0x7` — Vendor Specific
 
 - Used by vendor-defined extensions
 
 👉 Meaning depends on SSD vendor implementation
 
 
-# 🔹 Summary Table
+## Summary Table
 
 |SCT|Name|Description|
 |---|---|---|
@@ -88,7 +88,7 @@ Examples:
 |0x6|Reserved|—|
 |0x7|Vendor Specific|Vendor-defined|
 
-# 🔹 How SCT Is Used
+## How SCT Is Used
 
 To interpret a completion:
 
@@ -103,10 +103,3 @@ SCT = 0x0 (Generic)
 SC  = 0x00 → SUCCESS
 ```
 
-
----
-
-If you want, I can:
-
-- list **all Status Codes (SC) under each SCT**
-- or decode a **real NVMe CQE status field bit-by-bit**

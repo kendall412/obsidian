@@ -1,5 +1,4 @@
-# Set Feature Command
-## NVMe Base Specification 5.1.25 pg 367
+#### NVMe Base Specification 5.1.25 pg 367
 
 The Set Features command in NVMe is **executed synchronously by the host driver whenever it needs to change a configurable attribute of the controller or a specific namespace**. Unlike some background maintenance tasks, it does not happen automatically on a timer; **it is always triggered by a specific event or condition in the host software stack**.
 
@@ -68,6 +67,7 @@ The Set Features command in NVMe is **executed synchronously by the host driver 
 **In the context of FTP (Fault Tolerance Policy), the Set Features command is almost always executed during driver initialization (boot) to ensure the drive behaves correctly from the moment the OS takes control**. If the drive resets due to an error, the driver will re-send this command during the recovery phase to re-establish the safety policy.
 
 ## NVMe Base Spec v2.2 5.1.25 Set Feature Command
+
 The Set Features command uses the Data Pointer, Command Dword 10, and Command Dword 14. The use of Command Dword 11, Command Dword 12, Command Dword 13, and Command Dword 15 fields is Feature specific. If Command Dword 11, Command Dword 12, Command Dword 13, or Command Dword 15 fields are not used, then the Command Dwords are reserved.
 
 |Bits|Descriptiom|

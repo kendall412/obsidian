@@ -1,8 +1,6 @@
 
 > In NVMe, **status codes** are how the controller tells the host the result of a command—success, failure, or specific error condition. They are returned in the **Completion Queue Entry (CQE)** for every command.
 
----
-
 # Where status codes live
 
 A completion entry (CQE) includes a **Status field** (16 bits) that encodes:
