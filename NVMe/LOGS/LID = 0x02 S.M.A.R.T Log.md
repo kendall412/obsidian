@@ -1,9 +1,7 @@
 
-> The **NVMe SMART / Health Information Log** is a standardized log page that reports the **health, reliability, and usage statistics** of an NVMe SSD.
+> The **NVMe SMART / Health Information Log** is a standardized log page that reports the **health, reliability, and usage statistics** of an NVMe SSD. **The NVMe SMART log (LID 0x02) is a 512-byte health report containing endurance, usage, temperature, and reliability metrics used to monitor SSD condition.** SMART log provides **lifetime telemetry of the SSD**, not just current status.
 
-> **The NVMe SMART log (LID 0x02) is a 512-byte health report containing endurance, usage, temperature, and reliability metrics used to monitor SSD condition.** SMART log provides **lifetime telemetry of the SSD**, not just current status.
-
-# 🔹 Command to Retrieve SMART Log
+# Command to Retrieve SMART Log
 
 - **Admin Command**: Get Log Page (`Opcode 0x02`)
 - **Log Identifier (LID)**: `0x02` → SMART / Health Information
@@ -14,11 +12,11 @@ Example using nvme-cli:
 nvme smart-log /dev/nvme0
 ```
 
-# 🔹 SMART Log Structure (512 bytes)
+# SMART Log Structure (512 bytes)
 
 Returned as a structured data block. Below are the key fields (with byte offsets).
 
-# 🔹 [[Critical Warning]] (Byte 0)
+# [[Critical Warning]] (Byte 0)
 
 ```
 bit 0 → Available Spare below threshold
@@ -30,7 +28,7 @@ bit 4 → Volatile memory backup failed
 
 👉 Any bit = 1 → warning condition
 
-# 🔹 Composite Temperature (Bytes 1–2)
+# Composite Temperature (Bytes 1–2)
 
 - Unit: Kelvin
 - Convert to Celsius:
@@ -39,15 +37,15 @@ bit 4 → Volatile memory backup failed
 °C = K - 273
 ```
 
-# 🔹 Available Spare (Byte 3)
+# Available Spare (Byte 3)
 
 - Remaining spare capacity (%)
 
-# 🔹 Available Spare Threshold (Byte 4)
+# Available Spare Threshold (Byte 4)
 
 - Threshold below which warning triggers
 
-# 🔹 Percentage Used (Byte 5)
+# Percentage Used (Byte 5)
 
 ```
 0%   → new drive
@@ -55,7 +53,7 @@ bit 4 → Volatile memory backup failed
 >100 → exceeded endurance
 ```
 
-# 🔹 Data Units Read (Bytes 32–47)
+# Data Units Read (Bytes 32–47)
 
 - 128-bit counter
 - Units = **1000 × 512 bytes**
@@ -64,7 +62,7 @@ bit 4 → Volatile memory backup failed
 1 unit = 512,000 bytes
 ```
 
-# 🔹 Data Units Written (Bytes 48–63)
+# Data Units Written (Bytes 48–63)
 
 Same unit as reads:
 
@@ -72,45 +70,45 @@ Same unit as reads:
 Total bytes written = value × 512,000
 ```
 
-# 🔹 Host Read Commands (Bytes 64–79)
+# Host Read Commands (Bytes 64–79)
 
 - Number of read commands issued by host
 
-# 🔹 Host Write Commands (Bytes 80–95)
+# Host Write Commands (Bytes 80–95)
 
 - Number of write commands issued
 
-# 🔹 Controller Busy Time (Bytes 96–111)
+# Controller Busy Time (Bytes 96–111)
 
 - Time controller was busy
 - Unit: minutes
 
-# 🔹 Power Cycles (Bytes 112–127)
+# Power Cycles (Bytes 112–127)
 
 - Number of power on/off cycles
 
-# 🔹 Power-On Hours (Bytes 128–143)
+# Power-On Hours (Bytes 128–143)
 
 - Total hours powered on
 
-# 🔹 Unsafe Shutdowns (Bytes 144–159)
+# Unsafe Shutdowns (Bytes 144–159)
 
 - Power losses without proper shutdown
 
-# 🔹 Media and Data Integrity Errors (Bytes 160–175)
+# Media and Data Integrity Errors (Bytes 160–175)
 
 - Count of unrecoverable errors
 
-# 🔹 Error Information Log Entries (Bytes 176–191)
+# Error Information Log Entries (Bytes 176–191)
 
 - Number of error log entries generated
 
-# 🔹 Temperature Sensors (Bytes 192+)
+# Temperature Sensors (Bytes 192+)
 
 - Up to 8 sensors
 - Units: Kelvin
 
-# 🔹 Example Interpretation
+# Example Interpretation
 
 ```
 Percentage Used = 85%
@@ -124,35 +122,34 @@ Critical Warning = 0x01
 - Spare capacity low
 - Warning triggered
 
-# 🔹 Key Metrics to Watch
+# Key Metrics to Watch
 
-## ✔ Endurance
+## Endurance
 
 - Percentage Used
 - Data Units Written
 
-## ✔ Reliability
+## Reliability
 
 - Media Errors
 - Critical Warning
 
-## ✔ Usage
+## Usage
 
 - Power-on hours
 - Power cycles
 
-## ✔ Stability
+## Stability
 
 - Unsafe shutdowns
 
-# 🔹 Real-World Use
+# Real-World Use
 
 - Predict SSD failure
 - Monitor wear and endurance
 - Debug performance/reliability issues
 - Data center fleet health monitoring
 
----
 # Decode a sample of SMART output
 
 > Decoding the SMART log involves converting counters (units, time, temperature) into real-world values and interpreting warning bits to assess SSD health, endurance, and reliability.
@@ -178,7 +175,7 @@ media_errors                        : 5
 num_err_log_entries                 : 42
 ```
 
-## ✔ critical_warning : 0x01
+## critical_warning : 0x01
 
 ```
 bit 0 → Available Spare below threshold
@@ -199,7 +196,7 @@ Meaning:
 
 👉 This is an **active health warning**
 
-## ✔ temperature : 315 K
+## temperature : 315 K
 
 Convert to Celsius:
 
@@ -209,20 +206,20 @@ Convert to Celsius:
 
 👉 Normal operating temperature (safe range)
 
-## ✔ available_spare : 12%
+## available_spare : 12%
 
 - Remaining spare NAND capacity
 - Still above threshold (10%)
 
 👉 Close to warning limit
 
-## ✔ available_spare_threshold : 10%
+## available_spare_threshold : 10%
 
 - When spare drops below 10%, warning triggers
 
 👉 Already triggered earlier (critical_warning = 1)
 
-## ✔ percentage_used : 85%
+## percentage_used : 85%
 
 - SSD has consumed **85% of its rated endurance**
 
@@ -232,7 +229,7 @@ Remaining life ≈ 15%
 
 👉 Near end-of-life
 
-## ✔ data_units_read : 12,345,678
+## data_units_read : 12,345,678
 
 Convert to bytes:
 
@@ -242,7 +239,7 @@ Convert to bytes:
 12,345,678 × 512,000 ≈ 6.32 TB read
 ```
 
-## ✔ data_units_written : 23,456,789
+## data_units_written : 23,456,789
 
 ```
 23,456,789 × 512,000 ≈ 12.01 TB written
@@ -250,17 +247,17 @@ Convert to bytes:
 
 👉 Total host writes ≈ **12 TB**
 
-## ✔ host_read_commands : 345,678,901
+## host_read_commands : 345,678,901
 
 - Total read commands issued by host
 
-## ✔ host_write_commands : 456,789,012
+## host_write_commands : 456,789,012
 
 - Total write commands issued
 
 👉 Useful for workload profiling (IOPS estimation)
 
-## ✔ controller_busy_time : 12,345 minutes
+## controller_busy_time : 12,345 minutes
 
 Convert to hours:
 
@@ -270,11 +267,11 @@ Convert to hours:
 
 👉 Time SSD was actively processing I/O
 
-## ✔ power_cycles : 1,234
+## power_cycles : 1,234
 
 - Number of times device powered on/off
 
-## ✔ power_on_hours : 8,760
+## power_on_hours : 8,760
 
 ```
 8,760 hours ≈ 1 year
@@ -282,25 +279,25 @@ Convert to hours:
 
 👉 Drive has been running continuously for ~1 year
 
-## ✔ unsafe_shutdowns : 23
+## unsafe_shutdowns : 23
 
 - Unexpected power losses
 
 👉 Moderate risk indicator (not critical but notable)
 
-## ✔ media_errors : 5
+## media_errors : 5
 
 - Unrecoverable read/write errors
 
 👉 Non-zero → indicates **some NAND reliability issues**
 
-## ✔ num_err_log_entries : 42
+## num_err_log_entries : 42
 
 - Total error events logged
 
 👉 Should correlate with error log (LID 0x01)
 
-# 🔹 Overall Health Assessment
+# Overall Health Assessment
 
 ```
 Endurance     : HIGH (85% used)
@@ -316,7 +313,7 @@ Shutdowns     : Moderate
 Drive is nearing end-of-life and should be monitored or replaced soon
 ```
 
-# 🔹 Key Insights
+# Key Insights
 
 - **Percentage Used + Spare** → best indicators of wear
 - **Data Units Written** → workload magnitude

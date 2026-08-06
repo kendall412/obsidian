@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/logs/LID = 0x01 Error Information Log Page.md",
+                "file": "NVMe/logs/LID = 0x02 S.M.A.R.T Log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LID = 0x01 Error Information Log Page"
+              "title": "LID = 0x02 S.M.A.R.T Log"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "488700c92724f69d",
   "lastOpenFiles": [
+    "NVMe/logs/LID = 0x01 Error Information Log Page.md",
     "NVMe/logs/LID = 0x03 Firmware Slot Info Log Page.md",
     "NVMe/logs/LID = 0x04 Changed Namespace List Log Page.md",
     "NVMe/logs/logs.md",
@@ -212,7 +213,6 @@
     "NVMe/Admin Command Set OPCODE (OPC).md",
     "NVMe/Admin Command Set.md",
     "NVMe/registers/Doorbell Registers.md",
-    "NVMe/registers/doorbell.md",
     "NVMe/pictures/cdw0.png",
     "NVMe/pictures/sqe.png",
     "NVMe/pictures/fig.91 cdw0.png",

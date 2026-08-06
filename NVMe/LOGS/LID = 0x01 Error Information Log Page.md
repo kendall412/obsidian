@@ -111,7 +111,6 @@ Entry[ 0]
 - Some controllers may log **only critical errors**
 - Log depth is **limited → must be polled regularly**
 
-
 ## Related Logs
 
 - **SMART / Health (LID 0x02)** → aggregate error counters
