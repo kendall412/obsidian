@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/logs/LID = 0x02 S.M.A.R.T Log.md",
+                "file": "NVMe/NVMe Validation Dev/ioctl.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LID = 0x02 S.M.A.R.T Log"
+              "title": "ioctl"
             }
           }
         ]
@@ -183,8 +183,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "488700c92724f69d",
+  "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
+    "NVMe/NVMe Validation Dev/validation overview.md",
+    "NVMe/NVMe Validation Dev/Validation automation development guide.md",
+    "NVMe/NVMe Validation Dev/SPDK (Storage Performance Development Kit).md",
+    "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
+    "NVMe/Admin Command Set OPCODE (OPC).md",
+    "NVMe/logs/LID = 0x02 S.M.A.R.T Log.md",
     "NVMe/logs/LID = 0x01 Error Information Log Page.md",
     "NVMe/logs/LID = 0x03 Firmware Slot Info Log Page.md",
     "NVMe/logs/LID = 0x04 Changed Namespace List Log Page.md",
@@ -207,12 +213,6 @@
     "NVMe/NVMe CLI.md",
     "NVMe/Fuse.md",
     "NVMe/descriptors.md",
-    "NVMe/data buffer.md",
-    "NVMe/data buffer (NVMe).md",
-    "NVMe/Critical Warning.md",
-    "NVMe/Admin Command Set OPCODE (OPC).md",
-    "NVMe/Admin Command Set.md",
-    "NVMe/registers/Doorbell Registers.md",
     "NVMe/pictures/cdw0.png",
     "NVMe/pictures/sqe.png",
     "NVMe/pictures/fig.91 cdw0.png",
@@ -228,7 +228,7 @@
     "NVMe/nvme_validation_dev",
     "NVMe/FID",
     "C",
-    "NVMe/NVMe Validation",
+    "NVMe/NVMe Validation Dev",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "NVMe/nvme ioctl",
     "Untitled.canvas"

@@ -1,5 +1,5 @@
 ### Core Structure
-
+#opc
 - **Opcode (OPC)** = 1 byte in **DWORD 0**
 - Executed via **Admin Submission Queue**
 - Applies to **controller + namespaces (management only)**

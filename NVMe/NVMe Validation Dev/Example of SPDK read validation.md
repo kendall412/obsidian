@@ -1,7 +1,6 @@
 
 Let's walk through a realistic example of how **SPDK** is used in an NVMe validation test to verify a **Read** command. This is similar to what an NVMe validation engineer might write, although production code is usually more modular and includes extensive error handling and logging.
 
----
 
 # Validation Goal
 
@@ -23,7 +22,6 @@ The validation procedure is:
 9. Report PASS or FAIL
 ```
 
----
 
 # Overall Architecture
 
@@ -46,7 +44,7 @@ NVMe Controller
 NAND Flash
 ```
 
----
+
 
 # Step 1 — Initialize SPDK
 
@@ -64,7 +62,7 @@ spdk_env_init(&opts);
 
 This prepares hugepage memory, DMA support, and PCI access.
 
----
+
 
 # Step 2 — Discover Controllers
 
@@ -107,7 +105,7 @@ Identify Controller
 
 The `attach_cb()` callback is invoked for each controller found.
 
----
+
 
 # Step 3 — Get Namespace
 
@@ -121,7 +119,7 @@ ns = spdk_nvme_ctrlr_get_ns(ctrlr, 1);
 
 Now the program has access to Namespace 1.
 
----
+
 
 # Step 4 — Allocate DMA Buffer
 
@@ -138,7 +136,7 @@ buffer = spdk_dma_zmalloc(
 
 The result is a DMA-safe 4 KB buffer.
 
----
+
 
 # Step 5 — Fill Test Pattern
 
