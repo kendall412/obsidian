@@ -1,6 +1,6 @@
 [https://wiki.osdev.org/NVMe](https://wiki.osdev.org/NVMe)
 
-![[Pasted image 20260129210408.png]]
+![[cdw.png]]
 
 NVMe commands are structured within a 64-byte Submission Queue Entry (SQE), which is composed of 16 Double Words (DWORDs). Each DWORD is 4 bytes in size. The structure is generally consistent across different command types (Admin commands and I/O commands), with some fields having common definitions and others being command-specific.
 

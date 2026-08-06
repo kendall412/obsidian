@@ -6,11 +6,11 @@ CDW 0 (4.1.1 Admin Command and I/O Command Common SQE):
 
 In NVMe, Command Dword 0 (CDW0) is the first 4-byte field in a 64-byte Submission Queue Entry (SQE). It contains essential parameters common to all Admin and NVM commands, specifically the Opcode and the Command Identifier (CID). 
 
-![[SQE.png]]
+![[sqe.png]]
 
-![[DWORD0.png]]
+![[cdw0.png]]
 
-![[Pasted image 20260129210256.png]]
+![[fig.91 cdw0.png]]
 
 "Command Dword 0, Namespace Identifier, Metadata Pointer, PRP Entry 1, PRP Entry 2, SGL Entry 1, and Metadata SGL Segment Pointer have common definitions for all Admin commands and I/O commands for all I/O Command Sets. Metadata Pointer, PRP Entry 1, PRP Entry 2, and Metadata SGL Segment Pointer are not used by all commands."
 
