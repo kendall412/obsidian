@@ -1,7 +1,7 @@
 
 > **Atomicity in NVMe** means that a write is **all-or-nothing**: after a failure (e.g., power loss), the data for that write is seen as **either fully old or fully new—never partially updated**.
 
-# 🔹 Why Atomicity Matters
+# Why Atomicity Matters
 
 Without atomicity:
 
@@ -19,7 +19,7 @@ Either entire write is committed
 OR nothing is changed
 ```
 
-# 🔹 Where NVMe Guarantees Atomicity
+# Where NVMe Guarantees Atomicity
 
 ## ✔ Atomic Write Unit (AWU)
 
@@ -30,7 +30,7 @@ NVMe defines a size (in logical blocks) that is **guaranteed atomic**:
 
 These are reported in **Identify Controller / Namespace data**.
 
-## ✔ Interpretation
+### Interpretation
 
 ```
 If write size ≤ AWU:
@@ -40,7 +40,7 @@ If write size > AWU:
   → may be torn on failure
 ```
 
-# 🔹 Example
+### Example
 
 Assume:
 
@@ -59,7 +59,7 @@ Write 32 KB → atomic (safe)
 Write 64 KB → NOT guaranteed atomic
 ```
 
-# 🔹 How SSD Ensures Atomicity
+# How SSD Ensures Atomicity
 
 Internally via FTL:
 
@@ -70,7 +70,7 @@ Internally via FTL:
     - metadata protection
     - capacitor-backed flush (PLP)
 
-# 🔹 Atomicity vs Power Loss Protection (PLP)
+# Atomicity vs Power Loss Protection (PLP)
 
 |Feature|Role|
 |---|---|
@@ -79,21 +79,21 @@ Internally via FTL:
 
 👉 PLP helps enforce atomicity in real hardware.
 
-# 🔹 Related NVMe Features
+# Related NVMe Features
 
-## ✔ Write Atomicity Normal (Feature ID 0x0A)
+## Write Atomicity Normal (Feature ID 0x0A)
 
 - Controls atomic write behavior
 
-## ✔ FUA (Force Unit Access)
+## FUA (Force Unit Access)
 
 - Ensures data is persisted before completion
 
-## ✔ Flush command
+## Flush command
 
 - Forces durability boundary
 
-# 🔹 Atomicity vs Consistency
+# Atomicity vs Consistency
 
 - Atomicity ensures **single write correctness**
 - Does NOT ensure:
@@ -102,7 +102,7 @@ Internally via FTL:
 
 👉 Higher-level software (DB, FS) handles that
 
-# 🔹 Real-World Use
+# Real-World Use
 
 - Databases (avoid torn pages)
 - Journaling filesystems
@@ -299,19 +299,11 @@ Atomicity = old mapping OR new mapping
 
 The host never sees an incomplete intermediate mapping state.
 
----
-# 🔹 Key Insight
+# Key Insight
 
 > Atomicity is guaranteed **only up to a certain size (AWU)**—beyond that, the host must manage consistency.
 
----
 
-# 🔹 One-Line Summary
+# One-Line Summary
 
 **Atomicity in NVMe ensures that writes up to a defined size (AWU) are completed fully or not at all, preventing partial or torn writes, especially during failures.**
-
----
-
-If you want, I can:
-
-- show **exact AWUN/AWUPF bit fields in Identify data**
