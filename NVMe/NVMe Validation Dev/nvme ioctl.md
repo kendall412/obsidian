@@ -1,5 +1,5 @@
 
-
+#iotcl 
 > Linux provides several `ioctl` request types to interface directly with NVMe devices, primarily categorized into ==passthrough commands and controller-level management functions==. These enable user-space applications to send native NVMe specifications to both Admin and I/O submission queues. [1](https://manpages.debian.org/testing/nvme-cli/nvme.1.en.html), [2](https://github.com/torvalds/linux/blob/master/include/uapi/linux/nvme_ioctl.h)
 
 ## 1. Passthrough Commands

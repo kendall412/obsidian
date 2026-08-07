@@ -1,5 +1,5 @@
-
-> NVMe validation is the process of verifying that an NVMe SSD functions correctly, complies with the NVMe specification, interoperates with hosts, and meets performance, reliability, and endurance requirements. Validation is typically much broader than unit testing—it spans the firmware, controller hardware, NAND flash, PCIe interface, and system-level behavior.
+#validation 
+> **NVMe validation is the process of verifying that an NVMe SSD functions correctly, complies with the NVMe specification, interoperates with hosts, and meets performance, reliability, and endurance requirements**. Validation is typically much broader than unit testing—it spans the firmware, controller hardware, NAND flash, PCIe interface, and system-level behavior.
 
 A typical SSD company (Samsung, SK hynix, Kioxia, Micron, Solidigm, Western Digital, etc.) performs validation in several stages.
 
@@ -38,7 +38,7 @@ A typical SSD company (Samsung, SK hynix, Kioxia, Micron, Solidigm, Western Digi
 
 
 # 2. Functional Validation
-
+#functional
 This verifies that every NVMe command behaves exactly as defined in the NVMe specification.
 
 Examples include:
@@ -126,7 +126,7 @@ For each command they verify
 
 
 # 3. PCIe Validation
-
+#pcie
 Before NVMe commands even work, PCIe must function correctly.
 
 Tests include
@@ -203,7 +203,7 @@ Hot plug
 
 
 # 4. Register Validation
-
+#register
 Engineers verify every NVMe register.
 
 Examples
@@ -311,7 +311,7 @@ Correct completion order
 
 
 # 6. Feature Validation
-
+#feature
 Every Set Features and Get Features command is tested.
 
 Examples
@@ -341,7 +341,7 @@ Reservation Persistence
 
 
 # 7. Namespace Validation
-
+#namespace
 Verify
 
 Namespace creation
@@ -363,7 +363,7 @@ Multiple namespaces
 
 
 # 8. Performance Validation
-
+#performance
 Performance engineers measure
 
 Sequential read
@@ -419,7 +419,7 @@ CPU utilization
 
 
 # 9. Power Validation
-
+#power
 Verify
 
 Power state transitions
@@ -461,7 +461,7 @@ Verify latency
 
 
 # 10. Thermal Validation
-
+#thermal
 Run heavy workloads while measuring
 
 Controller temperature
@@ -494,7 +494,7 @@ Typical temperatures
 
 
 # 11. NAND Validation
-
+#media
 The flash translation layer (FTL) is extensively exercised.
 
 Tests include
@@ -520,7 +520,7 @@ Media scrubbing
 
 
 # 12. Reliability Validation
-
+#reliability
 One of the largest validation efforts.
 
 Examples
@@ -622,7 +622,7 @@ Thousands of power interruptions may be performed automatically.
 
 
 # 14. Reset Testing
-
+#reset
 Engineers inject
 
 Controller reset
@@ -642,7 +642,7 @@ while I/O is running.
 
 
 # 15. Error Injection
-
+#error_injection
 Firmware is intentionally forced into unusual situations.
 
 Examples
@@ -680,7 +680,7 @@ No deadlock
 
 
 # 16. Compliance Testing
-
+#compliance
 The SSD is tested against the official NVMe specification.
 
 Checks include
@@ -708,7 +708,7 @@ Security
 
 
 # 17. Interoperability (Interop) Testing
-
+#interoperability
 The drive is tested with many different systems and operating systems.
 
 Examples:
@@ -731,7 +731,7 @@ The goal is to ensure the SSD behaves correctly across diverse host implementati
 
 
 # 18. Automation Framework
-
+#automation
 Almost all validation is automated.
 
 A simplified architecture looks like this:

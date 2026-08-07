@@ -1,4 +1,4 @@
-
+#memset
 `memset()` is a standard C library function that **fills a block of memory with a specified byte value**. It is declared in `<string.h>`.
 ### Syntax
 
@@ -17,7 +17,7 @@ void *memset(void *ptr, int value, size_t num);
 ### Return Value
 
 Returns the original pointer (`ptr`).
-## Example 1: Initialize an array to zero
+### Example 1: Initialize an array to zero
 
 ```c
 #include <stdio.h>
@@ -43,7 +43,7 @@ Output:
 
 Since all bytes are set to `0x00`, each integer becomes `0`.
 
-## Example 2: Fill a character buffer
+### Example 2: Fill a character buffer
 
 ```c
 char buffer[10];
@@ -63,7 +63,7 @@ In hexadecimal:
 41 41 41 41 41 41 41 41 41 41
 ```
 
-## Example 3: Fill with 0xFF
+### Example 3: Fill with 0xFF
 
 ```c
 unsigned char data[8];

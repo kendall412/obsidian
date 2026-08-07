@@ -1,4 +1,4 @@
-
+#development #validation
 > NVMe validation automation is essentially **software development for testing**. Engineers build a framework that can control an SSD, issue NVMe commands, verify responses, collect logs, and report results automatically. At companies like SK hynix, Samsung, Micron, Kioxia, Solidigm, or Western Digital, the automation framework often contains **hundreds of thousands of lines of code** and thousands of test cases.
 
 The architecture typically looks like this:
@@ -27,7 +27,7 @@ The architecture typically looks like this:
                          NVMe SSD
 ```
 
----
+
 
 # Step 1. Read the specification
 
@@ -47,7 +47,7 @@ Status Code = Invalid Field
 
 This becomes a formal test case.
 
----
+
 
 # Step 2. Design the test case
 
@@ -90,7 +90,7 @@ Expected:
 Controller enters PS3
 ```
 
----
+
 
 # Step 3. Write reusable libraries
 
@@ -126,12 +126,12 @@ controller.set_feature()
 
 Most tests then become concise and readable.
 
----
+
 
 # Step 4. Create an abstraction layer
 
 The framework hides low-level details from test writers.
-
+#iotcl #spdk
 ```text
 Test Script
       │
@@ -152,7 +152,7 @@ Vendor Driver
 
 A test author doesn't need to know PRP lists, queue doorbells, or DMA programming unless they're writing low-level tests.
 
----
+
 
 # Step 5. Build the command
 
@@ -184,7 +184,7 @@ Return data
 
 The helper function hides these details.
 
----
+
 
 # Step 6. Verify results automatically
 
@@ -211,7 +211,7 @@ assert identify.cntlid != 0
 
 Assertions turn protocol requirements into automated checks.
 
----
+
 
 # Step 7. Log everything
 
@@ -257,7 +257,7 @@ Latency 92 us
 
 When a failure occurs, engineers can reconstruct exactly what happened.
 
----
+
 
 # Step 8. Generate reports
 
@@ -287,9 +287,9 @@ SKIP 17
 
 Failures include logs, stack traces, and device information.
 
----
 
-# Example: Read command test
+
+### Example: Read command test
 
 A simplified flow:
 
@@ -321,9 +321,9 @@ data = controller.read(lba=100)
 assert data == pattern
 ```
 
----
 
-# Example: Power-cycle test
+
+### Example: Power-cycle test
 
 Automation can repeatedly cycle power:
 
@@ -364,7 +364,7 @@ for i in range(10000):
 
 Here, `power.off()` is often implemented through programmable lab equipment rather than the SSD itself.
 
----
+
 
 # Stress testing
 
@@ -385,7 +385,7 @@ while True:
 
 This can run continuously for days or weeks to uncover rare firmware issues.
 
----
+
 
 # Continuous Integration (CI)
 
@@ -415,7 +415,7 @@ Email or dashboard results
 
 This ensures regressions are detected early.
 
----
+
 
 # Typical framework organization
 
@@ -451,7 +451,7 @@ nvme_validation/
 
 This separation allows protocol logic, utilities, and tests to evolve independently.
 
----
+
 
 # Skills needed to develop NVMe validation automation
 

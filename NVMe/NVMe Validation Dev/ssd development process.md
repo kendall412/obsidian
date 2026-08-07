@@ -1,3 +1,4 @@
+#evt #dvt #fvt #pvt
 In SSD development, **EVT, DVT, FVT, and PVT** are validation phases used to move a product from early engineering samples to mass production.
 
 The exact meaning can vary by company, but commonly:
@@ -20,7 +21,7 @@ Where **MP** means **Mass Production**.
 ---
 
 ## 1. EVT — Engineering Validation Test
-
+#evt
 **EVT** is the early bring-up and engineering validation phase.
 
 The goal is to check whether the SSD hardware, controller, NAND, firmware, and basic system architecture work.
@@ -51,10 +52,9 @@ Are there major hardware or firmware blockers?
 
 At EVT, many bugs are expected. Debug firmware, special test hooks, reworked boards, and engineering samples are common.
 
----
 
 ## 2. DVT — Design Validation Test
-
+#dvt
 **DVT** validates that the SSD design meets the product requirements.
 
 This phase is more formal and much broader than EVT.
@@ -87,10 +87,9 @@ Is it reliable across real-world conditions?
 Are the controller, NAND, PCB, and firmware design acceptable?
 ```
 
----
 
 ## 3. FVT — Firmware Validation Test / Functional Validation Test
-
+#fvt
 **FVT** usually focuses on validating the SSD firmware and product functions.
 
 Different companies use the term differently:
@@ -140,10 +139,10 @@ Trigger thermal limit → verify throttling works
 Run firmware update → reboot → verify new firmware active
 ```
 
----
+
 
 ## 4. PVT — Production Validation Test
-
+#pvt
 **PVT** validates that the product can be built consistently in the factory.
 
 The design should already be mostly stable before PVT. The focus moves from engineering design to manufacturing readiness.
@@ -174,7 +173,7 @@ Is the factory test process stable?
 Is the product ready for mass production?
 ```
 
----
+
 
 ## Simple comparison
 
@@ -185,7 +184,7 @@ Is the product ready for mass production?
 | **FVT** | Firmware/function validation | FTL, GC, wear leveling, SPOR recovery, SMART logs work correctly |
 | **PVT** | Production readiness | Factory can build, test, program, and ship SSDs reliably |
 
----
+
 
 ## More practical SSD lifecycle
 
@@ -213,7 +212,7 @@ EVT → DVT → PVT → MP
 
 and include **FVT** inside **DVT** or across all stages.
 
----
+
 
 ## Short summary
 
