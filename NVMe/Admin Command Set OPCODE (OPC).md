@@ -13,7 +13,7 @@
 |`0x04`|Delete I/O Completion Queue|Remove CQ|
 |`0x05`|Create I/O Completion Queue|Create CQ|
 
-### Identification & Capabilites
+### Identification & Capabilities
 |Opcode|Command|Purpose|
 |---|---|---|
 |`0x06`|Identify|Get controller/namespace info|

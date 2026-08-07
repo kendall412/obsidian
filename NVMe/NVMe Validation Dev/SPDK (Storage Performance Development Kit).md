@@ -4,7 +4,6 @@
 
 For NVMe validation automation, SPDK is often used because it gives engineers **fine-grained control over NVMe commands**, **lower latency**, and **higher performance** than traditional kernel interfaces.
 
----
 
 # Why SPDK was created
 
@@ -39,7 +38,6 @@ Every I/O request crosses the kernel boundary, which adds overhead due to:
 
 This is perfectly acceptable for most applications, but it can limit maximum performance and make certain types of validation more difficult.
 
----
 
 # SPDK architecture
 
@@ -62,7 +60,6 @@ SPDK moves the NVMe driver into user space.
 
 Instead of using the kernel NVMe driver, SPDK typically uses the **VFIO** (or previously UIO) framework to map the PCIe device directly into user space.
 
----
 
 # Traditional ioctl() vs SPDK
 
@@ -101,7 +98,6 @@ Disadvantages:
 - Less control over queue processing
     
 
----
 
 ## SPDK approach
 
@@ -131,7 +127,6 @@ Advantages:
 - Excellent for performance and stress testing
     
 
----
 
 # How SPDK works internally
 
@@ -169,7 +164,6 @@ Return Data
 
 The application doesn't need to manually program all of these steps.
 
----
 
 # SPDK uses polling
 
@@ -205,7 +199,6 @@ Continue Immediately
 
 Polling eliminates interrupt latency, which is one reason SPDK achieves very high performance.
 
----
 
 # Example validation program
 
@@ -227,7 +220,6 @@ disconnect();
 
 Each of these functions uses SPDK APIs underneath.
 
----
 
 # Typical validation workflow
 
@@ -255,7 +247,6 @@ Verify Results
 Destroy Queue Pair
 ```
 
----
 
 # Example automation
 
@@ -299,7 +290,6 @@ Completion
 
 This generally completes faster because there is less software overhead.
 
----
 
 # What validation engineers use SPDK for
 
@@ -324,7 +314,6 @@ SPDK is especially useful for:
 
 For example, a vendor-specific Admin command can be built directly with SPDK structures and submitted without waiting for kernel support.
 
----
 
 # SPDK vs nvme-cli
 
@@ -337,7 +326,6 @@ For example, a vendor-specific Admin command can be built directly with SPDK str
 |Queue control|Direct control|Limited|
 |Best for|Automated performance/stress tools|Functional testing, scripting, diagnostics|
 
----
 
 # Is SPDK used everywhere?
 
@@ -352,7 +340,6 @@ No. Validation teams typically use multiple interfaces depending on the goal:
 - **Vendor-specific APIs/tools**: Manufacturing tests, firmware download, debug features, and internal diagnostics.
     
 
----
 
 # Should you learn SPDK?
 

@@ -27,7 +27,7 @@ These `ioctl` commands are used to manage the state of the NVMe controller itsel
 
 For detailed C-struct definitions and how the parameters are mapped into user space, you can review the [GitHub libnvme ioctl.h Source](https://github.com/linux-nvme/libnvme/blob/master/src/nvme/ioctl.h).
 
----
+
 # Linux NVMe `ioctl` functions
 
 In Linux, NVMe does not have a separate C function for every NVMe command. Applications call the generic system call:
@@ -47,7 +47,7 @@ Include these headers:
 #include <unistd.h>
 ```
 
----
+
 
 ## 1. `NVME_IOCTL_ID`
 
@@ -67,7 +67,7 @@ Purpose:
 - Normally used with a namespace file such as:
     
 
-```text
+```bash
 /dev/nvme0n1
 ```
 
@@ -92,7 +92,6 @@ close(fd);
 
 The namespace ioctl handler returns the namespace’s ID directly. ([GitHub](https://github.com/torvalds/linux/blob/master/drivers/nvme/host/ioctl.c "linux/drivers/nvme/host/ioctl.c at master · torvalds/linux · GitHub"))
 
----
 
 ## 2. `NVME_IOCTL_ADMIN_CMD`
 
@@ -132,7 +131,7 @@ Purpose:
 
 Typical device:
 
-```text
+```bash
 /dev/nvme0
 ```
 
@@ -253,7 +252,7 @@ Purpose:
 
 Typical device:
 
-```text
+```bash
 /dev/nvme0n1
 ```
 
@@ -313,7 +312,6 @@ io.nblocks = 0;                    /* Zero-based: read one block */
 int status = ioctl(fd, NVME_IOCTL_SUBMIT_IO, &io);
 ```
 
----
 
 ## 4. `NVME_IOCTL_IO_CMD`
 
@@ -368,7 +366,7 @@ Examples:
 
 Prefer opening the namespace device:
 
-```text
+```bash
 /dev/nvme0n1
 ```
 
@@ -398,7 +396,6 @@ cmd.timeout_ms = 5000;
 int status = ioctl(fd, NVME_IOCTL_IO_CMD, &cmd);
 ```
 
----
 
 ## 5. `NVME_IOCTL_RESET`
 
@@ -423,7 +420,7 @@ Purpose:
 
 Typical device:
 
-```text
+```bash
 /dev/nvme0
 ```
 
@@ -438,7 +435,6 @@ if (ioctl(fd, NVME_IOCTL_RESET) < 0)
 
 The driver checks `CAP_SYS_ADMIN` before performing the synchronous controller reset. ([GitHub](https://github.com/torvalds/linux/blob/master/drivers/nvme/host/ioctl.c "linux/drivers/nvme/host/ioctl.c at master · torvalds/linux · GitHub"))
 
----
 
 ## 6. `NVME_IOCTL_SUBSYS_RESET`
 
@@ -465,7 +461,7 @@ Purpose:
 
 Typical device:
 
-```text
+```bash
 /dev/nvme0
 ```
 
@@ -478,7 +474,7 @@ if (ioctl(fd, NVME_IOCTL_SUBSYS_RESET) < 0)
 
 The Linux controller ioctl handler routes this request to the NVMe subsystem-reset implementation after checking administrative privilege. ([GitHub](https://github.com/torvalds/linux/blob/master/drivers/nvme/host/ioctl.c "linux/drivers/nvme/host/ioctl.c at master · torvalds/linux · GitHub"))
 
----
+
 
 ## 7. `NVME_IOCTL_RESCAN`
 
@@ -521,7 +517,7 @@ if (ioctl(fd, NVME_IOCTL_RESCAN) < 0)
 
 The ioctl queues an NVMe controller scan and returns without using a command structure. ([GitHub](https://github.com/torvalds/linux/blob/master/drivers/nvme/host/ioctl.c "linux/drivers/nvme/host/ioctl.c at master · torvalds/linux · GitHub"))
 
----
+
 
 ## 8. `NVME_IOCTL_ADMIN64_CMD`
 
@@ -585,7 +581,6 @@ NVME_IOCTL_ADMIN64_CMD  result = 64 bits
 
 ([GitHub](https://github.com/torvalds/linux/blob/master/include/uapi/linux/nvme_ioctl.h "linux/include/uapi/linux/nvme_ioctl.h at master · torvalds/linux · GitHub"))
 
----
 
 ## 9. `NVME_IOCTL_IO64_CMD`
 
@@ -613,13 +608,13 @@ Purpose:
 
 Typical device:
 
-```text
+```bash
 /dev/nvme0n1
 ```
 
 The namespace ioctl handler submits this request through the 64-bit passthrough processing path. ([GitHub](https://github.com/torvalds/linux/blob/master/drivers/nvme/host/ioctl.c "linux/drivers/nvme/host/ioctl.c at master · torvalds/linux · GitHub"))
 
----
+
 
 ## 10. `NVME_IOCTL_IO64_CMD_VEC`
 
@@ -677,7 +672,7 @@ The driver marks this operation with its internal vectored-I/O flag before submi
 |`NVME_IOCTL_IO64_CMD`|`nvme_passthru_cmd64`|I/O command with 64-bit result|
 |`NVME_IOCTL_IO64_CMD_VEC`|`nvme_passthru_cmd64`|Vectored I/O passthrough|
 
----
+
 
 # NVMe `io_uring` command interfaces
 
@@ -705,13 +700,13 @@ The current kernel requires the large `io_uring` submission and completion entry
 
 Use the controller character device for controller-wide Admin operations:
 
-```text
+```bash
 /dev/nvme0
 ```
 
 Use the namespace device for NVM I/O operations:
 
-```text
+```bash
 /dev/nvme0n1
 ```
 

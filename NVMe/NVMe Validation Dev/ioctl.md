@@ -184,7 +184,7 @@ cmd.cdw10 = 1;
 
 Then pass its address:
 
-```
+```c
 ioctl(fd, NVME_IOCTL_ADMIN_CMD, &cmd);
 ```
 
@@ -192,7 +192,7 @@ ioctl(fd, NVME_IOCTL_ADMIN_CMD, &cmd);
 
 Most `ioctl()` programs follow this pattern:
 
-```
+```c
 #include <fcntl.h>
 #include <stdio.h>
 #include <sys/ioctl.h>
@@ -240,7 +240,7 @@ That is important:
 
 Here is an example that gets the terminal window size:
 
-```
+```c
 #include <stdio.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
@@ -265,7 +265,7 @@ int main(void)
 
 The call:
 
-```
+```c
 ioctl(STDOUT_FILENO, TIOCGWINSZ, &size);
 ```
 
@@ -289,7 +289,7 @@ Where should the result go?
 
 The kernel fills:
 
-```
+```c
 struct winsize size;
 ```
 
@@ -299,7 +299,7 @@ with information.
 
 For NVMe programming on Linux, include:
 
-```
+```c
 #include <linux/nvme_ioctl.h>
 #include <sys/ioctl.h>
 ```
@@ -362,7 +362,7 @@ The controller returns:
 
 ### Complete example
 
-```
+```c
 #include <errno.h>
 #include <fcntl.h>
 #include <linux/nvme_ioctl.h>
@@ -489,13 +489,13 @@ int main(void)
 
 Compile:
 
-```
+```bash
 gcc -Wall -O2 nvme_identify.c -o nvme_identify
 ```
 
 Run:
 
-```
+```bash
 sudo ./nvme_identify
 ```
 
@@ -503,7 +503,7 @@ sudo ./nvme_identify
 
 The key line is:
 
-```
+```c
 int ret = ioctl(fd, NVME_IOCTL_ADMIN_CMD, &cmd);
 ```
 
@@ -764,7 +764,7 @@ cmd.cdw10 = 1           ───────► CDW10.CNS = 1
 
 When you call:
 
-```
+```c
 ret = ioctl(fd, NVME_IOCTL_ADMIN_CMD, &cmd);
 ```
 
@@ -784,7 +784,7 @@ ioctl()
 
 So:
 
-```
+```c
 printf("before\n");
 
 ioctl(fd, NVME_IOCTL_ADMIN_CMD, &cmd);
@@ -820,25 +820,25 @@ NVME_IOCTL_SUBSYS_RESET
 
 The relevant header is:
 
-```
+```c
 #include <linux/nvme_ioctl.h>
 ```
 
 You can inspect it on Linux:
 
-```
+```bash
 cat /usr/include/linux/nvme_ioctl.h
 ```
 
 Or:
 
-```
+```bash
 grep -n "NVME_IOCTL" /usr/include/linux/nvme_ioctl.h
 ```
 
 The header will contain definitions similar to:
 
-```
+```c
 #define NVME_IOCTL_ID
 #define NVME_IOCTL_ADMIN_CMD
 #define NVME_IOCTL_IO_CMD
@@ -866,7 +866,7 @@ Many different drivers use it:
 
 The meaning of:
 
-```
+```c
 ioctl(fd, request, argument);
 ```
 
@@ -882,19 +882,19 @@ For NVMe, I recommend learning in this order:
 
 #### Step 1 — Open the controller
 
-```
+```c
 int fd = open("/dev/nvme0", O_RDONLY);
 ```
 
 #### Step 2 — Create the command
 
-```
+```c
 struct nvme_admin_cmd cmd = {0};
 ```
 
 #### Step 3 — Fill the NVMe fields
 
-```
+```c
 cmd.opcode = 0x06;
 cmd.nsid = 0;
 cmd.addr = (uint64_t)(uintptr_t)buffer;
@@ -904,13 +904,13 @@ cmd.cdw10 = 1;
 
 #### Step 4 — Send it
 
-```
+```c
 int ret = ioctl(fd, NVME_IOCTL_ADMIN_CMD, &cmd);
 ```
 
 #### Step 5 — Check the result
 
-```
+```c
 if (ret < 0) {
     perror("ioctl");
 }
@@ -924,7 +924,7 @@ else {
 
 #### Step 6 — Parse the returned buffer
 
-```
+```c
 unsigned char *data = buffer;
 ```
 

@@ -1,6 +1,4 @@
-
-Let's walk through a realistic example of how **SPDK** is used in an NVMe validation test to verify a **Read** command. This is similar to what an NVMe validation engineer might write, although production code is usually more modular and includes extensive error handling and logging.
-
+>Let's walk through a realistic example of how **SPDK** is used in an NVMe validation test to verify a **Read** command. This is similar to what an NVMe validation engineer might write, although production code is usually more modular and includes extensive error handling and logging.
 
 # Validation Goal
 
@@ -43,7 +41,6 @@ NVMe Controller
       ▼
 NAND Flash
 ```
-
 
 
 # Step 1 — Initialize SPDK
@@ -155,7 +152,7 @@ Now the buffer contains:
 ...
 ```
 
----
+
 
 # Step 6 — Write Data
 
@@ -210,7 +207,7 @@ SSD Executes Write
 Completion Queue Updated
 ```
 
----
+
 
 # Step 7 — Wait for Completion
 
@@ -227,7 +224,7 @@ while (!done)
 
 The completion callback is called when the SSD finishes the write.
 
----
+
 
 # Step 8 — Clear Buffer
 
@@ -245,7 +242,7 @@ Now the buffer is:
 ...
 ```
 
----
+
 
 # Step 9 — Read Data
 
@@ -311,7 +308,7 @@ DMA Data to Host Buffer
 Write Completion Queue Entry
 ```
 
----
+
 
 # Step 10 — Process Completion
 
@@ -328,7 +325,7 @@ while (!done)
 
 Once the callback runs, the buffer contains the data transferred by the SSD.
 
----
+
 
 # Step 11 — Validate Data
 
@@ -360,7 +357,7 @@ else
 }
 ```
 
----
+
 
 # What Happens Inside the SSD
 
@@ -396,7 +393,7 @@ Host Polls CQ
 Validation Compares Data
 ```
 
----
+
 
 # How a Real Validation Framework Wraps This
 

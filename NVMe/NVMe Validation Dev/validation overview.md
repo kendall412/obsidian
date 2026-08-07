@@ -36,7 +36,6 @@ A typical SSD company (Samsung, SK hynix, Kioxia, Micron, Solidigm, Western Digi
        Customer Qualification
 ```
 
----
 
 # 2. Functional Validation
 
@@ -88,7 +87,6 @@ Capabilities
 
 The returned fields are compared against the NVMe specification.
 
----
 
 ### I/O Commands
 
@@ -126,7 +124,6 @@ For each command they verify
 - command retries
     
 
----
 
 # 3. PCIe Validation
 
@@ -156,7 +153,6 @@ x4
 x8
 ```
 
----
 
 ### LTSSM
 
@@ -184,7 +180,6 @@ L2
 
 Unexpected transitions are checked.
 
----
 
 ### Error Injection
 
@@ -206,7 +201,6 @@ Surprise removal
 
 Hot plug
 
----
 
 # 4. Register Validation
 
@@ -268,7 +262,7 @@ Registers reset
 PASS
 ```
 
----
+
 
 # 5. Queue Validation
 
@@ -314,7 +308,7 @@ No corruption
 Correct completion order
 ```
 
----
+
 
 # 6. Feature Validation
 
@@ -344,7 +338,7 @@ Volatile Write Cache
 Reservation Persistence
 ```
 
----
+
 
 # 7. Namespace Validation
 
@@ -366,7 +360,7 @@ Namespace sharing
 
 Multiple namespaces
 
----
+
 
 # 8. Performance Validation
 
@@ -422,7 +416,7 @@ Latency
 CPU utilization
 ```
 
----
+
 
 # 9. Power Validation
 
@@ -464,7 +458,7 @@ Resume
 Verify latency
 ```
 
----
+
 
 # 10. Thermal Validation
 
@@ -498,7 +492,6 @@ Typical temperatures
 85°C
 ```
 
----
 
 # 11. NAND Validation
 
@@ -524,7 +517,7 @@ RAID/parity recovery (if implemented)
 
 Media scrubbing
 
----
+
 
 # 12. Reliability Validation
 
@@ -548,7 +541,7 @@ Read
 Weeks
 ```
 
----
+
 
 ### Continuous Write
 
@@ -564,7 +557,7 @@ Write
 Petabytes written
 ```
 
----
+
 
 ### Mixed Workload
 
@@ -576,7 +569,7 @@ Petabytes written
 Weeks
 ```
 
----
+
 
 ### Long Duration
 
@@ -592,7 +585,7 @@ Some tests run
 180 days
 ```
 
----
+
 
 # 13. Power Failure Testing
 
@@ -626,7 +619,7 @@ Journal replay
 
 Thousands of power interruptions may be performed automatically.
 
----
+
 
 # 14. Reset Testing
 
@@ -646,7 +639,7 @@ Recovery
 
 while I/O is running.
 
----
+
 
 # 15. Error Injection
 
@@ -684,7 +677,7 @@ Recovery successful
 No deadlock
 ```
 
----
+
 
 # 16. Compliance Testing
 
@@ -712,7 +705,7 @@ Sanitize
 
 Security
 
----
+
 
 # 17. Interoperability (Interop) Testing
 
@@ -735,7 +728,7 @@ Examples:
 
 The goal is to ensure the SSD behaves correctly across diverse host implementations.
 
----
+
 
 # 18. Automation Framework
 
@@ -767,7 +760,7 @@ A simplified architecture looks like this:
 
 The framework runs thousands of test cases, collects logs, compares actual results with expected behavior, and generates pass/fail reports automatically.
 
----
+
 
 # 19. Common Tools Used
 
@@ -782,28 +775,21 @@ Validation teams commonly use:
 |Firmware debugging|JTAG, UART, semihosting, vendor debug tools|
 |Automation|Python, C/C++, shell scripts, Jenkins, GitLab CI|
 
----
+
 
 # 20. Typical Role of an NVMe Validation Engineer
 
 A validation engineer's work often includes:
 
 1. Reading the NVMe specification to understand expected behavior.
-    
 2. Designing detailed test cases for new features or bug fixes.
-    
 3. Developing automated tests (commonly in Python, C++, or C).
-    
 4. Running tests on SSD prototypes in a lab.
-    
 5. Analyzing protocol traces, firmware logs, and hardware captures.
-    
 6. Reporting defects with enough detail for firmware or hardware engineers to reproduce them.
-    
 7. Verifying fixes through regression testing.
-    
 8. Maintaining and expanding the automated validation framework.
-    
+
 
 In many companies, a single firmware change may trigger **thousands to tens of thousands of automated validation tests**, which can take hours or days to complete before the change is considered ready for release.
 

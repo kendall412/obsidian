@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/NVMe Validation Dev/ioctl.md",
+                "file": "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ioctl"
+              "title": "Example of SPDK read validation"
             }
           }
         ]
@@ -183,13 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "488700c92724f69d",
   "lastOpenFiles": [
     "NVMe/NVMe Validation Dev/validation overview.md",
-    "NVMe/NVMe Validation Dev/Validation automation development guide.md",
     "NVMe/NVMe Validation Dev/SPDK (Storage Performance Development Kit).md",
-    "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
+    "NVMe/NVMe Validation Dev/nvme ioctl request types.md",
+    "NVMe/NVMe Validation Dev/ioctl.md",
     "NVMe/Admin Command Set OPCODE (OPC).md",
+    "NVMe/NVMe Validation Dev/Validation automation development guide.md",
+    "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
     "NVMe/logs/LID = 0x02 S.M.A.R.T Log.md",
     "NVMe/logs/LID = 0x01 Error Information Log Page.md",
     "NVMe/logs/LID = 0x03 Firmware Slot Info Log Page.md",
@@ -211,8 +213,6 @@
     "NVMe/error_correction",
     "NVMe/interrupt.md",
     "NVMe/NVMe CLI.md",
-    "NVMe/Fuse.md",
-    "NVMe/descriptors.md",
     "NVMe/pictures/cdw0.png",
     "NVMe/pictures/sqe.png",
     "NVMe/pictures/fig.91 cdw0.png",
