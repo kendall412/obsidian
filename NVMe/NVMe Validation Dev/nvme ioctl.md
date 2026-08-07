@@ -160,6 +160,7 @@ struct nvme_passthru_cmd {
 };
 ```
 
+`__u8` is a Linux kernel type that means an **unsigned 8-bit integer**.
 This structure represents the important fields of the 64-byte NVMe submission queue entry. The kernel fills `result` with command-specific completion data when applicable. ([GitHub](https://github.com/torvalds/linux/blob/master/include/uapi/linux/nvme_ioctl.h "linux/include/uapi/linux/nvme_ioctl.h at master · torvalds/linux · GitHub"))
 
 ### Identify Controller example

@@ -283,7 +283,7 @@ L0
 
 Now the SSD operates at full speed.
 
-# #What Happens During Recovery?
+## What Happens During Recovery?
 
 Normal PCIe traffic is temporarily halted.
 
