@@ -1,4 +1,4 @@
-
+#posix_memalign #posix 
 `posix_memalign()` is a POSIX standard library function that **allocates memory with a specified  [[byte alignment]]**. Unlike `malloc()`, which only guarantees alignment suitable for normal data types, `posix_memalign()` lets you request a specific memory boundary (e.g., 64 bytes, 4096 bytes).
 
 It is commonly used in:

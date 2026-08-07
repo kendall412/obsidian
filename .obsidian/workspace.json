@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/NVMe Validation Dev/nvme ioctl.md",
+                "file": "NVMe/NVMe Validation Dev/explanation of code 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nvme ioctl"
+              "title": "explanation of code 1"
             }
           }
         ],
@@ -256,10 +256,12 @@
   },
   "active": "c4f7124a17a73f69",
   "lastOpenFiles": [
+    "C/posix_memalign().md",
+    "NVMe/NVMe Validation Dev/explanation of code 1.md",
+    "NVMe/NVMe Validation Dev/nvme ioctl.md",
     "C/byte alignment.md",
     "C/perror().md",
     "C/__u8.md",
-    "NVMe/NVMe Validation Dev/nvme ioctl.md",
     "NVMe/NVMe Validation Dev/nvme ioctl set-feature fid 0Eh.md",
     "PCIe/LTSSM/RECOVERY.md",
     "NVMe/NVMe Validation Dev/validation overview.md",
@@ -280,8 +282,6 @@
     "NVMe/Set Features.md",
     "NVMe/Set Features Command.md",
     "NVMe/Get Features command.md",
-    "NVMe/Get Feature command.md",
-    "NVMe/metadata.md",
     "error_correction",
     "NVMe/error_correction",
     "NVMe/pictures/cdw0.png",
