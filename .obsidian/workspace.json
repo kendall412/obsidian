@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/format (hexadecimal).md",
+                "file": "8bit-10bit encoding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "format (hexadecimal)"
+              "title": "8bit-10bit encoding"
             }
           }
         ],
@@ -256,8 +256,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "c4f7124a17a73f69",
   "lastOpenFiles": [
+    "hardware state machine.md",
+    "race conditions.md",
+    "MMIO (Memory-Mapped IO).md",
+    "Heisenbug.md",
+    "PCIe/Base Address Register (BAR).md",
+    "python/format (hexadecimal).md",
     "NVMe/NVM Command Set IO Commands.md",
     "PCIe/DLP (Data Link Packet) Area.md",
     "PCIe/DLLP (Data Link Packet).md",
@@ -269,7 +275,6 @@
     "python/module/subprocess - Popen()communicate().md",
     "python/module/pyTest.md",
     "python/module",
-    "python/format (hexadecimal).md",
     "python/file descriptor.md",
     "python/dataclass.md",
     "python",
@@ -279,13 +284,8 @@
     "NVMe/admin-passthru.md",
     "PCIe/FLIT (Flow Control Unit).md",
     "NVMe/nvme IO commands.md",
-    "Heisenbug.md",
     "NVMe/NVMe Set.md",
     "PCIe/PAM4 (Pulse Amplitude Modulation 4 levles)).md",
-    "NVMe/management.md",
-    "NVMe/NVM Subsystem.md",
-    "NVMe/Controller Level Resets.md",
-    "NVMe/controller level reset.md",
     "error_correction",
     "NVMe/error_correction",
     "NVMe/pictures/cdw0.png",

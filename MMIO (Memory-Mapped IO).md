@@ -24,25 +24,25 @@ So when software writes to those addresses, it is actually controlling hardware.
 
 Suppose an NVMe SSD has:
 
-```
+```bash
 BAR0 = 0x90000000
 ```
 
 And the controller’s status register is at:
 
-```
+```bash
 Offset = 0x1C
 ```
 
 Then:
 
-```
+```bash
 MMIO Address = 0x90000000 + 0x1C             = 0x9000001C
 ```
 
-Software reads it like memory (in C):
+Software reads it like memory:
 
-```
+```c
 status = *(volatile uint32_t *)0x9000001C;
 ```
 
@@ -64,13 +64,13 @@ MMIO provides a standardized method.
 
 ## Normal Memory Access
 
-```
+```text
 CPU → DRAM controller → RAM chips
 ```
 
 ## MMIO Access
 
-```
+```text
 CPU → PCIe root complex → PCIe device registers
 ```
 
@@ -92,19 +92,19 @@ Then MMIO is used to access those mapped addresses.
 
 NVMe device says:
 
-```
+```text
 Need 16 KB MMIO space
 ```
 
 ## Step 2 — OS assigns address
 
-```
+```bash
 BAR0 = 0x90000000
 ```
 
 ## Step 3 — Driver accesses MMIO registers
 
-```
+```c
 write32(0x90001000, sq_tail);
 ```
 
@@ -112,27 +112,27 @@ This write becomes a PCIe Memory Write TLP.
 
 # MMIO Accesses Become PCIe Transactions
 
-When CPU executes (in C):
+When CPU executes:
 
-```
+```c
 *(volatile uint32_t *)addr = value;
 ```
 
 hardware converts it into:
 
-```
+```text
 PCIe Memory Write Request
 ```
 
 Similarly:
 
-```
+```c
 x = *(volatile uint32_t *)addr;
 ```
 
 becomes:
 
-```
+```text
 PCIe Memory Read Request
 ```
 
@@ -166,9 +166,9 @@ Important NVMe registers accessed through MMIO:
 
 MMIO registers can change independently of software. Compiler optimizations are dangerous.
 
-Example (in C):
+Example:
 
-```
+```c
 volatile uint32_t *reg;
 ```
 
@@ -184,7 +184,7 @@ That would break hardware communication.
 
 Device registers are generally mapped as:
 
-```
+```text
 Uncacheable (UC)
 ```
 
@@ -196,7 +196,7 @@ because caching hardware registers would produce stale or invalid behavior.
 
 Uses memory instructions:
 
-```
+```text
 load/store
 ```
 
@@ -206,7 +206,7 @@ Modern systems prefer this.
 
 Uses special CPU instructions (in asm):
 
-```
+```text
 IN
 OUT
 ```
@@ -219,7 +219,7 @@ PCIe/NVMe primarily use MMIO.
 
 MMIO is much slower than RAM because accesses traverse:
 
-```
+```text
 CPU
 → interconnect
 → PCIe root complex
@@ -231,8 +231,8 @@ So drivers avoid excessive MMIO reads.
 
 # Memory Map Example
 
-```
-System Physical Address Space
+```c
+//System Physical Address Space
 
 0x00000000 - 0x7FFFFFFF   RAM
 0x80000000 - 0x80003FFF   NVMe MMIO BAR
@@ -246,9 +246,9 @@ Not all “memory addresses” refer to RAM.
 
 Driver submits command into Submission Queue in RAM.
 
-Then rings doorbell (in C):
+Then rings doorbell:
 
-```
+```c
 *(volatile uint32_t *)(bar0 + doorbell_offset) = new_tail;
 ```
 
@@ -270,7 +270,7 @@ This tells the NVMe controller:
 
 MMIO is essentially:
 
-```
+```text
 CPU memory accesses redirected to hardware devices
 ```
 

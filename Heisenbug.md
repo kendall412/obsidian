@@ -1,16 +1,18 @@
 ## Heisenbug
 
-A heisenbug is a software bug that disappears or changes its behavior when you try to study or isolate it. The term is a playful reference to Werner Heisenberg’s Uncertainty Principle, highlighting how the "observer effect"—such as adding print statements or using a debugger—alters the program's environment and masks the defect.
+>A heisenbug is a software bug that disappears or changes its behavior when you try to study or isolate it. The term is a playful reference to Werner Heisenberg’s Uncertainty Principle, highlighting how the "observer effect"—such as adding print statements or using a debugger—alters the program's environment and masks the defect.
 
 ### Why Heisenbugs HappenTiming and Concurrency: 
+
 - They are highly non-deterministic and common in multi-threaded environments. Debuggers or logging slow down the execution, allowing race conditions to resolve themselves.
 - Memory Corruption: Bugs caused by uninitialized memory or buffer overflows can shift in behavior when debugging tools allocate memory differently in the background.
 
 ### How to Catch Them
+
 - Non-Intrusive Logging: Rely on writing lightweight logs to disk or memory rather than stepping through the code interactively, minimizing the observer effect.Memory 
 - Analysis: Use runtime analysis tools (e.g., Valgrind) or crash dump analyzers that inspect the program state after it fails, rather than manipulating the program while it runs.
 
----
+
 There can be a few reasons for a bug to behave like a Heisenbug: when a bug is only noticeable in production, but hard to reproduce while debugging, usually it's the context that makes the difference:
 
 - Timing: if, while debugging, you run instructions line by line, the delay between operations might be orders of magnitude larger than in production; this is especially relevant when the Heisenbug is caused by the interaction of different thread.
@@ -29,6 +31,7 @@ There can be a few reasons for a bug to behave like a Heisenbug: when a bug is o
 
 
 ### What Can You Do?
+
 - Narrow down the portion of code where the bug happens. It's not always easy, because a race condition can cause an error to show up later in the execution, but you should try to focus on the smallest portion of code possible.
 
 - If you are running a data-transformation pipeline, store intermediate results at every step and compare them over multiple executions (or between local and production runs).
@@ -47,6 +50,7 @@ There can be a few reasons for a bug to behave like a Heisenbug: when a bug is o
     - The lockset algorithm reports a potential race condition when shared memory is accessed by two or more threads without the threads holding a common lock. It might report false positives.
     - The "happens-before" algorithm is based on partial ordering of events (i.e. any instruction, including read/write and locks) in distributed systems, within and across threads: if two or more threads access a shared variable, and the accesses are not deterministically ordered by the "happens-before" relationship, then it reports that a race have occurred. This algorithm generates very few false positives, but it's sensitive to the order of execution, so you might need to run it several times before catching a race condition that's causing a Heisenbug.
     - Reverse debugging: the ability of a debugger to stop after a failure in a program has been observed, and go back into the history of the execution to uncover the reason for the failure.
+    -
 - Use ad-hoc debugging tools for race conditions. A few examples (there are many more):
     - The Intel Inspector
     - Microsoft CHESS
