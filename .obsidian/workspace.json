@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/NVMe Validation Dev/explanation of code 1.md",
+                "file": "python/format (hexadecimal).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "explanation of code 1"
+              "title": "format (hexadecimal)"
             }
           }
         ],
@@ -112,7 +112,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -254,34 +256,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "c4f7124a17a73f69",
+  "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
-    "C/posix_memalign().md",
-    "NVMe/NVMe Validation Dev/explanation of code 1.md",
-    "NVMe/NVMe Validation Dev/nvme ioctl.md",
-    "C/byte alignment.md",
-    "C/perror().md",
-    "C/__u8.md",
-    "NVMe/NVMe Validation Dev/nvme ioctl set-feature fid 0Eh.md",
-    "PCIe/LTSSM/RECOVERY.md",
-    "NVMe/NVMe Validation Dev/validation overview.md",
-    "NVMe/NVMe Validation Dev/Validation automation development guide.md",
-    "NVMe/NVMe Validation Dev/ssd development process.md",
-    "NVMe/NVMe Validation Dev/SPDK (Storage Performance Development Kit).md",
-    "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
-    "NVMe/NVMe Validation Dev/ioctl.md",
-    "C/memset().md",
-    "C/bitmasking.md",
-    "PCIe/LeCroy Summit T54.md",
-    "NVMe/Admin Command Set OPCODE (OPC).md",
-    "NVMe/logs/LID = 0x02 S.M.A.R.T Log.md",
-    "NVMe/logs/LID = 0x01 Error Information Log Page.md",
-    "NVMe/logs/LID = 0x03 Firmware Slot Info Log Page.md",
-    "NVMe/logs/LID = 0x04 Changed Namespace List Log Page.md",
-    "NVMe/logs/logs.md",
-    "NVMe/Set Features.md",
-    "NVMe/Set Features Command.md",
-    "NVMe/Get Features command.md",
+    "NVMe/NVM Command Set IO Commands.md",
+    "PCIe/DLP (Data Link Packet) Area.md",
+    "PCIe/DLLP (Data Link Packet).md",
+    "NVMe/log page support requirements.md",
+    "python/to_hex().md",
+    "python/pyTest.md",
+    "NVMe/NSSR (NVMe Subsystem Reset Register).md",
+    "python/module/traceback.md",
+    "python/module/subprocess - Popen()communicate().md",
+    "python/module/pyTest.md",
+    "python/module",
+    "python/format (hexadecimal).md",
+    "python/file descriptor.md",
+    "python/dataclass.md",
+    "python",
+    "PCIe/physical function.md",
+    "PCIe/pcie configuration space data structure.md",
+    "PCIe/PIPE (PHY Interface for PCI Express).md",
+    "NVMe/admin-passthru.md",
+    "PCIe/FLIT (Flow Control Unit).md",
+    "NVMe/nvme IO commands.md",
+    "Heisenbug.md",
+    "NVMe/NVMe Set.md",
+    "PCIe/PAM4 (Pulse Amplitude Modulation 4 levles)).md",
+    "NVMe/management.md",
+    "NVMe/NVM Subsystem.md",
+    "NVMe/Controller Level Resets.md",
+    "NVMe/controller level reset.md",
     "error_correction",
     "NVMe/error_correction",
     "NVMe/pictures/cdw0.png",
@@ -300,8 +304,6 @@
     "NVMe/FID",
     "C",
     "NVMe/NVMe Validation Dev",
-    "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
-    "NVMe/nvme ioctl",
     "Untitled.canvas"
   ]
 }
