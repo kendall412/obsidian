@@ -83,7 +83,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8bit-10bit encoding.md",
+                "file": "PCIe/symbols/8bit-10bit encoding.md",
                 "mode": "source",
                 "source": false
               },
@@ -151,7 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 351.5
+    "width": 273.49609375
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -256,8 +256,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "c4f7124a17a73f69",
+  "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
+    "PCIe/symbols/8b-10b encoding.md",
+    "PCIe/SIDEBAND-OOB/sideband vs out of band.md",
+    "PCIe/SIDEBAND-OOB/sideband signals.md",
+    "PCIe/SIDEBAND-OOB/sideband management.md",
+    "PCIe/SIDEBAND-OOB/sideband.md",
+    "PCIe/SIDEBAND-OOB/REFCLK.md",
+    "PCIe/SIDEBAND-OOB/PRSNT.md",
+    "PCIe/SIDEBAND-OOB/PEWAKE.md",
+    "PCIe/SIDEBAND-OOB/PERST.md",
+    "PCIe/SIDEBAND-OOB/NVMe-MI.md",
+    "PCIe/SIDEBAND-OOB/management data.md",
+    "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
+    "PCIe/process/PCIe link training process.md",
+    "PCIe/process/pcie enumeration.md",
+    "PCIe/symbols/8bit-10bit encoding.md",
     "hardware state machine.md",
     "race conditions.md",
     "MMIO (Memory-Mapped IO).md",
@@ -270,22 +285,8 @@
     "NVMe/log page support requirements.md",
     "python/to_hex().md",
     "python/pyTest.md",
-    "NVMe/NSSR (NVMe Subsystem Reset Register).md",
-    "python/module/traceback.md",
-    "python/module/subprocess - Popen()communicate().md",
-    "python/module/pyTest.md",
     "python/module",
-    "python/file descriptor.md",
-    "python/dataclass.md",
     "python",
-    "PCIe/physical function.md",
-    "PCIe/pcie configuration space data structure.md",
-    "PCIe/PIPE (PHY Interface for PCI Express).md",
-    "NVMe/admin-passthru.md",
-    "PCIe/FLIT (Flow Control Unit).md",
-    "NVMe/nvme IO commands.md",
-    "NVMe/NVMe Set.md",
-    "PCIe/PAM4 (Pulse Amplitude Modulation 4 levles)).md",
     "error_correction",
     "NVMe/error_correction",
     "NVMe/pictures/cdw0.png",
@@ -303,7 +304,6 @@
     "NVMe/nvme_validation_dev",
     "NVMe/FID",
     "C",
-    "NVMe/NVMe Validation Dev",
     "Untitled.canvas"
   ]
 }
