@@ -10,8 +10,6 @@
 - **Location:** While traditionally embedded in the controller firmware, some FTL functions can run on the host CPU in specialized PCIe devices.
 - **Failure:** Corruption of the FTL, often referred to generally as "firmware corruption," makes data inaccessible.
 
-
-
 It’s not NVMe-specific—FTL exists in any flash-based SSD—but it’s critical to how an NVMe SSD behaves.
 
 ---
