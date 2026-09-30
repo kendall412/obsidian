@@ -265,12 +265,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "strcmp() - string compare.md",
+                "file": "C/function pointers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "strcmp() - string compare"
+              "title": "function pointers"
             }
           }
         ],
@@ -440,8 +440,11 @@
   },
   "active": "b14ec6235d686645",
   "lastOpenFiles": [
-    "SSD/VSB (Virtual Super Block).md",
+    "C/strpbrk() - string pointer break.md",
+    "C/function pointers.md",
+    "C/typedef.md",
     "strcmp() - string compare.md",
+    "SSD/VSB (Virtual Super Block).md",
     "SSD/FTL (Flash Translation Layer).md",
     "C/const.md",
     "C/atoi().md",
@@ -463,9 +466,6 @@
     "PCIe/SIDEBAND-OOB/sideband signals.md",
     "PCIe/SIDEBAND-OOB/sideband management.md",
     "PCIe/SIDEBAND-OOB/sideband.md",
-    "PCIe/SIDEBAND-OOB/REFCLK.md",
-    "PCIe/SIDEBAND-OOB/PRSNT.md",
-    "PCIe/SIDEBAND-OOB/PEWAKE.md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
