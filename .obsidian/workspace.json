@@ -440,6 +440,7 @@
   },
   "active": "b14ec6235d686645",
   "lastOpenFiles": [
+    "C/strcmp() - string compare.md",
     "C/function pointers.md",
     "C/strpbrk() - string pointer break.md",
     "C/typedef.md",
@@ -465,7 +466,6 @@
     "PCIe/SIDEBAND-OOB/sideband vs out of band.md",
     "PCIe/SIDEBAND-OOB/sideband signals.md",
     "PCIe/SIDEBAND-OOB/sideband management.md",
-    "PCIe/SIDEBAND-OOB/sideband.md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
