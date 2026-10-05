@@ -5,7 +5,7 @@ PCIe is organized as a layered protocol, similar to a network stack. Each layer 
 
 ```
 +------------------------------------+
-| Software / Driver                  |
+| Software / Driver (Device Core)    |
 +------------------------------------+
 | Transaction Layer (TL)             |
 +------------------------------------+
@@ -551,5 +551,8 @@ For NVMe firmware work, the most commonly debugged PCIe stack components are:
 1. **Transaction Layer** (doorbells, BAR accesses, TLPs)
 2. **Data Link Layer** (replay, CRC, ACK/NAK issues)
 3. **LTSSM in the Physical Layer** (link training failures, Gen4/Gen5 equalization problems).
+
+
+
 
 
