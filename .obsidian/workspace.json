@@ -440,6 +440,7 @@
   },
   "active": "b14ec6235d686645",
   "lastOpenFiles": [
+    "PCIe/PCI Express Technology 3.0 v1.03-MindShare.pdf",
     "PCIe/PCIe Stack/PCIe Stack.md",
     "PCIe/semaphore.md",
     "PCIe/subsystem.md",
@@ -465,7 +466,6 @@
     "C/malloc().md",
     "PCIe/LTSSM/DETECT.md",
     "Communication Protocols/Serial Communication.md",
-    "PCIe/PCIe Stack/PCIe TL (PCIe Transaction Layer).md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
