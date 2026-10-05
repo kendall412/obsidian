@@ -69,7 +69,7 @@ Running disparity tracks whether more 1s or more 0s have been transmitted.
 The encoder chooses alternate 10-bit symbols to maintain balance.
 
 
-xample:
+Example:
 
 A byte may have:
 
@@ -85,7 +85,7 @@ The encoder picks whichever helps rebalance the stream.
 8b/10b guarantees enough bit transitions for:
 
 - clock-data recovery (CDR)
-- PLL synchronization
+- [[PLL (phase lock loop)]] synchronization
 
 Without transitions, the receiver loses timing.
 

@@ -1,4 +1,4 @@
-
+#pll
 > **PLL (Phase-Locked Loop)** is one of the most critical circuits in a PCIe PHY. It is an **analog/mixed-signal circuit** that generates the high-speed clocks needed for PCIe transmission and recovers timing from incoming data.
 
 Without a PLL, a PCIe device cannot:
