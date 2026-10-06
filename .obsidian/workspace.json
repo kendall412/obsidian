@@ -440,6 +440,7 @@
   },
   "active": "b14ec6235d686645",
   "lastOpenFiles": [
+    "PCIe/PCI Express Technology 3.0 v1.03-MindShare.pdf.sb-ed9c9f6d-jJkRnw",
     "PCIe/PCI Express Technology 3.0 v1.03-MindShare.pdf",
     "PCIe/PCIe Stack/PCIe Stack.md",
     "PCIe/semaphore.md",
@@ -485,7 +486,6 @@
     "NVMe/security",
     "NVMe/nvme_validation_dev",
     "NVMe/FID",
-    "C",
     "Untitled.canvas"
   ]
 }
