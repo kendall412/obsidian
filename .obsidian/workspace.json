@@ -454,6 +454,7 @@
   },
   "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
+    "PCIe/PF (Physical Function).md",
     "PCIe/root port.md",
     "PCIe/single root enumeration.md",
     "PCIe/function.md",
@@ -483,7 +484,6 @@
     "C/typedef.md",
     "strcmp() - string compare.md",
     "SSD/VSB (Virtual Super Block).md",
-    "SSD/FTL (Flash Translation Layer).md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
