@@ -279,12 +279,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/PCIe fabric.md",
+                "file": "PCIe/single root enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PCIe fabric"
+              "title": "single root enumeration"
             }
           }
         ],
@@ -454,8 +454,14 @@
   },
   "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
-    "PCIe/ECAM (Enhanced Configuration Access Mechanism).md",
+    "PCIe/root port.md",
+    "PCIe/single root enumeration.md",
+    "PCIe/function.md",
+    "VF (Virtual Function).md",
+    "PF (Physical Function).md",
     "PCIe/PCIe fabric.md",
+    "PCIe/PCI Express Technology 3.0 v1.03-MindShare.pdf.sb-ed9c9f6d-I4vZdN",
+    "PCIe/ECAM (Enhanced Configuration Access Mechanism).md",
     "PCIe/Configuration Request.md",
     "PCIe/PCI Express Technology 3.0 v1.03-MindShare.pdf.sb-ed9c9f6d-uc4YIb",
     "PCIe/completer.md",
@@ -478,11 +484,6 @@
     "strcmp() - string compare.md",
     "SSD/VSB (Virtual Super Block).md",
     "SSD/FTL (Flash Translation Layer).md",
-    "C/atoi().md",
-    "C/strings.md",
-    "C/strcpy().md",
-    "C/size_t.md",
-    "PCIe/LTSSM/CONFIGURATION.md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
@@ -499,7 +500,6 @@
     "NVMe/pictures/host to nvme.png",
     "NVMe/pictures/controller_BAR.png",
     "NVMe/NVM_whitepaper.pdf",
-    "NVMe/security",
     "Untitled.canvas"
   ]
 }
