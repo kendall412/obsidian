@@ -279,12 +279,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/single root enumeration.md",
+                "file": "C/memcpy().md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "single root enumeration"
+              "title": "memcpy()"
             }
           }
         ],
@@ -454,9 +454,10 @@
   },
   "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
+    "PCIe/single root enumeration.md",
+    "C/memcpy().md",
     "PCIe/PF (Physical Function).md",
     "PCIe/root port.md",
-    "PCIe/single root enumeration.md",
     "PCIe/function.md",
     "VF (Virtual Function).md",
     "PF (Physical Function).md",
@@ -483,7 +484,6 @@
     "C/strpbrk() - string pointer break.md",
     "C/typedef.md",
     "strcmp() - string compare.md",
-    "SSD/VSB (Virtual Super Block).md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
