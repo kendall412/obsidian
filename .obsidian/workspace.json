@@ -279,12 +279,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C/memcpy().md",
+                "file": "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "memcpy()"
+              "title": "LID 21h - Reclaim Unit Handle Usage Log Page (72-byte)"
             }
           }
         ],
@@ -454,8 +454,14 @@
   },
   "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
-    "PCIe/single root enumeration.md",
+    "NVMe/FDP/specified.md",
+    "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
+    "NVMe/FDP/RU & RUH.md",
+    "NVMe/FDP/FDP Configuration Descriptor (aka FDP configuration) - PRIMER.md",
+    "NVMe/FDP/FDP Configuration Log Page - PRIMER.md",
     "C/memcpy().md",
+    "NVMe/FDP",
+    "PCIe/single root enumeration.md",
     "PCIe/PF (Physical Function).md",
     "PCIe/root port.md",
     "PCIe/function.md",
@@ -479,11 +485,6 @@
     "PCIe/symbols/8bit-10bit encoding.md",
     "PCIe/PLL (phase lock loop).md",
     "C/const.md",
-    "C/strcmp() - string compare.md",
-    "C/function pointers.md",
-    "C/strpbrk() - string pointer break.md",
-    "C/typedef.md",
-    "strcmp() - string compare.md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
@@ -499,7 +500,6 @@
     "NVMe/pictures/Pasted image 20260129210326.png",
     "NVMe/pictures/host to nvme.png",
     "NVMe/pictures/controller_BAR.png",
-    "NVMe/NVM_whitepaper.pdf",
     "Untitled.canvas"
   ]
 }
