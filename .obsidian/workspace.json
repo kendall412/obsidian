@@ -279,12 +279,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
+                "file": "Bible/Ecclesiastes/Ecc. 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LID 21h - Reclaim Unit Handle Usage Log Page (72-byte)"
+              "title": "Ecc. 1"
             }
           }
         ],
@@ -454,8 +454,12 @@
   },
   "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
-    "NVMe/FDP/specified.md",
+    "Bible/Ecclesiastes/General.md",
+    "Bible/Ecclesiastes/Ecc. 1.md",
+    "Bible/Main Outline.md",
+    "Bible/Ecclesiastes",
     "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
+    "NVMe/FDP/specified.md",
     "NVMe/FDP/RU & RUH.md",
     "NVMe/FDP/FDP Configuration Descriptor (aka FDP configuration) - PRIMER.md",
     "NVMe/FDP/FDP Configuration Log Page - PRIMER.md",
@@ -482,14 +486,10 @@
     "PCIe/PCI Express Technology 3.0 v1.03-MindShare.pdf",
     "PCIe/PCIe Stack/PCIe Stack.md",
     "PCIe/subsystem.md",
-    "PCIe/symbols/8bit-10bit encoding.md",
-    "PCIe/PLL (phase lock loop).md",
-    "C/const.md",
     "PCIe/SIDEBAND-OOB/I3C Technology Training.pdf",
     "python/module",
     "python",
     "error_correction",
-    "NVMe/error_correction",
     "NVMe/pictures/cdw0.png",
     "NVMe/pictures/sqe.png",
     "NVMe/pictures/fig.91 cdw0.png",
