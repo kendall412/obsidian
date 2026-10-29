@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/VALIDATION/Test Deployment Framework.md",
+                "file": "NVMe/FDP/RU vs RUH vs RG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test Deployment Framework"
+              "title": "RU vs RUH vs RG"
             }
           }
         ]
@@ -94,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.23046875
+    "width": 280.25390625
   },
   "right": {
     "id": "0f835676d6415f60",
@@ -201,19 +201,27 @@
   },
   "active": "d3cca91a4e87df18",
   "lastOpenFiles": [
+    "NVMe/FDP/ruh rollover.png",
+    "NVMe/FDP/selection path.png",
+    "NVMe/FDP/RU & RUH.md",
+    "NVMe/FDP/RU vs RUH vs RG.md",
+    "NVMe/FDP/partially written RU.png",
+    "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
+    "NVMe/FDP/FDP Configuration Descriptor (aka FDP configuration) - PRIMER.md",
+    "NVMe/FDP/16 bit placement id.png",
+    "NVMe/FDP/troubleshooting/2 nvme drive with FDP support but nvme fdp commands do not work in one of them. What could be the cause.md",
+    "NVMe/FDP/troubleshooting/Troubleshooting FDP Statistics, Events, and Usage Commands.md",
+    "NVMe/VALIDATION/Test Deployment Framework.md",
+    "NVMe/FDP/troubleshooting",
     "NVMe/VALIDATION/images/workflow.png",
     "NVMe/VALIDATION/images",
     "NVMe/VALIDATION/images/overall architecture.png",
     "NVMe/FDP/validation/Exhaustive NVMe Flexible Data Placement (FDP) Validation Plan.md",
-    "NVMe/VALIDATION/Test Deployment Framework.md",
     "NVMe/VALIDATION",
     "NVMe/FDP/validation/Creating an NVMe Namespace with a Specific Placement Handle (PHNDL).md",
-    "NVMe/FDP/FDP Configuration Descriptor (aka FDP configuration) - PRIMER.md",
     "NVMe/FDP/validation",
-    "NVMe/FDP/partially written RU.png",
     "C/scanf.md",
     "C/const.md",
-    "NVMe/FDP/16 bit placement id.png",
     "PCIe/pcie configuration space.md",
     "SSD/VSB (Virtual Super Block).md",
     "C/atoi().md",
@@ -228,25 +236,17 @@
     "C/memset().md",
     "PCIe/LeCroy Summit T54.md",
     "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
-    "Bible/Ecclesiastes/Ecc. 1.md",
     "PCIe/eBooks/PCI Express Technology 3.0 v1.03-MindShare.pdf",
     "PCIe/eBooks",
     "python/eBooks/Python3 Objectoriented Programming.pdf",
     "python/eBooks",
     "eBooks",
     "python/Python3 Objectoriented Programming.pdf",
-    "Bible/Ecclesiastes/General.md",
-    "Bible/Main Outline.md",
-    "Bible/Ecclesiastes",
-    "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
-    "NVMe/FDP/specified.md",
     "NVMe/pictures/cdw0.png",
     "NVMe/pictures/sqe.png",
     "NVMe/pictures/fig.91 cdw0.png",
     "NVMe/pictures/fig.384-cdw10.png",
     "NVMe/pictures/fig.325 identify cdword14.png",
-    "NVMe/pictures/cdw.png",
-    "NVMe/pictures/Pasted image 20260129210349.png",
     "Untitled.canvas"
   ]
 }
