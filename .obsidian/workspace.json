@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NVMe/FDP/RU vs RUH vs RG.md",
+                "file": "NVMe/superblocks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RU vs RUH vs RG"
+              "title": "superblocks"
             }
           }
         ]
@@ -199,12 +199,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
+    "superblock & RU.png",
+    "parallel writes across 4 dies.png",
+    "nand flash org.png",
+    "NVMe/FDP/RU vs RUH vs RG.md",
+    "NVMe/superblocks.md",
+    "NVMe/ebooks/Samsung - Getting Started with FDP.pdf",
+    "NVMe/ebooks/NVM_whitepaper.pdf",
+    "NVMe/ebooks",
     "NVMe/FDP/ruh rollover.png",
     "NVMe/FDP/selection path.png",
     "NVMe/FDP/RU & RUH.md",
-    "NVMe/FDP/RU vs RUH vs RG.md",
     "NVMe/FDP/partially written RU.png",
     "NVMe/FDP/LID 21h - Reclaim Unit Handle Usage Log Page (72-byte).md",
     "NVMe/FDP/FDP Configuration Descriptor (aka FDP configuration) - PRIMER.md",
@@ -235,18 +242,11 @@
     "NVMe/NVMe Validation Dev/nvme ioctl.md",
     "C/memset().md",
     "PCIe/LeCroy Summit T54.md",
-    "NVMe/NVMe Validation Dev/Example of SPDK read validation.md",
     "PCIe/eBooks/PCI Express Technology 3.0 v1.03-MindShare.pdf",
     "PCIe/eBooks",
     "python/eBooks/Python3 Objectoriented Programming.pdf",
-    "python/eBooks",
-    "eBooks",
-    "python/Python3 Objectoriented Programming.pdf",
     "NVMe/pictures/cdw0.png",
     "NVMe/pictures/sqe.png",
-    "NVMe/pictures/fig.91 cdw0.png",
-    "NVMe/pictures/fig.384-cdw10.png",
-    "NVMe/pictures/fig.325 identify cdword14.png",
     "Untitled.canvas"
   ]
 }
