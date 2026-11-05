@@ -1,4 +1,3 @@
-## Heisenbug
 
 >A heisenbug is a software bug that disappears or changes its behavior when you try to study or isolate it. The term is a playful reference to Werner Heisenberg’s Uncertainty Principle, highlighting how the "observer effect"—such as adding print statements or using a debugger—alters the program's environment and masks the defect.
 

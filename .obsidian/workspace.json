@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCIe/NP MMIO (Non-Prefetchable Memory Address Space).md",
+                "file": "race conditions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NP MMIO (Non-Prefetchable Memory Address Space)"
+              "title": "race conditions"
             }
           }
         ]
@@ -199,13 +199,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3cca91a4e87df18",
+  "active": "45c720fb8a1de14d",
   "lastOpenFiles": [
+    "hardware/MMIO (Memory-Mapped IO).md",
+    "software/Heisenbug.md",
+    "software",
+    "race conditions.md",
+    "hardware/hardware state machine.md",
+    "python/design patterns/Factory Design Pattern (Simple Factory).md",
+    "python/pictures/how factory works.png",
+    "python/design patterns/Singleton Design Pattern in Python.md",
+    "python/pictures",
+    "python/pictures/normal vs singleton.png",
+    "PCIe/NP MMIO (Non-Prefetchable Memory Address Space).md",
+    "python/design patterns",
     "PCIe/pictures/BAR setup.png",
     "PCIe/pictures/memory bar lower bits.png",
     "PCIe/pictures/mmio.png",
     "NVMe/SPDK/Getting Started with SPDK for NVMe Test Automation.md",
-    "PCIe/NP MMIO (Non-Prefetchable Memory Address Space).md",
     "PCIe/eBooks/PCI Express Technology 3.0 v1.03-MindShare.pdf.sb-ed9c9f6d-vCptbE",
     "NVMe/SPDK/understanding spdk access.png",
     "NVMe/FDP/Reclaim Unit Handle Update.md",
@@ -215,11 +226,8 @@
     "NVMe/FDP/images/host provided data buffer.png",
     "NVMe/FDP/images/host to ctrl ruh update.png",
     "NVMe/FDP/images/partially written RU.png",
-    "NVMe/FDP/images/16 bit placement id.png",
-    "NVMe/FDP/images/ruh rollover.png",
     "NVMe/FDP/images",
     "NVMe/superblocks.md",
-    "NVMe/pictures/nand flash org.png",
     "NVMe/FDP/RU vs RUH vs RG.md",
     "NVMe/ebooks/Samsung - Getting Started with FDP.pdf",
     "NVMe/ebooks/NVM_whitepaper.pdf",
@@ -231,22 +239,14 @@
     "NVMe/FDP/troubleshooting/Troubleshooting FDP Statistics, Events, and Usage Commands.md",
     "NVMe/VALIDATION/Test Deployment Framework.md",
     "NVMe/FDP/troubleshooting",
-    "NVMe/VALIDATION/images",
     "NVMe/FDP/validation/Exhaustive NVMe Flexible Data Placement (FDP) Validation Plan.md",
-    "NVMe/VALIDATION",
     "NVMe/FDP/validation/Creating an NVMe Namespace with a Specific Placement Handle (PHNDL).md",
-    "NVMe/FDP/validation",
     "C/scanf.md",
     "C/const.md",
     "PCIe/pcie configuration space.md",
     "SSD/VSB (Virtual Super Block).md",
     "C/atoi().md",
     "C/strcpy().md",
-    "C/fread().md",
-    "C/size_t.md",
-    "C/buffer.md",
-    "C/malloc().md",
-    "PCIe/LTSSM/DETECT.md",
     "Untitled.canvas"
   ]
 }
